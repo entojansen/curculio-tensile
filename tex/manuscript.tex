@@ -1,0 +1,121 @@
+\documentclass[twocolumn, linenumbers, superscriptaddress]{revtex4-1}
+
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{blindtext}
+
+\begin{document}
+	%abstract - approx. 150 words
+	\begin{abstract}
+		\blindtext
+	\end{abstract}
+	
+	%title and author block
+	{\title{Fracture mechanics and cuticle microstructure of the acorn weevil rostrum}
+	
+	\date{\today}
+	
+	\author{M. Andrew Jansen}
+		\email[corresponding author, email:~]{majanse1@asu.edu}
+		\affiliation{School of Life Sciences, Arizona State University, Tempe, AZ 85287, USA}
+	\author{Nikhilesh Chawla}
+		\affiliation{School for Engineering of Matter, Energy, and Transport, Arizona State University, Tempe, AZ 85287, USA}
+	\author{Nico M. Franz}
+		\affiliation{School of Life Sciences, Arizona State University, Tempe, AZ 85287, USA}
+		
+	\maketitle
+	}
+	
+%introduction - nature materials requires that introduction is given NO SECTION HEADER
+	\lipsum
+	
+%4 sections of results ideally, nobody really uses subsections, 6 display items max.
+	\section*{Section 1}
+		\lipsum
+	
+	\section*{Section 2}
+		\lipsum
+		
+	\section*{Section 3}
+		\lipsum
+		
+	\section*{Section 4}
+		\lipsum
+
+%conclusion	- with intro and "results" should be no more than 3000 words
+	\section*{Conclusion}
+		\blindtext[3]
+
+%actual methods after references
+	\section*{Methods}
+		Methods, including statements of data availability and any associated accession codes and references, are available in the online version of this paper.
+	
+%50 references (as a guideline)
+	\begin{thebibliography}{50}
+		\section*{References}	
+		\bibitem{lamport94}
+			Leslie Lamport,
+			\textit{\LaTeX: a document preparation system},
+			Addison Wesley, Massachusetts,
+			2nd edition,
+			1994.
+
+	\end{thebibliography}
+
+%brief and 'without effusive statements'
+%thank everyone who helped with data collection, especially jason (tensile testing), sridhar (if I use micro-CT scan data), dave (SEM), charlie (specimens), paige (if I use confocal data), Sal (if I use histology/staining data or confocal data, he helped with specimen clearing).
+%Financial support/ funding sources/ grants.
+	\begin{acknowledgements}
+		\blindtext
+	\end{acknowledgements}
+
+%author contributions
+%MAJ: did tensile tests, SEM, confocal (if applicable), data analysis.
+%MAJ, NC: designed research, micro-CT (if applicable)
+%MAJ, NMF: field collection of test specimens, procurement of specimen loans, specimen prep.
+%MAJ, NC, NMF: All authors contributed to the writing, review, and revision of the manuscript.
+	\section*{Author contributions}
+		\blindtext
+	
+	\section*{Additional information}
+		Supplementary information is available in the online version of the paper.
+		Reprints and permissions information is available online at www.nature.com/reprints.
+		Correspondence and requests for materials should be addressed to M.A.J.
+	
+	\section*{Competing financial interests}
+		The authors declare no competing financial interests.
+	
+	\newpage
+
+%provide detailed methods here, subsection for each method, statistical analysis, statements of code and data avilability.
+	\section*{Methods}
+		\subsection*{Method 1}
+			\blindtext[3]
+			
+		\subsection*{Method 2}
+			\blindtext[3]
+			
+		\subsection*{Method 3}
+			\blindtext[3]
+			
+		\subsection*{Statistical analysis}
+			\blindtext[3]
+			
+		\subsection*{Code availability}
+			\blindtext[3]
+			
+		\subsection*{Data availability}
+			\blindtext[3]
+
+%references for methods only
+	\begin{thebibliography}{50}
+		\section*{References}	
+		\bibitem{lamport94}
+			Leslie Lamport,
+			\textit{\LaTeX: a document preparation system},
+			Addison Wesley, Massachusetts,
+			2nd edition,
+			1994.
+
+	\end{thebibliography}
+\end{document}
