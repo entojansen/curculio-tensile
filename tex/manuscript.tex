@@ -20,7 +20,7 @@
 	\end{abstract}
 	
 	%title and author block
-	{\title{Microstructure-derived flexibility in the acorn weevil exoskeleton}
+	{\title{Microstructure-derived strength in the acorn weevil exoskeleton}
 	
 	\date{\today}
 	
@@ -55,8 +55,8 @@
 	While this behavior has been observed in many species of \textit{Curculio}, we have lacked a fundamental understanding of how female \textit{Curculio} rostra can withstand the repeated, often extreme bending incurred during the process of oviposition.
 
 	We have found that the composite profile of the rostrum is strongly differentiated from the head capsule and other body parts, with modification of both the relative layer thicknesses and fiber orientation angles of cuticle regions (viz. exocuticle and endocuticle), which we describe in detail below.
-	We posit that these modifications enable the snout to be flexed until straight while remaining within the elastic limits of the material and without evident alteration of the mechanical properties of the individual components of the cuticle across the structure and between species.
-	Thus, the flexibility of the rostrum appears to be derived \emph{exclusively} from modification of the composite architecture of the exoskeleton.
+	We posit that these modifications enable the snout to be flexed until straight while remaining within the elastic limits of the material, mitigating the risk of structural damage, and without evident alteration of the mechanical properties of the individual components of the cuticle across the structure and between species.
+	Thus, the flexibility and tensile strength of the rostrum appear to be derived \emph{exclusively} from modification of the composite architecture of the exoskeleton.
 	
 	Support for this hypothesis has come from three lines of evidence: 
 	\begin{enumerate}
@@ -116,6 +116,11 @@
 %MAJ, NMF: field collection of test specimens, procurement of specimen loans, specimen prep.
 %MAJ, NC, NMF: All authors contributed to the writing, review, and revision of the manuscript.
 	\section*{Author contributions}
+		\begin{description}
+		\item[Andrew Jansen] Conducted sectioning and staining, microscopy and imaging, tensile and fatigue testing, statistical analysis, and participated in manuscript preparation.
+		\item[Nikhilesh Chawla] Facilitated microscopy, tensile and fatigue testing, and participated in manuscript preparation.
+		\item[Nico Franz] Facilitated specimen acquisition and imaging, participated in manuscript preparation.
+		\end{description} 
 	
 	\section*{Additional information}
 		Supplementary information is available in the online version of the paper.
@@ -129,13 +134,37 @@
 
 %provide detailed methods here, subsection for each method, statistical analysis, statements of code and data avilability.
 	\section*{Methods}
-		\subsection*{Method 1}
+		\subsection*{Histological sectioning}
 			
-		\subsection*{Method 2}
+		\subsection*{Tensile and fatigue testing}
 
-		\subsection*{Method 3}
+		\subsection*{Specimen imaging and microscopy}
 			
 		\subsection*{Statistical analysis}
+			\paragraph*{General approach}
+				To explore the relationships between the composite structure and mechanical properties of the cuticle, we fit phylogenetic linear mixed-effects models to the data using maximum likelihood estimation.
+				In order to control for phylogenetic non-independence in the data, we included the species of each specimen as a random effect in all models.
+				We also allowed for correlation in the error term of the models, as specified by a variance-covariance matrix generated from a Brownian motion model of trait evolution along the phylogeny.
+				Response variables and covariates were natural-log transformed, as needed, to ensure model residuals were normally distributed and homoscedastic.
+				In all models, we tested whether the inclusion of phylogenetic correlation in the model error produced significantly better model fit, using a likelihood-ratio test and $R^{2}_{\sigma}$-difference test between the fully-specified model and a model lacking the phylogenetic effect.
+			\paragraph*{Hypothesis testing}
+				The following three hypotheses were tested using PGLMMs fitted using ML estimation:
+				\begin{enumerate}
+				\item The maximum sustained tensile force is proportional to the cross-sectional area of the endocuticle, and \emph{not} that of the exocuticle.
+				\item The ultimate tensile strength of the samples is inversely proportional to the ratio of exocuticle to endocuticle at the location of fracture.
+				\item Young's modulus of the samples is proportional to the length of the snout.
+				\end{enumerate}
+				
+				We fitted a fully-specified model with the cross-sectional area of endocuticle and exocuticle at the site of fracture as fixed effects, including an interaction term, and with maximum tensile force sustained prior to fracture as a response variable.
+				This model was then compared to models with only cross-sectional area of either endocuticle or exocuticle as the sole fixed effect in the model.
+				We then tested the first hypothesis by using likelihood-ratio tests and $R^{2}_{\beta*}$-difference tests between each of the three models.
+				
+				The hypothesis that 
+			
+ 
+			\paragraph*{Model selection and fitting}
+			\paragraph*{Estimating phylogenetic signal}
+		
 			
 		\subsection*{Code availability}
 			
