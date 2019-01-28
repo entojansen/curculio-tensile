@@ -1,6 +1,8 @@
 \documentclass[twocolumn, linenumbers, superscriptaddress]{revtex4-1}
 
+\usepackage{amsmath}
 \usepackage{graphicx}
+%TODO remove package: blindtext
 \usepackage{blindtext}
 \usepackage{gensymb}
 \usepackage{xcolor}
@@ -13,14 +15,14 @@
 \usepackage{cleveref}
 \graphicspath{{figures/}}
 
-%TODO NOTES! REMOVE FROM COMPLETE DRAFT-----_-----------------------------------
+%TODO NOTES! REMOVE FROM COMPLETE DRAFT-----------------------------------------
 \usepackage{xargs}
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 \newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
 \newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
 \newcommandx{\info}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
 \newcommandx{\improvement}[2][1=]{\todo[linecolor=purple,backgroundcolor=purple!25,bordercolor=purple,#1]{#2}}
-\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+\newcommandx{\noshow}[2][1=]{\todo[disable,#1]{#2}}
 %-------------------------------------------------------------------------------
 
 \begin{document}
@@ -84,7 +86,7 @@
 	Beetle cuticle is divided into two structurally and mechanically distinct regions, the (outer) exocuticle and (inner) endocuticle.
 	The exocuticle is characterized by a transversely-isotropic helicoidal structure that is comparatively rigid (though brittle) and has been the subject of many prior studies\unsure{numbers and refs}.
 	By contrast, the endocuticle of beetles is comprised of large, aligned bundles (macrofibers) of chitin that are strongly anisotropic\unsure{numbers again}.
-	Arranged in unidirectional laminae, the macrofibers contribute to the toughness of the exoskeleton by inhibiting crack formation and propagation between successive plies \cite{Kamp2010,Kamp2015,Hepburn1973}.
+	Arranged in unidirectional laminae, the macrofibers improve cuticle toughness by inhibiting crack formation and propagation between successive plies \cite{Kamp2010,Kamp2015,Hepburn1973}.
 	
 	In general, impact-prone areas and exaggerated structures, such as horns and legs exhibit cuticle organization that resists deformation and fracture.
 	Acorn weevils in the genus \textit{Curculio} are typified by an elongate structure of the head, called the rostrum (snout), which instead exhibits unusual distal flexibility.
@@ -95,7 +97,7 @@
 	
 	While this behavior has been observed in many species of \textit{Curculio}, it was unclear how the rostrum of female acorn weevils can withstand the repeated, often extreme bending incurred during the process of egg-chamber excavation.
 	In this study we characterize the composite profile of the rostral cuticle to account for the observed flexibility of the snout.
-	We show that the relative layer thicknesses and fiber orientation angles of the exocuticle and endocuticle of the rostrum are strongly differentiated from the head capsule and other body parts.
+	We show that the relative layer thicknesses and fiber orientation angles of the exocuticle and endocuticle of the rostrum are strongly differentiated from the head capsule and other body parts, and we predict the effect of these differences using Classical Laminate Theory (CLT).
 	Because recent studies have shown that the yield strength of the weevil rostrum exoskeleton is lower in tension than compression, we perform a comparative analysis of the ultimate tensile strength of the rostrum across species and snout morphotypes; we also report the results of displacement-controlled load cycling of the snout in a species with strongly curved morphology.
 	We relate an observed increase in the volume fraction of endocuticle in the rostrum to higher tensile strength at the rostral apex in all tested species, and find that a strongly curved rostrum can be flexed repeatedly without harm to the structure.
 	
@@ -104,51 +106,45 @@
 	Thus, the flexibility and tensile strength of the rostrum appear to be derived \emph{exclusively} from modification of the composite architecture of the exoskeleton.
 	To our knowledge, this is the first time that a modified composite profile has been reported as a means of enhancing structural elasticity in the insect exoskeleton.\info{630 words, reduce to 600 or less in revisions, structure of argument/narrative is good}
 }	
-	\section{Microstructure of the \textit{Curculio} rostrum}\label{sec:microstructure}
-		Insect cuticle is made up of chitin and numerous uncharacterized proteins, which effectively act as a matrix into which the chitin is embedded \cite{Nikolov2011,Nikolov2010,Vincent2004}.
-		The arrangement of the embedded chitin fibers is primarily responsible for the mechanical behavior of the cuticle, although this is modulated by the degree of tanning and water retention. \cite{Klocke2011,Vincent2004}.	
-		Accordingly, cuticle is often considered as a fiber-reinforced composite material; however, in beetles, the composite arrangement of the chitin fibers varies by cuticle region.	
-	
-		Insect cuticle is divisible into three regions (Figs.~INSERT-REFS-HERE), including (1) endocuticle, which is the most compliant and innermost region; and (3) exocuticle, which is the stiffest, hardest, and outermost region.
-		Between these lies (2) mesocuticle, which is similar in microstructure to exocuticle, but less sclerotized (tanned), usually acting as a thin transition zone \cite{Klocke2011,Vincent1982,Vincent2004}.
+	\section{Microstructure of the \textit{Curculio} rostrum}
+		In arthropods (including beetles), the exocuticle is comprised of numerous unidirectional laminae of chitin fibers; each layer is the thickness of a single fiber (2-4nm) embedded in a proteinaceous matrix.
+		These layers are stacked at a more or less constant angle to each other, thus forming a quasi-isotropic laminate referred to as the Bouligand structure \cite{Blackwell1980,Bouligand1972,Neville1976}. 
+		This layout effectively produces a transversely isotropic composite, mitigating the strong anisotropy of $\alpha$-chitin to yield a versatile building material for the exoskeleton.
 		
-		In general, these regions are confluent, and not necessarily sharply defined; for instance, mesocuticle is not always evident, and is sometimes considered part of the exocuticle.
-		In beetles, both exocuticle and mesocuticle (when present) are laminate, and have numerous laminae of unidirectional chitin fibers, each layer a single fiber thick (2-4nm), embedded in a proteinaceous matrix.
-		These layers are stacked at a more or less constant angle to each other in a helicoidal arrangement, referred to as the Bouligand structure \cite{Blackwell1980,Bouligand1972,Neville1976}. 
-		This microstructure allows exocuticle and mesocuticle to exhibit transverse isotropy, or complete isotropy in some cases, despite the strong anisotropy of $\alpha$-chitin.
+		Conversely, the endocuticle of Coleoptera retains the anisotropy of $\alpha$-chitin to improve fracture resistance of the cuticle.
+		Beetle endocuticle is unique among arthropods and is comprised of large (5-20$\mu$m OD) unidirectional bundles of chitin, called macrofibers.
+		Chitin macrofibers are orthotropic \improvement{insert E1, E2, E3 here} and arranged in unidirectional plies, as in Figs. \info{~INSERT-FIGS-HERE} \cite{Kamp2010,Kamp2015}.
+		Typically, adjacent macrofiber plies are paired and pseudo-orthogonal (i.e., angled approx. $90\degree$ to each other, see Figs.\info{~INSERT-REFS-HERE}), with a constant stacking angle \emph{between} pairs \info{what kind of laminate is this?}, although other configurations have been observed \cite{Hepburn1973,Kamp2010}.
+		This geometric sequence of the macrofiber laminae yields an approximately transversely isotropic composite, similar to the Bouligand structure.
+		Notably, the resulting laminate is less rigid than the exocuticle, but exhibits greater toughness because the pseudo-orthogonal plies effectively inhibit crack formation and propagation between successive layers \cite{Kamp2010,Kamp2015,Hepburn1973}.
 		
-		Conversely, the endocuticle of Coleoptera appears to take advantage of this anisotropy to improve fracture resistance of the exoskeleton.
-		Beetles in particular have a highly modified endocuticle comprised of large (5-20$\mu$m OD) unidirectional bundles of chitin, called macrofibers.
-		The macrofibers are strongly anisotropic, with an elastic modulus of ~8-9GPa along their longitudinal axis, but only 1-2 GPa along the transverse plane.
-		Macrofibers are aligned in layers, as in Figs~INSERT-FIGS-HERE \cite{Kamp2010,Kamp2015}.
-		Typically, endocuticle contains several layers of macrofibers, with the adjacent layers forming pairs. 
-		The layers \emph{within} each pair are pseudo-orthogonal (i.e., angled approx. $90\degree$ to each other, see Figs.~INSERT-REFS-HERE), while the stacking angle \emph{between} pairs is typically acute, although other configurations have been observed \cite{Hepburn1973,Kamp2010}.
-		It is thought that this arrangement of the macrofibers contributes to the toughness of beetle exoskeletons by inhibiting crack formation and propagation between successive plies \cite{Kamp2010,Kamp2015,Hepburn1973}.		
-		
-		We have found that in \textit{Curculio}, the head capsule (which is similar to the rest of the body) fits the general profile of endocuticle, with an angle of approximately $30\degree$ between successive pseudo-orthogonal plies.
-		Additionally, in the head capsule, the thickness of the exocuticle in cross section is nearly equal to that of the endocuticle; compared to the snout, this part of the head is fairly rigid.
-		
-		By contrast, the region beyond the scrobe (antennal channel) is quite flexible, even in fully desiccated specimens.
-		Serial thin sectioning of the snout has demonstrated that the cuticle in this region has a different composite structure (see Fig~INSERT-REFS-HERE) than the head capsule, namely:
+		Serial thin sectioning and SEM of fractured \textit{Curculio} specimens has revealed that endocuticle in the head capsule fits this general profile, with an angle of approximately $30\degree$ between successive pairs of pseudo-orthogonal plies.
+		Additionally, in the head capsule, the thickness of the exocuticle in cross section is nearly equal to that of the endocuticle\info{thickness measurements here}.
+		However, we have also found that the cuticle composite lay-up of the rostral apex differs from that of the head capsule (see Fig.\info{~INSERT-REFS-HER}E) in two key characteristics:
 
 		\begin{enumerate}
-			\item The exocuticle is reduced to a thin shell, with the endocuticle thickened to offset this reduction.
-			\item The endocuticular macrofibers exhibit no rotation between successive pseudo-orthogonal plies, which are all oriented at approx. $\pm45\degree$ to the longitudinal axis of the snout.
+			\item The exocuticle is reduced to a thin shell\info{measurement here}, with the endocuticle thickened \info{measurement here} to offset this reduction to maintain a constant cuticle thickness in the head.
+			\item The endocuticular macrofibers exhibit no rotation between successive pseudo-orthogonal plies, which are all oriented at approximately $\pm45\degree$ to the longitudinal axis of the snout (i.e., an antisymmetric $[\pm45\degree]$ angle-ply laminate).
 		\end{enumerate}
 		
-		We believe that each of these modifications contributes to the observed flexibility of the snout, but in different ways.
-		Because the exocuticle is generally more rigid (and brittle) than the endocuticle due to its transverse isotropy and microstructure, a reduction in the relative thickness of this region would likely have the effect of increasing the flexibility of the resulting composite.
-		Additionally, aligning the layers of endocuticle as a 45 deg cross ply would likely reduce the bending moment of the structure.
-		The combined effect of these modifications is that the apex of the rostrum is able to bend until completely straight without fracture.
-		
-		Correspondingly, the portion of the snout between the head capsule and apex of the scrobe exhibits a gradual transition in composite profile along an anterior-posterior gradient.		
-		In previous work we identified these modifications to the composite structure of the cuticle, but only within a single species, \textit{C. longinasus} Chittenden, 1927 \cite{Jansen2016, Singh2016}.
+		In previous work we identified these modifications to the composite structure of the cuticle within a single species, \textit{C. longinasus} Chittenden, 1927 \cite{Jansen2016, Singh2016}.
 		This composite profile has now been uncovered in the rostral apex of six additional, phylogenetically disparate, species (listed below), indicating that this is likely a genus-wide trait.
+		We note that in all species, the portion of the snout between the head capsule and apex of the scrobe exhibits a gradual transition in composite profile along an anterior-posterior gradient.
 		
-		Notably, we could find no evidence of resilin, as indicated by florescent microscopy, anywhere in the cuticle of the head (including the rostrum).
-		We also observed no difference in total cuticle thickness between the head capsule and rostral apex, only differences in relative layer thicknesses.
-		Below we demonstrate that that the endocuticle does not vary in tensile strength across the rostrum, making it unlikely that differences in sclerotization or chitin composition within the cuticle are responsible for the mechanical behavior of the rostrum.
-		The available evidence therefore suggests that the relative flexibility of the snout is solely derived from the composite profile of its cuticle.
+		To investigate the effect of these cuticle modifications, we estimated the engineering and flexural elastic moduli of the cuticle in both the rostral apex and head capsule using Classical Laminate Plate Theory (CLPT), as detailed in our methods.
+		We previously derived the effective elastic constants of the cuticle regions of \textit{C. longinasus}, which we used here to construct constitutive equations for the entire cuticle of that species.
+		The cuticle of the head capsule has moduli\info{insert numbers here}.
+		The cuticle of the rostral apex has moduli\info{insert numbers here}.
+		
+		Interestingly, each of these modifications contributes to the observed flexibility of the snout.
+		
+		\info{some explanation in source code}
+		\noshow{Because the exocuticle is generally more rigid (and brittle) than the endocuticle due to its transverse isotropy and microstructure, a reduction in the relative thickness of this region would likely have the effect of increasing the flexibility of the resulting composite.
+		Additionally, aligning the layers of endocuticle as a 45 deg cross ply would likely reduce the bending moment of the structure.
+		The combined effect of these modifications is that the apex of the rostrum is able to bend until completely straight without fracture.}
+		
+		Below we demonstrate that the endocuticle does not vary in tensile strength across the rostrum or between species, making it unlikely that differences in sclerotization or chitin composition within the cuticle are responsible for the mechanical behavior of the rostrum.
+		The available evidence therefore suggests that the relative flexibility of the snout is primarily derived from the composite profile of its cuticle.
 		
 	\section{Force-controlled loading to fracture}
 		To better characterize the mechanical behavior of the snout as an integrated whole, we performed tensile testing on the snouts of six species in the genus \textit{Curculio}, representing a mixture of closely and distantly related taxa.
@@ -201,7 +197,7 @@
 		
 		In addition, the exocuticle typically appears to fracture before the endocuticle, with shear-cusp formation evident over unbroken endocuticle.
 		We note, however, that the exocuticle of weevils/beetles is anchored to the endocuticle by cross-linking fibers in a transition zone described by Kamp et al. (see refs.).
-		The presence of shear-cusps therefore indicates that the fibers of the endocuticle are shearing past each other within each ply along the radial/normal plane (type II shearing???).
+		The presence of shear-cusps therefore indicates that the fibers of the endocuticle are shearing past each other within each ply along the radial/normal plane (type II shearing???, extension shear-coupling).
 		Furthermore, given the delamination observed between plies, the layers of endocuticle are liekly shearing past each other (type III shearing) along the transverse plane.
 		We therefore infer that, under tension, the endocuticle tends to deform visco-elastically and plastically along the longitudinal axes of the macrofibers, while the overlying exocuticle exhibits brittle fracture due to shearing between the stretching endocuticle fibers to which it is anchored.
 		
@@ -358,7 +354,211 @@
 		\subsection*{Tensile and fatigue testing}
 
 		\subsection*{Specimen imaging and microscopy}
-			
+		
+		\subsection*{Constitutive modeling of the cuticle}
+			\paragraph*{General Approach}
+			\paragraph*{Cuticle profile of model}
+				The cuticle of \textit{C. longinasus} is 50 microns thick; we use \textit{C. longinasus} because we have constitutive models for the cuticle regions of this species.
+				We assumed equal layer thicknesses in the endocuticle of the basal cuticle, and equal thicknesses of exocuticle and endocuticle.
+				In the apical cuticle we assumed the exocuticle and upper 8 layers of the endocuticle were each 5 microns thick, with 4 thinner layers of endocuticle, each 1.5 microns thick.
+				The angles of the endocuticle layers for both types of cuticle are as described above.
+			\paragraph*{Permutations}
+				We additionally calculated models for two hypothetical hybrid cuticles: one model has the layer thicknesses of the apex, but fiber orientations of the base, while the second has the fiber orientations of the apex, but the layer thicknesses of the base.
+			\paragraph*{Classical Laminate Plate Theory}
+				We begin by calculating the 2D reduced stiffness matrix for each part of the cuticle.
+				For orthotropic materials with the principal axes parallel to the ply edges, the reduced stiffness matrix is defined as follows:
+				
+				\begin{equation}
+				[Q] =
+					\begin{bmatrix}
+						Q_{11} & Q_{12} & 0 \\
+						Q_{21} & Q_{22} & 0 \\
+						0 & 0 & Q_{66}
+					\end{bmatrix}\,,
+				\end{equation}
+				
+				and where:
+				
+				\begin{equation}
+				\begin{aligned}
+					Q_{11} & = \frac{E_{1}}{1 - \nu_{12}\nu_{21}}\,, \\
+					Q_{12} & = \frac{E_{1}\nu_{21}}{1 - \nu_{12}\nu_{21}} = Q_{21}\,, \\
+					Q_{21} & = \frac{E_{2}\nu_{12}}{1 - \nu_{12}\nu_{21}} = Q_{12}\,, \\
+					Q_{22} & = \frac{E_{2}}{1 - \nu_{12}\nu_{21}}\,, \\
+					Q_{66} & = G_{12}\,.
+				\end{aligned}
+				\end{equation}
+				
+				For each layer $k$, the reduced stiffness matrix is transformed to account for the layer orientation angle $\theta$ within the laminate coordinate system, yielding a reduced transformed stiffness matrix according to:
+				
+				\begin{equation}
+					[\bar{Q}] = [T]^{-1}[Q][T]^{-T}\,,
+				\end{equation}
+				
+				where the transformation matrix $[T]$ is defined as:
+				
+				\begin{equation}
+				[T] =
+				 \begin{bmatrix}
+					 \cos^2\theta & \sin^2\theta & 2\cos\theta\sin\theta \\
+					 \sin^2\theta & \cos^2\theta & -2\cos\theta\sin\theta \\
+					 -\cos\theta\sin\theta & \cos\theta\sin\theta & \cos^2\theta - \sin^2\theta
+				 \end{bmatrix}\,.
+				\end{equation}
+				
+				Using the lay-ups specified for the cuticle permutations, we calculate the extensional stiffness matrix $[A]$, bending stiffness matrix $[D]$, and bending-extension coupling matrix $B$ for each laminate consisting of $n$ layers at a distance $z$ from the laminate mid-plane.
+				The elements of these matrices can be found according to:
+				
+				\begin{equation}
+					\begin{aligned}
+						A_{ij} & = \sum_{k = 1}^{n}(\bar{Q}_{ij})_k(z_{k} - z_{k-1})\,, \\
+						B_{ij} & = \frac{1}{2}\sum_{k = 1}^{n}(\bar{Q}_{ij})_k(z^2_{k} - z^2_{k-1})\,, \\
+						D_{ij} & = \frac{1}{3}\sum_{k = 1}^{n}(\bar{Q}_{ij})_k(z^3_{k} - z^3_{k-1})\,.
+					\end{aligned}
+				\end{equation}
+				
+				These stiffness matrices relate vectors of resultant forces $\{N\}$ and bending moments $\{M\}$ to mid-surface strains and curvatures $\{\epsilon^{\degree}\}$ and $\{\kappa\}$, respectively, in the laminate according to the following relationship:
+				
+				\begin{equation}
+					\begin{Bmatrix}
+						\{N\} \\
+						\{M\}
+					\end{Bmatrix}
+					=
+					\begin{bmatrix}
+						[A] & [B] \\
+						[B] & [D]
+					\end{bmatrix}
+					\begin{Bmatrix}
+					\{\epsilon^{\degree}\} \\
+					\{\kappa\}
+					\end{Bmatrix}\,.
+				\end{equation}
+				
+				For symmetric laminates, $[B] = 0$, and therefore:
+				
+				\begin{equation}
+				\label{eqn::abbd}
+					\begin{aligned}
+						\{N\} & = [A]\{\epsilon^{\degree}\}\,, \\
+						\{M\} & = [D]\{\kappa\}\,,						
+					\end{aligned}\,,
+				\end{equation}
+				
+				or, in expanded form:
+				
+				\begin{equation}
+					\begin{aligned}
+						\begin{Bmatrix}
+							N_{xx} \\
+							N_{yy} \\
+							N_{xy}
+						\end{Bmatrix}
+						& =
+						\begin{bmatrix}
+							A_{11} & A_{12} & A_{16} \\
+							A_{21} & A_{22} & A_{26} \\
+							A_{61} & A_{62} & A_{66}
+						\end{bmatrix}
+						\begin{Bmatrix}
+							\epsilon^{\degree}_{xx} \\
+							\epsilon^{\degree}_{yy} \\
+							\gamma^{\degree}_{xy}
+						\end{Bmatrix}\,,
+						\\
+						\begin{Bmatrix}
+							M_{xx} \\
+							M_{yy} \\
+							M_{xy}
+						\end{Bmatrix}
+						& =
+						\begin{bmatrix}
+							D_{11} & D_{12} & D_{16} \\
+							D_{21} & D_{22} & D_{26} \\
+							D_{61} & D_{62} & D_{66}
+						\end{bmatrix}
+						\begin{Bmatrix}
+							\kappa_{xx} \\
+							\kappa_{yy} \\
+							\kappa_{xy}
+						\end{Bmatrix}\,.
+					\end{aligned}
+				\end{equation}
+				
+				If we make the simplifying assumptions (see ref.\info{reddy, 2007 and jones, 1998}) that \textbf{(1)} the laminate experiences pure axial loading and transverse bending (i.e., $N_{yy} = N_{xy} = 0$ and $M_{yy} = M_{xy} = 0$, respectively) and \textbf{(2)} the laminate is a beam of sufficiently high aspect ratio to minimize the Poisson effect and anisotropic shear coupling (i.e., below we effectively let $A^*_{12} = A^*_{16} = 0$ and $D^*_{12} = D^*_{16} = 0$), then we can calculate the in-plane effective flexural and axial Young's moduli of the laminate along the x-axis.
+				
+				For axial Young's modulus of the laminate, we first define the average membrane stresses in the laminate as:
+				
+				\begin{equation}
+					\{\bar{\sigma}^m\} = \frac{\{N\}}{z_1 - z_n}\,.
+				\end{equation}
+				
+				By substitution in Eq.~\ref{eqn::abbd}, we find:
+				
+				\begin{equation}
+					\begin{aligned}
+						\begin{Bmatrix}
+							\bar{\sigma}^m_{xx} \\
+							\bar{\sigma}^m_{yy} \\
+							\bar{\tau}^m_{xy}
+						\end{Bmatrix}
+						& = \frac{1}{(z_1 - z_n)}
+						\begin{bmatrix}
+							A_{11} & A_{12} & A_{16} \\
+							A_{21} & A_{22} & A_{26} \\
+							A_{61} & A_{62} & A_{66}
+						\end{bmatrix}
+						\begin{Bmatrix}
+							\epsilon^m_{xx} \\
+							\epsilon^m_{yy} \\
+							\gamma^m_{xy}
+						\end{Bmatrix}\,,
+					\end{aligned}
+				\end{equation}
+				
+				and, by inverting this equation (let $A^* = A^{-1}$) and substituting based on the assumptions above, we infer:
+				
+				\begin{equation}
+					\epsilon^m_{xx} = (z_1 - z_n)A^{*}_{11}\bar{\sigma}^m_{xx}\,.
+				\end{equation}
+				
+				We therefore define Young's modulus for effective axial elasticity as:
+				
+				\begin{equation}
+					E^m_{xx} = \frac{\bar{\sigma}^m_{xx}}{\epsilon^m_{xx}} = \frac{1}{A^*_{11}(z_1 - z_k)}
+				\end{equation}
+				
+				To find the transverse flexural Young's modulus of the laminate, we first specify the moment-curvature relation of an Euler-Bernoulli beam:
+				
+				\begin{equation}
+				\label{eqn::bee}
+				M = EI\kappa\,.
+				\end{equation}
+				
+				Along the x-axis, the second moment of area for a rectangular cross-section is:
+				
+				\begin{equation}
+					I_{yy} = \frac{b(z_1 - z_n)^3}{12}\,,
+				\end{equation}	
+				
+				Given the assumption that $M_{yy} = M_{xy} = 0$, the moment along the x-axis is related to the moment of the beam by:
+				
+				\begin{equation}
+					M = M_{xx}b\,.
+				\end{equation}
+				
+				Thus, given the assumption that $D_{12} = D_{16} = 0$, Young's modulus for the effective transverse flexural elasticity of the laminate can be found by making Eq.~\ref{eqn::bee} specific to transverse flexure of the x-axis and rearranging the terms:
+				
+				\begin{equation}
+					E^m_{xx} = \frac{12M_{xx}}{(z_1 - z_n)^3\kappa_{xx}}
+				\end{equation}
+				
+				From inversion of Eq.~\ref{eqn::abbd} (let $D^* = D^{-1}$) this reduces to:
+				
+				\begin{equation}
+					E^m_{xx} = \frac{12}{(z_1 - z_n)^3D^*_{11}}
+				\end{equation}
+					
 		\subsection*{Statistical analysis}
 			\paragraph*{General approach}
 				To explore the relationships between the composite structure and mechanical properties of the cuticle, we fit phylogenetic linear mixed-effects models to the data using maximum likelihood estimation.
@@ -382,6 +582,7 @@
 			
  
 			\paragraph*{Model selection and fitting}
+			
 			\paragraph*{Estimating phylogenetic signal}
 		
 			
