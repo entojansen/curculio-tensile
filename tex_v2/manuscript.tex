@@ -5,6 +5,7 @@
 %TODO remove package: blindtext
 \usepackage{blindtext}
 \usepackage{gensymb}
+\usepackage{textgreek}
 \usepackage{xcolor}
 \usepackage[colorlinks]{hyperref}
 	\hypersetup{colorlinks,
@@ -81,10 +82,10 @@
 %	Paragraph 3 - modified cuticle in curculio
 %	Paragraph 4 - study objectives
 %	Paragraph 5 - short segue/ signposting
-	{The exoskeleton of Coleoptera (beetles) is a hierarchically-structured fibrous composite typified by variously arranged $\alpha$-chitin (N-acetylglucosamine) nanofibrils embedded in a heterogeneous protein matrix.
-	Although $\alpha$-chitin is brittle and strongly anisotropic\unsure{give some numbers here}, beetle cuticle is simultaneously rigid and tough due to its uniquely layered microstructure\unsure{give more numbers here}.
+	{The exoskeleton of Coleoptera (beetles) is a hierarchically-structured fibrous composite typified by variously arranged \textalpha-chitin (N-acetylglucosamine) nanofibrils embedded in a heterogeneous protein matrix.
+	Although \textalpha-chitin is brittle and strongly anisotropic\unsure{give some numbers here}, beetle cuticle is simultaneously rigid and tough due to its uniquely layered microstructure\unsure{give more numbers here}.
 	Beetle cuticle is divided into two structurally and mechanically distinct regions, the (outer) exocuticle and (inner) endocuticle.
-	The exocuticle is characterized by a transversely-isotropic helicoidal structure that is comparatively rigid (though brittle) and has been the subject of many prior studies\unsure{numbers and refs}.
+	The exocuticle is characterized by a transversely-isotropic helicoidal structure that is comparatively rigid (though brittle) and has been the subject of numerous prior studies\unsure{numbers and refs}.
 	By contrast, the endocuticle of beetles is comprised of large, aligned bundles (macrofibers) of chitin that are strongly anisotropic\unsure{numbers again}.
 	Arranged in unidirectional laminae, the macrofibers improve cuticle toughness by inhibiting crack formation and propagation between successive plies \cite{Kamp2010,Kamp2015,Hepburn1973}.
 	
@@ -97,7 +98,8 @@
 	
 	While this behavior has been observed in many species of \textit{Curculio}, it was unclear how the rostrum of female acorn weevils can withstand the repeated, often extreme bending incurred during the process of egg-chamber excavation.
 	In this study we characterize the composite profile of the rostral cuticle to account for the observed flexibility of the snout.
-	We show that the relative layer thicknesses and fiber orientation angles of the exocuticle and endocuticle of the rostrum are strongly differentiated from the head capsule and other body parts, and we predict the effect of these differences using Classical Laminate Theory (CLT).
+	We show that the relative layer thicknesses and fiber orientation angles of the exocuticle and endocuticle of the rostrum are strongly differentiated from the head capsule and other body parts, and we estimate the effect of these differences using Classical Laminate Plate Theory (CLPT).
+	
 	Because recent studies have shown that the yield strength of the weevil rostrum exoskeleton is lower in tension than compression, we perform a comparative analysis of the ultimate tensile strength of the rostrum across species and snout morphotypes; we also report the results of displacement-controlled load cycling of the snout in a species with strongly curved morphology.
 	We relate an observed increase in the volume fraction of endocuticle in the rostrum to higher tensile strength at the rostral apex in all tested species, and find that a strongly curved rostrum can be flexed repeatedly without harm to the structure.
 	
@@ -107,13 +109,12 @@
 	To our knowledge, this is the first time that a modified composite profile has been reported as a means of enhancing structural elasticity in the insect exoskeleton.\info{630 words, reduce to 600 or less in revisions, structure of argument/narrative is good}
 }	
 	\section{Microstructure of the \textit{Curculio} rostrum}
-		In arthropods (including beetles), the exocuticle is comprised of numerous unidirectional laminae of chitin fibers; each layer is the thickness of a single fiber (2-4nm) embedded in a proteinaceous matrix.
+		In arthropods (including beetles), the exocuticle is comprised of numerous unidirectional laminae of chitin fibers; each layer is the thickness of a single fiber (2-4\,nm) embedded in a proteinaceous matrix.
 		These layers are stacked at a more or less constant angle to each other, thus forming a quasi-isotropic laminate referred to as the Bouligand structure \cite{Blackwell1980,Bouligand1972,Neville1976}. 
-		This layout effectively produces a transversely isotropic composite, mitigating the strong anisotropy of $\alpha$-chitin to yield a versatile building material for the exoskeleton.
+		This layout effectively produces a transversely isotropic composite, mitigating the strong anisotropy of \textalpha-chitin to yield a versatile building material for the exoskeleton.
 		
-		Conversely, the endocuticle of Coleoptera retains the anisotropy of $\alpha$-chitin to improve fracture resistance of the cuticle.
-		Beetle endocuticle is unique among arthropods and is comprised of large (5-20$\mu$m OD) unidirectional bundles of chitin, called macrofibers.
-		Chitin macrofibers are orthotropic \improvement{insert E1, E2, E3 here} and arranged in unidirectional plies, as in Figs. \info{~INSERT-FIGS-HERE} \cite{Kamp2010,Kamp2015}.
+		Beetle endocuticle, however, is unique among arthropods and is comprised of large (5-20\,{\textmu}m OD) unidirectional bundles of chitin, called macrofibers.
+		Chitin macrofibers are orthotropic ($E_1 = 8.5$\,GPa, $E_2 = E_3 = 0.52$\,GPa \cite{Jansen2016}) and arranged in unidirectional plies, as in Figs. \info{~INSERT-FIGS-HERE} \cite{Kamp2010,Kamp2015}.
 		Typically, adjacent macrofiber plies are paired and pseudo-orthogonal (i.e., angled approx. $90\degree$ to each other, see Figs.\info{~INSERT-REFS-HERE}), with a constant stacking angle \emph{between} pairs \info{what kind of laminate is this?}, although other configurations have been observed \cite{Hepburn1973,Kamp2010}.
 		This geometric sequence of the macrofiber laminae yields an approximately transversely isotropic composite, similar to the Bouligand structure.
 		Notably, the resulting laminate is less rigid than the exocuticle, but exhibits greater toughness because the pseudo-orthogonal plies effectively inhibit crack formation and propagation between successive layers \cite{Kamp2010,Kamp2015,Hepburn1973}.
@@ -183,7 +184,7 @@
 		We therefore believe that under normal conditions in life, repeated bending of the snout does exceed the yield/plastic limit of the cuticle, and the bending strain is purely elastic/visco-elastic.
 		
 		We cannot fully account for these results, but we speculate that the microstructure of the endocuticle is resposible for what we observed.
-		The endocuticle is made of aligned $\alpha$-chitin nanofibrils whose crystaline structure is enforced by hydrogen bonds between individual chitin chains along their length.
+		The endocuticle is made of aligned \textalpha-chitin nanofibrils whose crystaline structure is enforced by hydrogen bonds between individual chitin chains along their length.
 		The viscoelasticity of the cuticle is thought, in part, to come from slippage between these chains as the hydrogen bonds break and reform in response to shearing between the chitin molecules.
 		We believe that repeated strain may have caused such slippage in the endocuticle of the rostral apex during the fatigue test, but without sufficient time for the material to \textit{completely} relax after deformation, the specimen would slowly accumulate strain and consequently deform visco-elastically/visco-plastically.
 		After 24 hours soaking in ethanol and water, the hydrogen bonds would relax sufficiently to allow the specimen to return to its original configuration, dissipating the accumulated strain without any damage to the specimen.
@@ -193,7 +194,7 @@
 			
 		In cross-section, the exocuticle consistently presented a smooth, nearly continuous fracture surface, indicative of relatively brittle fracture, likely due to the microarchitecture and resultant transverse isotropy of the Bouligand structure (explain this).
 		Endocuticle, on the other hand exhibited severe delamination, ply-splitting, and fiber pulling, consistent with viscoelastic/plastic behavior shown in previous studies and congruent with theoretical consideration of the microstructure of this material (name something here). 
-		These patterns indicate that the endocuticle is probably less brittle than the exocuticle, most likely due to the alignment of the $\alpha$-chitin fibers in each macrofiber.
+		These patterns indicate that the endocuticle is probably less brittle than the exocuticle, most likely due to the alignment of the \textalpha-chitin fibers in each macrofiber.
 		
 		In addition, the exocuticle typically appears to fracture before the endocuticle, with shear-cusp formation evident over unbroken endocuticle.
 		We note, however, that the exocuticle of weevils/beetles is anchored to the endocuticle by cross-linking fibers in a transition zone described by Kamp et al. (see refs.).
@@ -219,7 +220,15 @@
 	
 	\begin{thebibliography}{50}
 	%50 references (as a guideline, in order of appearance in text)
-		\section*{References}	
+		\section*{References}
+			\bibitem{Jansen2016}
+				Jansen, M. A., Singh, S. S., Chawla, N., \& Franz, N. M.
+				A multilayer micromechanical model of the cuticle of \textit{Curculio longinasus} Chittenden, 1927 (Coleoptera: Curculionidae).
+				\textit{J. Struct. Biol.}
+				\textbf{195: 2,}
+				139--158,
+				(2016).
+				
 			\bibitem{Klocke2011}
 				Klocke, D. \& Schmitz, H.
 				Water as a major modulator of the mechanical properties of insect cuticle.
@@ -360,7 +369,7 @@
 			\paragraph*{Cuticle profile of model}
 				The cuticle of \textit{C. longinasus} is 50 microns thick; we use \textit{C. longinasus} because we have constitutive models for the cuticle regions of this species.
 				We assumed equal layer thicknesses in the endocuticle of the basal cuticle, and equal thicknesses of exocuticle and endocuticle.
-				In the apical cuticle we assumed the exocuticle and upper 8 layers of the endocuticle were each 5 microns thick, with 4 thinner layers of endocuticle, each 1.5 microns thick.
+				In the apical cuticle we assumed the exocuticle and upper 8 layers of the endocuticle were each 5 microns thick, with 4 thinner layers of endocuticle, each 1.25\,{\textmu}m thick.
 				The angles of the endocuticle layers for both types of cuticle are as described above.
 			\paragraph*{Permutations}
 				We additionally calculated models for two hypothetical hybrid cuticles: one model has the layer thicknesses of the apex, but fiber orientations of the base, while the second has the fiber orientations of the apex, but the layer thicknesses of the base.
@@ -525,7 +534,7 @@
 				We therefore define Young's modulus for effective axial elasticity as:
 				
 				\begin{equation}
-					E^m_{xx} = \frac{\bar{\sigma}^m_{xx}}{\epsilon^m_{xx}} = \frac{1}{A^*_{11}(z_1 - z_k)}
+					E^m_{xx} = \frac{\bar{\sigma}^m_{xx}}{\epsilon^m_{xx}} = \frac{1}{(z_1 - z_k)A^*_{11}}
 				\end{equation}
 				
 				To find the transverse flexural Young's modulus of the laminate, we first specify the moment-curvature relation of an Euler-Bernoulli beam:
@@ -550,13 +559,13 @@
 				Thus, given the assumption that $D_{12} = D_{16} = 0$, Young's modulus for the effective transverse flexural elasticity of the laminate can be found by making Eq.~\ref{eqn::bee} specific to transverse flexure of the x-axis and rearranging the terms:
 				
 				\begin{equation}
-					E^m_{xx} = \frac{12M_{xx}}{(z_1 - z_n)^3\kappa_{xx}}
+					E^f_{xx} = \frac{12M_{xx}}{(z_1 - z_n)^3\kappa_{xx}}
 				\end{equation}
 				
 				From inversion of Eq.~\ref{eqn::abbd} (let $D^* = D^{-1}$) this reduces to:
 				
 				\begin{equation}
-					E^m_{xx} = \frac{12}{(z_1 - z_n)^3D^*_{11}}
+					E^f_{xx} = \frac{12}{(z_1 - z_n)^3D^*_{11}}
 				\end{equation}
 					
 		\subsection*{Statistical analysis}
