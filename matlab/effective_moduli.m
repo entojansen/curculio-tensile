@@ -36,9 +36,10 @@ cuticle = [exo; endo];
 %--------------------------------------------------------------------------
 %sequence for basal portion of head
 base_z = (1 / 480) * [-24 -12:-1 1:12 24]; %48 layers, 50 microns => mm
-base_theta = 30 * [0 3:8 -(-5:0); 0:5 -(-8:-3) 0]; %correct angle sequence
+base_theta = 30 * [ 3:8 -(-5:0); 0:5 -(-8:-3)]; %30 deg angle sequence
+%subtract 5 deg  after matrix to maximize flexural stiffness
 base_seq = [1, repelem(2, 24) 1]; %1 for exocuticle, 2 for endocuticle
-base_layup = [base_z; base_theta(1:26); base_seq];
+base_layup = [base_z; 0 base_theta(1:24) 0; base_seq];
 
 %--------------------------------------------------------------------------
 %sequence for apical portion of head
@@ -49,7 +50,7 @@ apex_seq = [1, repelem(2, 24) 1]; %same sequence as base
 apex_layup = [apex_z; apex_theta(1:26); apex_seq];
 
 %--------------------------------------------------------------------------
-%permutations: exo thickness, endo angle; exo angle, endo thickness
+%permutations: base thickness, apex angle; base angle, apex thickness
 mod_theta_layup = [base_layup(1, :); apex_layup(2, :); base_layup(3, :)];
 
 mod_z_layup = [apex_layup(1, :); base_layup(2, :); base_layup(3, :)];
