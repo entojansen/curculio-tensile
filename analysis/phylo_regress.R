@@ -452,8 +452,8 @@ Analysis4 = function(phylogeny, raw.data, axis.labels) {
 main = function() {
   # Clear workspace
   rm(list = ls())
-  setwd(paste('C:/Users/Andrew/Documents/Current Projects/',
-              'Curculio Mechanical Testing/Tensile Testing/Analysis', sep=''))
+  setwd(paste('C:/Users/Andrew/Documents/GitHub/',
+              'curculio-tensile/analysis', sep=''))
   
   # Load gplots for plotCI
   library(ggplot2)
@@ -589,7 +589,7 @@ main = function() {
   writeLines('Comparison 4a: Etan low vs. length')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  raw.data$phenotype = raw.data$uts / raw.data$ufs
+  raw.data$phenotype = raw.data$Etanl
   raw.data$cofactor = raw.data$length
   Analysis1(phylo.vcv, raw.data)
 
@@ -597,10 +597,10 @@ main = function() {
   readline(prompt = 'Etan high vs. length: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Comparison 4a: Etan high vs. length')
+  writeLines('Comparison 4b: Etan high vs. length')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  raw.data$phenotype = raw.data$uts / raw.data$ufs
+  raw.data$phenotype = raw.data$Etanh
   raw.data$cofactor = raw.data$length
   Analysis1(phylo.vcv, raw.data)
 
@@ -608,7 +608,7 @@ main = function() {
   readline(prompt = 'Esec vs. length: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Comparison 4a: Esec low vs. length')
+  writeLines('Comparison 4c: Esec vs. length')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = raw.data$uts / raw.data$ufs
@@ -727,7 +727,7 @@ main = function() {
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$Esec)
   raw.data$cofactor = log(raw.data$length)
-  comparison = c('ln(Secant Modulus [MPa]', 'ln(Rostrum Length [mm2])')
+  comparison = c('ln(Secant Modulus [MPa])', 'ln(Rostrum Length [mm2])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 

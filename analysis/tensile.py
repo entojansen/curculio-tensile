@@ -50,16 +50,29 @@ class specimen:
 
 
         self.__Eindex__ = []
-        lower = 0.00 #self.__ufs__ * 0
-        upper = 0.015 #self.__ufs__ * 0.20
+        lower = self.__ufs__ * 0
+        upper = self.__ufs__ * 0.33
         self.__Eindex__.append(len([x for x in takewhile(lambda x: x[1] <= lower, enumerate(self.__epsilonN__))]))
         self.__Eindex__.append(len([y for y in takewhile(lambda y: y[1] <= upper, enumerate(self.__epsilonN__))]))
         xvals = self.__epsilonN__[self.__Eindex__[0]:self.__Eindex__[1]]
         yvals = self.__sigmaN__[self.__Eindex__[0]:self.__Eindex__[1]]
         self.__E__ = linreg(xvals, yvals) #engineering stress and strain via Hooke's Law
 
-        self.__Etanl__ = self.__E__
+        self.__Etanl__ = self.__E__[0]
         self.__Etanh__ = 0
+
+        t_upper = 0
+        t_lower = 0
+
+        for i in range(len(self.__epsilonN__)-1):
+            ub = self.__epsilonN__[i+1]
+            lb = self.__epsilonN__[i]
+            uh = self.__sigmaN__[i+1]
+            lh = self.__sigmaN__[i]
+            t_upper += (ub - lb) * uh
+            t_lower += (ub - lb) * lh
+
+        self.__U__ = (t_upper + t_lower) / 2
 
     def asuid(self):
         return self.__asuid__
@@ -164,6 +177,9 @@ class specimen:
     def ufs(self):
         return self.__ufs__
 
+    def U(self):
+        return self.__U__
+
 def as_si(x, ndp):
     s = '{x:0.{ndp:d}e}'.format(x=x, ndp=ndp)
     m, e = s.split('e')
@@ -240,8 +256,15 @@ def stress_strain(spec_set, save=True, i=0, j=-1):
         ax3.set_xlabel('Strain (ln(L/L0) or dL/L0)')
 
         print(spec.asuid()+' '+spec.species())
-        new_l = spec.ufs() * 0.65
-        new_u = spec.ufs() * 0.85
+        new_l = spec.ufs() * 0.00
+        new_u = spec.ufs() * 0.33
+        spec.recalcE(lower = new_l, upper = new_u, graphical=False, normal=False)
+        ax3.plot(spec.epsilonN()[spec.Eindex(0):spec.Eindex(1)],
+                 spec.E()*spec.epsilonN()[spec.Eindex(0):spec.Eindex(1)] + spec.E(1),
+                 color='r')
+
+        new_l = spec.ufs() * 0.67
+        new_u = spec.ufs() * 1.00
         spec.recalcE(lower = new_l, upper = new_u, graphical=False, normal=False)
         ax3.plot(spec.epsilonN()[spec.Eindex(0):spec.Eindex(1)],
                  spec.E()*spec.epsilonN()[spec.Eindex(0):spec.Eindex(1)] + spec.E(1),
@@ -249,8 +272,9 @@ def stress_strain(spec_set, save=True, i=0, j=-1):
 
         true = mpatches.Patch(color='gray', label='True')
         eng = mpatches.Patch(color='black', label='Nominal')
-        E = mpatches.Patch(color='r', label='E = {}MPa'.format(int(round(spec.E()))))
-        ax3.legend(handles=[true, eng, E], loc=2, fontsize = 6)
+        E1 = mpatches.Patch(color='r', label='E1 = {}MPa'.format(int(round(spec.Etanl()))))
+        E2 = mpatches.Patch(color='r', label='E2 = {}MPa'.format(int(round(spec.E()))))
+        ax3.legend(handles=[true, eng, E1, E2], loc=2, fontsize = 6)
         #ax3.set_title('Stress vs. Nominal Strain')
         #ax3.set_xlim(0, 1)
         #ax3.set_ylim(0, 300)
@@ -287,11 +311,12 @@ def xyplot(spec_set, save = True):
     ax.legend(handles=[car, pro, hum, sul, uni, vic], loc=4, fontsize = 7)
 
     for spec in spec_set:
-        new_l = spec.ufs() * 0.65
-        new_u = spec.ufs() * 0.85
+        new_l = spec.ufs() * 0.67
+        new_u = spec.ufs() * 1.00
         spec.recalcE(lower = new_l, upper = new_u, graphical=False, normal=False)
-        x = ln(spec.length())
-        y = ln(spec.ufs())
+        x = ln(spec.ufs())
+        y = ln(spec.U())
+        #spec.uts() / spec.ufs()
 
         if spec.species() == 'caryae':
             ax.plot(x, y, color='r', marker ='o')
@@ -355,7 +380,7 @@ def xyzplot(spec_set):
     for spec in spec_set:
         spec.recalcE(graphical=False, normal=False)
         x = (spec.length())
-        y = (spec.uts() / spec.ufs())
+        y = (spec.U())
         z = (spec.exo() / spec.endo())
         if spec.species() == 'caryae':
             ax.scatter(x, y, z, c='r')
@@ -392,7 +417,7 @@ def xyzplot(spec_set):
 
 def write_data(specimens, filename = 'tensile.csv'):
     outfile=open(filename,'w')
-    print('asuid,species,specimen,length,exo,endo,total,fmax,uts,dmax,ufs,Etanl,Etanh,Esec', file=outfile)
+    print('asuid,species,specimen,length,exo,endo,total,fmax,uts,dmax,ufs,Etanl,Etanh,Esec,Ut', file=outfile)
     humeralis = 0
     caryae = 0
     proboscideus = 0
@@ -432,9 +457,10 @@ def write_data(specimens, filename = 'tensile.csv'):
               spec.uts(),
               spec.dmax(),
               spec.ufs(),
-              spec.Etanl()[0],
+              spec.Etanl(),
               spec.E(),
               spec.uts() / spec.ufs(),
+              spec.U(),
               sep=',',
               file=outfile)
     outfile.close()
@@ -442,7 +468,7 @@ def write_data(specimens, filename = 'tensile.csv'):
 def main():
     specimens = spec_data(get_files())
     #stress_strain(specimens, save=True)
-    xyplot(specimens)
+    xyplot(specimens, save=False)
     #xyzplot(specimens)
     write_data(specimens)
     return specimens
