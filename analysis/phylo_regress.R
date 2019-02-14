@@ -67,7 +67,7 @@ Analysis1 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(simple.model,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(simple.model, type = 'normalized')))
+  print(shapiro.test(residuals(simple.model, type = 'normalized')))
   r2sigma = r2beta(simple.model, method = 'sgv')
   print(r2sigma)
   
@@ -76,7 +76,7 @@ Analysis1 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(simple.brownian,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(simple.brownian, type = 'normalized')))
+  print(shapiro.test(residuals(simple.brownian, type = 'normalized')))
   r2sigma.brownian = r2beta(simple.brownian, method = 'sgv')
   print(r2sigma.brownian)
   
@@ -92,7 +92,7 @@ Analysis1 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(y.transformed,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(y.transformed, type = 'normalized')))
+  print(shapiro.test(residuals(y.transformed, type = 'normalized')))
   r2sigma = r2beta(y.transformed, method = 'sgv')
   print(r2sigma)
   
@@ -101,7 +101,7 @@ Analysis1 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(y.brownian,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(y.brownian, type = 'normalized')))
+  print(shapiro.test(residuals(y.brownian, type = 'normalized')))
   r2sigma.brownian = r2beta(y.brownian, method = 'sgv')
   print(r2sigma.brownian)
   
@@ -116,7 +116,7 @@ Analysis1 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(x.transformed,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(x.transformed, type = 'normalized')))
+  print(shapiro.test(residuals(x.transformed, type = 'normalized')))
   r2sigma = r2beta(x.transformed, method = 'sgv')
   print(r2sigma)
   
@@ -125,7 +125,7 @@ Analysis1 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(x.brownian,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(x.brownian, type = 'normalized')))
+  print(shapiro.test(residuals(x.brownian, type = 'normalized')))
   r2sigma.brownian = r2beta(x.brownian, method = 'sgv')
   print(r2sigma.brownian)
   
@@ -140,7 +140,7 @@ Analysis1 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(xy.transformed,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(xy.transformed, type = 'normalized')))
+  print(shapiro.test(residuals(xy.transformed, type = 'normalized')))
   r2sigma = r2beta(xy.transformed, method = 'sgv')
   print(r2sigma)
   
@@ -149,7 +149,7 @@ Analysis1 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(xy.brownian,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(xy.brownian, type = 'normalized')))
+  print(shapiro.test(residuals(xy.brownian, type = 'normalized')))
   r2sigma.brownian = r2beta(xy.brownian, method = 'sgv')
   print(r2sigma.brownian)
   
@@ -184,7 +184,7 @@ Analysis2 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(full.model,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(full.model, type = 'normalized')))
+  print(shapiro.test(residuals(full.model, type = 'normalized')))
   r2sigma = r2beta(full.model, method = 'sgv')
   print(r2sigma)
   
@@ -193,7 +193,7 @@ Analysis2 = function(phylogeny, raw.data) {
   print(leveneTest(residuals(full.simple,
                              type = 'normalized') ~ raw.data$species,
                    data = raw.data))
-  print(ad.test(residuals(full.simple, type = 'normalized')))
+  print(shapiro.test(residuals(full.simple, type = 'normalized')))
   r2sigma.simple = r2beta(full.simple, method = 'sgv')
   print(r2sigma.simple)
   
@@ -493,32 +493,7 @@ main = function() {
                     '((humeralis1, humeralis2), victoriensis1)));')
   tree.star = ape::read.tree(text = tree.text)
   tree.star$edge.length = rep(1,nrow(tree.star$edge))
-  
-  # # Alternative trees for other packages / approaches
-  # tree.text.alt = paste('(((uniformis1, uniformis2, uniformis3,',
-  #                       'uniformis4, uniformis5), (caryae1,',
-  #                       'caryae2, caryae3, caryae4)),',
-  #                       '(((proboscideus1, proboscideus2,',
-  #                       'proboscideus3), (sulcatulus1,',
-  #                       'sulcatulus2, sulcatulus3, sulcatulus4)),',
-  #                       '(humeralis1, humeralis2)));')
-  # tree.star.alt = ape::read.tree(text = tree.text.alt)
-  # tree.star.alt$edge.length = rep(1,nrow(tree.star.alt$edge))
-  # 
-  # tree.text = paste('((((aurivestis, uniformis), pardus),',
-  #                   '((caryae, nasicus), confusor)),',
-  #                   '((proboscideus, sulcatulus),',
-  #                   '(((humeralis, pardalis), victoriensis),',
-  #                   'longidens)));')
-  # full = ape::read.tree(text = tree.text)
-  # full$edge.length = rep(1,nrow(full$edge))
-  # 
-  # trim.text = paste('((uniformis, caryae),',
-  #                   '((proboscideus, sulcatulus),',
-  #                   '(humeralis, victoriensis)));')
-  # trim = ape::read.tree(text = trim.text)
-  # trim$edge.length = rep(1,nrow(trim$edge))
-  
+
   # Generate phylogenetic variance-covariance matrix, Brownian motion
   phylo.vcv = corBrownian(1, tree.star)
   
@@ -538,84 +513,106 @@ main = function() {
   sink(file = 'phylo_regress_output.txt', append = TRUE)
   
   # Model exploration and initial testing of phylogenetic covariance
-  # Comparison 1, model covariance and transformation
+  # Comparison 1a, model covariance and transformation
   readline(prompt = 'fmax vs. endo: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Comparison 1: fmax vs. endo')
+  writeLines('Comparison 1a: fmax vs. endo')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = raw.data$fmax
   raw.data$cofactor = raw.data$endo
   Analysis1(phylo.vcv, raw.data)
 
-  # Comparison 2, model covariance and transformation
+  # Comparison 1b, model covariance and transformation
   readline(prompt = 'fmax vs. exo: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Comparison 2: fmax vs. exo')
+  writeLines('Comparison 1b: fmax vs. exo')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = raw.data$fmax
   raw.data$cofactor = raw.data$exo
   Analysis1(phylo.vcv, raw.data)
 
-  # Comparison 3a, model covariance and transformation
+  # Comparison 1c, model covariance and transformation
   readline(prompt = 'uts vs. ratio: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Comparison 3a: uts vs. ratio')
+  writeLines('Comparison 1c: uts vs. ratio')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = raw.data$uts
   raw.data$cofactor = raw.data$ratio
   Analysis1(phylo.vcv, raw.data)
-
-  # Comparison 3b, model covariance and transformation
-  readline(prompt = 'ufs vs. length: press enter to continue.')
+  
+  # Comparison 2a, model covariance and transformation
+  readline(prompt = 'ufs vs. Etanl: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Comparison 3b: ufs vs. length')
+  writeLines('Comparison 2a: ufs vs. Etanl')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = raw.data$ufs
-  raw.data$cofactor = raw.data$length
+  raw.data$cofactor = raw.data$Etanl
   Analysis1(phylo.vcv, raw.data)
 
-  # Comparison 4a, model covariance and transformation
+  # Comparison 2b, model covariance and transformation
+  readline(prompt = 'ufs vs. Esec: press enter to continue.')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  writeLines('Comparison 2b: ufs vs. Esec')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  raw.data$phenotype = raw.data$ufs
+  raw.data$cofactor = raw.data$uts / raw.data$ufs
+  Analysis1(phylo.vcv, raw.data)
+
+  # Comparison 2c, model covariance and transformation
+  readline(prompt = 'U vs. Etanl: press enter to continue.')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  writeLines('Comparison 2c: U vs. Etanl')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  raw.data$phenotype = raw.data$U
+  raw.data$cofactor = raw.data$Etanl
+  Analysis1(phylo.vcv, raw.data)
+
+  # Comparison 2d, model covariance and transformation
+  readline(prompt = 'U vs. Esec: press enter to continue.')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  writeLines('Comparison 2d: U vs. Esec')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  raw.data$phenotype = raw.data$U
+  raw.data$cofactor = raw.data$uts / raw.data$ufs
+  Analysis1(phylo.vcv, raw.data)
+
+  # Comparison 3a, model covariance and transformation
   readline(prompt = 'Etan low vs. length: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Comparison 4a: Etan low vs. length')
+  writeLines('Comparison 3a: Etan low vs. length')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = raw.data$Etanl
   raw.data$cofactor = raw.data$length
   Analysis1(phylo.vcv, raw.data)
 
-  # Comparison 4b, model covariance and transformation
-  readline(prompt = 'Etan high vs. length: press enter to continue.')
-  writeLines(strrep('=',80))
-  writeLines(strrep('=',80))
-  writeLines('Comparison 4b: Etan high vs. length')
-  writeLines(strrep('=',80))
-  writeLines(strrep('=',80))
-  raw.data$phenotype = raw.data$Etanh
-  raw.data$cofactor = raw.data$length
-  Analysis1(phylo.vcv, raw.data)
-
-  # Comparison 4c, model covariance and transformation
+  # Comparison 3b, model covariance and transformation
   readline(prompt = 'Esec vs. length: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Comparison 4c: Esec vs. length')
+  writeLines('Comparison 3b: Esec vs. length')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = raw.data$uts / raw.data$ufs
   raw.data$cofactor = raw.data$length
   Analysis1(phylo.vcv, raw.data)
 
-  # Comparison 5, compound cross sectional area
+  # Comparison 1 Test, compound cross sectional area
   readline(prompt = 'log(fmax) ~ endo + exo: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
@@ -625,11 +622,11 @@ main = function() {
   Analysis2(phylo.vcv, raw.data)
 
   # Final model fitting, hypothesis testing, and phylogenetic signal
-  # Model 1: log(fmax) ~ endo
+  # Model 1a: log(fmax) ~ endo
   readline(prompt = 'fmax vs. endo: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Model 1: log(fmax) ~ log(endo)')
+  writeLines('Model 1a: log(fmax) ~ log(endo)')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$fmax)
@@ -638,11 +635,11 @@ main = function() {
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
-  # Model 2: log(fmax) ~ exo
+  # Model 1b: log(fmax) ~ exo
   readline(prompt = 'fmax vs. exo: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Model 2: log(fmax) ~ exo')
+  writeLines('Model 1b: log(fmax) ~ exo')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$fmax)
@@ -651,21 +648,7 @@ main = function() {
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
-  # Model 2.1: log(fmax) ~ log(exo)
-  readline(prompt = 'fmax vs. exo: press enter to continue.')
-  writeLines(strrep('=',80))
-  writeLines(strrep('=',80))
-  writeLines('Model 2.1: log(fmax) ~ log(exo)')
-  writeLines(strrep('=',80))
-  writeLines(strrep('=',80))
-  raw.data$phenotype = log(raw.data$fmax)
-  raw.data$cofactor = log(raw.data$exo)
-  comparison = c('ln(Fmax [N])', 'ln(Exocuticle CSA [mm2])')
-
-  Analysis3(phylo.vcv, tree.star, raw.data, comparison)
-  Analysis4(phylo.vcv, raw.data, comparison)
-
-  # Model 3a:log(uts) ~ log(ratio)
+  # Model 1c:log(uts) ~ log(ratio)
   readline(prompt = 'uts vs. ratio: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
@@ -679,50 +662,76 @@ main = function() {
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
-  # Model 3b: log(ufs) ~ log(length)
-  readline(prompt = 'ufs vs. length: press enter to continue.')
+  # Model 2a: log(ufs) ~ log(Etanl)
+  readline(prompt = 'ufs vs. Etanl: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Model 3b: ufs ~ log(length)')
+  writeLines('Model 2a: log(ufs) ~ log(Etanl)')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$ufs)
-  raw.data$cofactor = log(raw.data$length)
-  comparison = c('Ultimate Strain', 'ln(Rostrum Length [mm2])')
+  raw.data$cofactor = log(raw.data$Etanl)
+  comparison = c('ln(Ultimate Strain [mm2])', 'ln(Tangent Modulus [MPa])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
-  # Model 4a: log(Etanl) ~ log(length)
+  # Model 2b: log(ufs) ~ log(Esec)
+  readline(prompt = 'ufs vs. Esec: press enter to continue.')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  writeLines('Model 2b: log(ufs) ~ log(Esec)')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  raw.data$phenotype = log(raw.data$ufs)
+  raw.data$cofactor = log(raw.data$Esec)
+  comparison = c('ln(Ultimate Strain [mm2])', 'ln(Secant Modulus [MPa])')
+  Analysis3(phylo.vcv, tree.star, raw.data, comparison)
+  Analysis4(phylo.vcv, raw.data, comparison)
+
+  # Model 2c: log(U) ~ log(Etanl)
+  readline(prompt = 'U vs. Etanl: press enter to continue.')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  writeLines('Model 2a: log(U) ~ log(Etanl)')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  raw.data$phenotype = log(raw.data$U)
+  raw.data$cofactor = log(raw.data$Etanl)
+  comparison = c('ln(Fracture Toughness [Jm-3])', 'ln(Tangent Modulus [MPa])')
+  Analysis3(phylo.vcv, tree.star, raw.data, comparison)
+  Analysis4(phylo.vcv, raw.data, comparison)
+
+  # Model 2d: log(U) ~ log(Esec)
+  readline(prompt = 'U vs. Esec: press enter to continue.')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  writeLines('Model 2b: log(U) ~ log(Esec)')
+  writeLines(strrep('=',80))
+  writeLines(strrep('=',80))
+  raw.data$phenotype = log(raw.data$U)
+  raw.data$cofactor = log(raw.data$Esec)
+  comparison = c('ln(Fracture Toughness [Jm-3])', 'ln(Secant Modulus [MPa])')
+  Analysis3(phylo.vcv, tree.star, raw.data, comparison)
+  Analysis4(phylo.vcv, raw.data, comparison)
+
+  # Model 3a: log(Etanl) ~ log(length)
   readline(prompt = 'Etan low vs. length: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Model 4a: log(Etanl) ~ log(length)')
+  writeLines('Model 3a: log(Etanl) ~ log(length)')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$Etanl)
   raw.data$cofactor = log(raw.data$length)
-  comparison = c('ln(Tangent Modulus (low) [MPa])', 'ln(Rostrum Length [mm2])')
+  comparison = c('ln(Tangent Modulus [MPa])', 'ln(Rostrum Length [mm2])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
-  # Model 4b: log(Etanh) ~ log(length)
-  readline(prompt = 'Etan high vs. length: press enter to continue.')
-  writeLines(strrep('=',80))
-  writeLines(strrep('=',80))
-  writeLines('Model 4b: log(Etanh) ~ log(length)')
-  writeLines(strrep('=',80))
-  writeLines(strrep('=',80))
-  raw.data$phenotype = log(raw.data$Etanh)
-  raw.data$cofactor = log(raw.data$length)
-  comparison = c('ln(Tangent Modulus (high) [MPa])', 'ln(Rostrum Length [mm2])')
-  Analysis3(phylo.vcv, tree.star, raw.data, comparison)
-  Analysis4(phylo.vcv, raw.data, comparison)
-
-  # Model 4c: log(Esec) ~ log(length)
+  # Model 3b: log(Esec) ~ log(length)
   readline(prompt = 'Esec vs. length: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Model 4c: log(Esec) ~ log(length)')
+  writeLines('Model 3b: log(Esec) ~ log(length)')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$Esec)

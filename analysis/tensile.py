@@ -314,8 +314,8 @@ def xyplot(spec_set, save = True):
         new_l = spec.ufs() * 0.67
         new_u = spec.ufs() * 1.00
         spec.recalcE(lower = new_l, upper = new_u, graphical=False, normal=False)
-        x = ln(spec.endo() / spec.exo())
-        y = ln(spec.ufs())
+        x = ln(spec.length())
+        y = ln(spec.Etanl())
         #spec.uts() / spec.ufs()
 
         if spec.species() == 'caryae':
