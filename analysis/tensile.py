@@ -59,7 +59,6 @@ class specimen:
         self.__E__ = linreg(xvals, yvals) #engineering stress and strain via Hooke's Law
 
         self.__Etanl__ = self.__E__[0]
-        self.__Etanh__ = 0
 
         t_upper = 0
         t_lower = 0
@@ -159,9 +158,6 @@ class specimen:
     def E(self, index = 0):
         return self.__E__[index]
 
-    def Etanh(self):
-        return self.__Etanh__
-
     def Etanl(self):
         return self.__Etanl__
 
@@ -250,10 +246,10 @@ def stress_strain(spec_set, save=True, i=0, j=-1):
         ax2.set_ylabel('Axial Displacement (mm)', color='r')
         ax2.tick_params('y', colors='r')
 
-        ax3.plot(spec.epsilonT()[i:j], spec.sigmaT()[i:j], color = 'gray')
+        # ax3.plot(spec.epsilonT()[i:j], spec.sigmaT()[i:j], color = 'gray')
         ax3.plot(spec.epsilonN()[i:j], spec.sigmaN()[i:j], color = 'black')
         ax3.set_ylabel('Stress (MPa)')
-        ax3.set_xlabel('Strain (ln(L/L0) or dL/L0)')
+        ax3.set_xlabel('Strain (dL/L0)')
 
         print(spec.asuid()+' '+spec.species())
         new_l = spec.ufs() * 0.00
@@ -263,18 +259,15 @@ def stress_strain(spec_set, save=True, i=0, j=-1):
                  spec.E()*spec.epsilonN()[spec.Eindex(0):spec.Eindex(1)] + spec.E(1),
                  color='r')
 
-        new_l = spec.ufs() * 0.67
-        new_u = spec.ufs() * 1.00
-        spec.recalcE(lower = new_l, upper = new_u, graphical=False, normal=False)
-        ax3.plot(spec.epsilonN()[spec.Eindex(0):spec.Eindex(1)],
-                 spec.E()*spec.epsilonN()[spec.Eindex(0):spec.Eindex(1)] + spec.E(1),
-                 color='r')
+        ax3.plot([min(spec.epsilonN()), max(spec.epsilonN()[0:-1])],
+                 [min(spec.sigmaN()), max(spec.sigmaN()[0:-1])],
+                 color='gray')
 
-        true = mpatches.Patch(color='gray', label='True')
-        eng = mpatches.Patch(color='black', label='Nominal')
-        E1 = mpatches.Patch(color='r', label='E1 = {}MPa'.format(int(round(spec.Etanl()))))
-        E2 = mpatches.Patch(color='r', label='E2 = {}MPa'.format(int(round(spec.E()))))
-        ax3.legend(handles=[true, eng, E1, E2], loc=2, fontsize = 6)
+        # true = mpatches.Patch(color='gray', label='True')
+        eng = mpatches.Patch(color='black', label='Engineering')
+        E1 = mpatches.Patch(color='r', label='E_low = {}MPa'.format(int(round(spec.Etanl()))))
+        E2 = mpatches.Patch(color='gray', label='E_sec = {}MPa'.format(int(round(spec.uts() / spec.ufs()))))
+        ax3.legend(handles=[eng, E1, E2], loc=2, fontsize = 6)
         #ax3.set_title('Stress vs. Nominal Strain')
         #ax3.set_xlim(0, 1)
         #ax3.set_ylim(0, 300)
@@ -467,7 +460,7 @@ def write_data(specimens, filename = 'tensile.csv'):
 
 def main():
     specimens = spec_data(get_files())
-    #stress_strain(specimens, save=True)
+    stress_strain(specimens, save=True)
     xyplot(specimens, save=False)
     #xyzplot(specimens)
     write_data(specimens)

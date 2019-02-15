@@ -643,8 +643,8 @@ main = function() {
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$fmax)
-  raw.data$cofactor = raw.data$exo
-  comparison = c('ln(Fmax [N])', 'Exocuticle CSA [mm2]')
+  raw.data$cofactor = log(raw.data$exo)
+  comparison = c('ln(Fmax [N])', 'ln(Exocuticle CSA [mm2])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
@@ -652,7 +652,7 @@ main = function() {
   readline(prompt = 'uts vs. ratio: press enter to continue.')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
-  writeLines('Model 3a:log(uts) ~ log(ratio)')
+  writeLines('Model 1c:log(uts) ~ log(ratio)')
   writeLines(strrep('=',80))
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$uts)
@@ -671,7 +671,7 @@ main = function() {
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$ufs)
   raw.data$cofactor = log(raw.data$Etanl)
-  comparison = c('ln(Ultimate Strain [mm2])', 'ln(Tangent Modulus [MPa])')
+  comparison = c('ln(Ultimate Strain [mm2])', 'ln(Elastic Modulus [MPa])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
@@ -697,7 +697,7 @@ main = function() {
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$U)
   raw.data$cofactor = log(raw.data$Etanl)
-  comparison = c('ln(Fracture Toughness [Jm-3])', 'ln(Tangent Modulus [MPa])')
+  comparison = c('ln(Fracture Toughness [Jm-3])', 'ln(Elastic Modulus [MPa])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
@@ -723,7 +723,7 @@ main = function() {
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$Etanl)
   raw.data$cofactor = log(raw.data$length)
-  comparison = c('ln(Tangent Modulus [MPa])', 'ln(Rostrum Length [mm2])')
+  comparison = c('ln(Elastic Modulus [MPa])', 'ln(Rostrum Length [mm2])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
