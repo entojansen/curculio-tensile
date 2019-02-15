@@ -2,8 +2,6 @@
 
 \usepackage{amsmath}
 \usepackage{graphicx}
-%TODO remove package: blindtext
-\usepackage{blindtext}
 \usepackage{gensymb}
 \usepackage{textgreek}
 \usepackage{xcolor}
@@ -13,21 +11,10 @@
 	citecolor={blue!60!black},
 	urlcolor={blue!40!black}
 	}
-\usepackage{cleveref}
 \graphicspath{{figures/}}
-
-%TODO NOTES! REMOVE FROM COMPLETE DRAFT-----------------------------------------
-\usepackage{xargs}
-\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
-\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
-\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-\newcommandx{\info}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
-\newcommandx{\improvement}[2][1=]{\todo[linecolor=purple,backgroundcolor=purple!25,bordercolor=purple,#1]{#2}}
-\newcommandx{\noshow}[2][1=]{\todo[disable,#1]{#2}}
 %-------------------------------------------------------------------------------
 
 \begin{document}
-	%word count: 156
 	\begin{abstract}
 		The acorn weevil snout exhibits remarkable flexibility and toughness that are derived from from the microarchitecture of its exoskeleton.
 		Here we characterize modifications to the composite profile of the rostral cuticle that simultaneously enhance the flexibility and fracture toughness of the distal portion of the snout.
@@ -40,8 +27,7 @@
 	\end{abstract}
 	
 	%title and author block
-	{\title{Exoskeletal microstructure and tensile behavior of the acorn weevil rostrum}
-	%CONSIDER CHANGING THE TITLE AFTER WRITING MANUSCRIPT
+	{\title{Exoskeletal strength and cuticle composite profile of the acorn weevil rostrum}
 	\date{\today}
 	
 	\author{M. Andrew Jansen}
@@ -57,14 +43,14 @@
 	\maketitle
 	}
 
-	{The exoskeleton of Coleoptera (beetles) is a hierarchically-structured fibrous composite characterized by variously arranged \textalpha-chitin (N-acetylglucosamine) nanofibrils embedded in a heterogeneous protein matrix \cite{Hepburn1973, Jansen2016, Vincent2004}.
+	The exoskeleton of Coleoptera (beetles) is a hierarchically-structured fibrous composite characterized by variously arranged \textalpha-chitin (N-acetylglucosamine) nanofibrils embedded in a heterogeneous protein matrix \cite{Hepburn1973, Jansen2016, Vincent2004}.
 	Although \textalpha-chitin is brittle and strongly anisotropic, beetle cuticle is simultaneously rigid and tough due to its unique laminate microstructure (see kamp, vincent for review), which we characterize in detail below \cite{Kamp2010, Kamp2015, Neville1976}.
 	Impact-prone areas and exaggerated structures in arthropods generally exhibit cuticle organization that resists deformation and fracture (e.g. \cite{Amini2015, Mccullough2014mech, Mccullough2014struc, Dirks2012, Dirks2013}); however, acorn weevils in the genus \textit{Curculio} Linnaeus, 1758\footnote{
 		Pursuant to the International Code of Zoological Nomenclature, the first mention of any specific epithet will include the full genus and species names as a binomen (two part name) followed by the author and date of publication of the name.
 		This is not an in-line reference; it is a part of the name itself and refers to a particular species-concept as indicated in the description of the species by that author \cite{ICZN1999}.}
 	instead exhibit unusual distal flexibility in an elongate extension of the head called the rostrum (snout) \cite{Toju2005, Jansen2016, Singh2016, Gibson1969}.
 	The rostrum is a hollow, strongly curved (over 90$\degree$ in some species), cylindrical, exoskeletal extension of the otherwise nearly-spherical head, which bears at its apex the terminal chewing mouthparts \cite{Morimoto2003, Ting1933, Ting1936, Dennell1942, Gibson1969}.
-	This structure is used by the female to feed and to excavate sites for egg-laying (oviposition, see Fig.~1c), and can be repeatedly bent without evident damage despite being composed of the same material as other rigid body parts \cite{Jansen2016, Singh2016, Gibson1969, Toju2005}.
+	This structure is used by the female to feed and to excavate sites for egg-laying (oviposition, see Fig.~\ref{fig::curculio}), and can be repeatedly bent without evident damage despite being composed of the same material as other rigid body parts \cite{Jansen2016, Singh2016, Gibson1969, Toju2005}.
 	By maintaining constant pressure on the snout and rotating around the bore-hole, females are able to flex the rostrum into a straightened configuration and produce a linear channel into the fruit; a single female may prepare hundreds of such sites as an adult \cite{Toju2005, Moffett1989, AguirreUribe1978}.
 	
 	While this behavior has been observed in many species of \textit{Curculio} \cite{Gibson1969, Moffett1989, AguirreUribe1978, Toju2005}, it was unclear how the rostrum of female acorn weevils can withstand the repeated, often extreme bending incurred during the process of egg-chamber excavation.
@@ -73,28 +59,62 @@
 	Because recent studies have shown that the yield strength of the beetle exoskeleton is lower in tension than compression \cite{Longhai2017}, we perform a comparative analysis of the ultimate tensile strength of the rostrum across species and snout morphotypes; we also report the results of displacement-controlled load cycling of the snout in a species with strongly curved morphology.
 	We relate an observed increase in the volume fraction of endocuticle in the rostrum to higher tensile strength at the rostral apex in all tested species, and find that a strongly curved rostrum can be flexed repeatedly without harm to the structure.
 	
+	\begin{figure*}
+		\centering
+		\includegraphics[width=180mm]{fig1.pdf}
+		\caption{\textbf{Morphology and oviposition behavior of female \textit{Curculio}.} 
+			\textbf{a}, Lateral habitus image of female \textit{Curculio~sayi} ((Gyllenhal, 1836)) featuring the elongate, strongly curved rostrum.
+			\textbf{b}, Lateral view of the head of a female specimen of \textit{Curculio~longinasus}, with major anatomical features indicated.
+			\textbf{c}, Illustration of the oviposition behavior of female \textit{Curculio}, proceeding from left to right: a female makes an incision in the host fruit, flexes the head directly over the bore hole using the front legs, then maintains tension on the snout while rotating to excavate a linear channel into the fruit. During this process, the rostrum is bent until completely straight.
+		}
+		\label{fig::curculio}
+	\end{figure*}
+	
 	We additionally describe the fracture mechanics of the snout and consider how modification of the cuticle may prevent crack formation during oviposition.
 	Based on our findings, we posit that the composite profile of the rostral apex enables the snout to undergo repeated distal flexion while remaining within the elastic limits of the material, mitigating the risk of structural damage, and without evident alteration of the mechanical properties of the individual components of the cuticle across the structure and between species.
 	Thus, the flexibility and tensile strength of the rostrum appear to be derived \emph{exclusively} from modification of the composite architecture of the exoskeleton.
 	To our knowledge, this is the first time that a modified composite profile has been reported as a means of enhancing structural elasticity in the insect exoskeleton (but see \cite{Matsumura2017}).
-}	
+	
 	\section{Microstructure of the \textit{Curculio} rostrum}
 		In arthropods (including beetles), the exocuticle is comprised of numerous unidirectional laminae of chitin nanofibrils; each layer is the thickness of a single fiber (2-4\,nm) embedded in a proteinaceous matrix \cite{Nikolov2010, Nikolov2011}.
 		These layers are stacked at a more or less constant angle to each other, forming a quasi-isotropic laminate known as the Bouligand structure \cite{Blackwell1980, Bouligand1972, Neville1976}. 
 		This layout effectively mitigates the strong anisotropy of \textalpha-chitin to yield a versatile building material for the exoskeleton \cite{Vincent1982, Vincent2004, Nikolov2010, Nikolov2011}.		
 		Beetle endocuticle, however, is unique among arthropods and is comprised of large (1-5\,{\textmu}m diameter in \textit{Curculio}) unidirectional bundles of chitin, called macrofibers.
-		Chitin macrofibers are orthotropic (axial: $E_1~=~8.5\,\text{GPa}$, transverse: $ E_2~=~E_3~=~0.52\,\text{GPa}$ \cite{Jansen2016}) and arranged in unidirectional plies, seen in Figs.~REF \cite{Kamp2010, Kamp2015}.
-		Typically, adjacent macrofiber laminae are paired and pseudo-orthogonal (i.e., angled approx. $90\degree$ to each other \cite{Cheng2009}, see Figs.~REF), with a constant stacking angle \emph{between} pairs, although other configurations have been observed \cite{Hepburn1973, Kamp2010, Kamp2015, Leopold1992}.
+		Chitin macrofibers are orthotropic (axial: $E_1~=~8.5\,\text{GPa}$, transverse: $ E_2~=~E_3~=~0.52\,\text{GPa}$ \cite{Jansen2016}) and arranged in unidirectional plies, seen in Figs.~\ref{fig::cuticle},~\ref{fig::profile} \cite{Kamp2010, Kamp2015}.
+		Typically, adjacent macrofiber laminae are paired and pseudo-orthogonal (i.e., angled approx. $90\degree$ to each other \cite{Cheng2009}, see Fig.~\ref{fig::profile}), with a constant stacking angle \emph{between} pairs, although other configurations have been observed \cite{Hepburn1973, Kamp2010, Kamp2015, Leopold1992}.
 		This geometric sequence of the macrofiber laminae yields an approximately transversely isotropic composite, similar to the Bouligand structure \cite{Kamp2015, Nikolov2010}.
 		Notably, the resulting laminate is less rigid than the exocuticle, but exhibits greater toughness because the pseudo-orthogonal plies effectively inhibit crack formation and propagation between successive layers \cite{Kamp2010, Kamp2015, Hepburn1973}.
 		
+		\begin{figure*}
+			\centering
+			\includegraphics[width=180mm]{fig2.pdf}
+			\caption{\textbf{Gross divisions of cuticle in the rostrum.}
+				\textbf{a}, Scanning electron micrograph of the head capsule, in frontal view, of female \textit{Curculio~sulcatulus} (Casey, 1897), with the rostrum removed.
+				\textbf{b}, Magnified view of the junction between the rostrum and head capsule showing the division of the cuticle into two general regions: the exocuticle and the endocuticle.
+			}
+			\label{fig::cuticle}
+		\end{figure*}
+		
 		Serial thin sectioning and scanning electron microscopy of fractured \textit{Curculio} specimens revealed that endocuticle in the head capsule fits this general profile, with an angle of approximately $30\degree$ between successive pairs of pseudo-orthogonal plies.
 		Additionally, in the head capsule, the thickness of the exocuticle and endocuticle in cross section are nearly equal (typically between 20-30\,{\textmu}m).
-		However, we found that the cuticle composite lay-up of the rostral apex is strongly differentiated from the head capsule (see Fig.~REF).
+		However, we found that the cuticle composite lay-up of the rostral apex is strongly differentiated from the head capsule (Fig.~\ref{fig::profile}).
 		Distally the exocuticle is reduced to a thin shell (ca. 5\,{\textmu}m), with the endocuticle thickened to offset this reduction and maintain a constant cuticle thickness (ca. 50\,{\textmu}m total) throughout its length.
 		Moreover, the endocuticular macrofibers exhibit no rotation between successive pseudo-orthogonal plies, and are oriented at approximately $\pm45\degree$ to the longitudinal axis of the snout (i.e., an antisymmetric $[\pm45\degree]$ angle-ply laminate).
 		We previously identified these modifications to the composite structure of the cuticle within a single species, \textit{C.~longinasus} Chittenden, 1927 \cite{Jansen2016, Singh2016}; however this composite profile has now been uncovered in the rostrum of six additional, phylogenetically disparate, species (detailed in methods), indicating that this is likely a genus-wide trait.
 		In all examined species, the portion of the snout between the head capsule and apex of the scrobe exhibits a gradual transition in composite profile along an anterior-posterior gradient.
+		
+		\begin{figure*}
+			\centering
+			\includegraphics[width=180mm]{fig3.pdf}
+			\caption{\textbf{Composite profiles of rostral cuticle.}
+				\textbf{a}, Scanning electron micrograph of a fractured specimen of \textit{Curculio~humeralis} (Casey, 1897), showing that the cuticle of the rostral apex is organized as a $\pm45\degree$ angle-ply laminate..
+				\textbf{b}, Scanning electron micrograph of a fractured specimen of \textit{Curculio~caryae}  (Horn, 1873), showing that the cuticle of the rostral base and head capsule has a roughly $30\degree$ stacking angle between each pair of pseudo-orthogonal plies.
+				Semi-thin sections of cuticle from a specimen of \textit{C.~humeralis}, stained with toluidine-blue-borax, demonstrating:
+				(\textbf{c}) that the exocuticle of the rostral apex is reduced to a thin shell close to 5\,{\textmu}m thick, with the endocuticle thickened to maintain a constant laminate thickness; and,
+				(\textbf{d}) that the exocuticle of the head capsule and base of the snout occupies nearly half of the through-thickness of the cuticle.
+			}
+			\label{fig::profile}
+		\end{figure*}
 		
 		We estimated the effect of differential cuticle organization on uni-axial membrane and transverse-flexural Young's moduli of the cuticle in the rostral apex and head capsule using Classical Laminate Plate Theory (CLPT), as detailed in our methods \cite{Reddy2004, Jones2014}.
 		The effective elastic constants of the cuticle regions of \textit{C.~longinasus} (estimated previously, see \cite{Jansen2016}) were used to construct constitutive equations for the entire cuticle of that species.
@@ -106,33 +126,63 @@
 		This result suggests that both modifications are necessary in order for the snout to function properly in the living animal, where the combined effect allows the rostrum to bend until completely straight without fracture.
 		
 	\section{Force-controlled loading to fracture}
+		
+		\begin{figure*}
+			\centering
+			\includegraphics[width=180mm]{fig4.pdf}
+			\caption{\textbf{Tensile properties of the \textit{Curculio} rostrum.}
+				Each plot shows the relationship between two variables as predicted by a phylogenetic linear mixed-effect model, with species as a random effect and a variance-covariance matrix generated from Brownian motion over the preferred phylogeny of Bonal et al. \cite{Bonal2016}.
+				The gray regions represent the prediction interval and bootstrapped 95\% confidence interval of the model.
+				The estimated fixed effect $\hat{\beta}$ is given, along with the p-value of a t-test assessing whether $\hat{\beta}$ is significantly different from zero.
+				Also reported is a generalized marginal $\text{R}^2_{\beta^*}$ for assessing fixed effects (see online Methods for more information).
+				In general, we find that increased endocuticle thickness is associated with greater tensile strength, and that stiffness is inversely correlated with toughness.
+			}
+			\label{fig::tensile}
+		\end{figure*}		
+	
 		To better characterize the failure behavior of the rostrum, we performed tensile testing on the snouts of six \textit{Curculio} species that representing a mixture of closely and distantly related taxa (see Methods) \cite{Hughes2004phylo, Hughes2004eco, Bonal2016, Bonal2011}.
 		Each specimen was immersed in $\text{di-H}_2\text{O}$ for 24 hours, to simulate the living tissue (see \cite{Klocke2011}), then subjected to force-controlled, uniaxial loading to fracture at a constant stress rate of $1.0\,\text{gf}\cdot\text{s}^{-1}$ (detailed in Methods).
 		In general, the specimens exhibited a non-linear viscoelastic response curve characterized by a sharp increase in stress at higher strains, terminating in brittle fracture \cite{Mihai2017}.
 		We postulate that strain hardening occurs as the longitudinal axis of the macrofibers becomes more closely aligned to the cylindrical axis of the rostrum, thereby resisting tension more directly with increasing strain \cite{Munster2013}.
 		
-		We examined the correspondence between composite structure and mechanical behavior of the snout using phylogenetic linear mixed effects models (PGLMM) to account for phylogenetic non-independence in residual variance, with species membership included as a random effect \cite{Revell2010, Felsenstein1985}.
-		Our models show that the maximum force sustained at the site of failure was strongly correlated with the cross-sectional area of the endocuticle, and not the exocuticle, at that site.
-		Accordingly, there was a negative correlation between ultimate tensile strength of the specimen and the ratio of exocuticle to endocuticle cross-sectional area at the site of fracture.
-		Although CLPT predicts a positive association between the proportion of exocuticle and stiffness of a generalized cuticle, we found no correspondence between the cross-sectional properties of the fracture site and the gross behavior of the entire rostrum.
+		We examined the correspondence between composite structure and mechanical behavior of the snout using phylogenetic linear mixed effects models (PGLM, Fig.~\ref{fig::tensile}) to account for phylogenetic non-independence in residual variance, with species membership included as a random effect \cite{Revell2010, Felsenstein1985}.
+		Our models show that the maximum force sustained at the site of failure was strongly correlated with the cross-sectional area of the endocuticle ($\hat{\beta}=1.28, p<0.0001$), and not the exocuticle ($\hat{\beta}=0.17, p=0.38$), at that site.
+		Accordingly, there was a negative correlation between ultimate tensile strength of the specimen and the ratio of exocuticle to endocuticle cross-sectional area at the site of fracture ($\hat{\beta}=-0.36, p=0.017$).
+		Although CLPT predicts a positive association between the proportion of exocuticle and stiffness of a generalized cuticle, we found no evidence of correspondence between the cross-sectional properties of the fracture site and the gross behavior of the entire rostrum.
 		Because the cross-sectional areas of the cuticle regions vary across the length of the head along an anterior-posterior gradient, it is not possible to correlate measurements from the fracture surface to the properties of the entire snout.
 		
-		Instead, we found that the uniaxial elastic modulus (low strain: $E_{low}$) and secant modulus at failure ($E_{sec}$) were inversely correlated with ultimate strain and fracture toughness, implying that stiffer specimens, and by extension, stiffer cuticle profiles, are generally more brittle.
-		We also observed a moderate, stiffening size-effect with respect to rostral length, contrary to our expectation that a longer, more strongly curved (see \cite{Hughes2004eco, Bonal2011}) snout would require increased flexibility to avoid fracture during oviposition.
-		One possible explanation for this trend is that longer snouts may have a longer transition gradient from basal to apical profile to reinforce the junction between the rostrum and head capsule against buckling.
+		Instead, we found that the uniaxial elastic modulus (low strain: $E_{low}$) and secant modulus at failure ($E_{sec}$) were inversely correlated with ultimate strain and fracture toughness (see Fig.~\ref{fig::tensile}), implying that stiffer specimens, and by extension, stiffer cuticle profiles, are generally more brittle.
+		We also observed a moderate, but not statistically significant, stiffening size-effect with respect to rostral length, contrary to our expectation that a longer, more strongly curved (see \cite{Hughes2004eco, Bonal2011}) snout would require increased flexibility to avoid fracture during oviposition.
+		One possible explanation for this trend might be that longer snouts have a longer transition gradient from basal to apical profile to reinforce the junction between the rostrum and head capsule against buckling.
 		Thus, Young's modulus of the rostrum would be comparatively higher in these species because of the higher volume fraction of exocuticle.
 		From these tests, we infer that the gross elastic behavior of the cuticle is consistent across the genus, and that a single mechanism (i.e. the modified composite profile) confers increased flexibility and tensile strength to the rostral apex in the genus \textit{Curculio}.
 		In addition, the endocuticle demonstrably contributes more to rostral tensile strength than the exocuticle, likely because of its organization into large bundles of aligned, anisotropic fibers, leading to a trade-off between rigidity and toughness.
 		Consequently, the altered composite profile of the cuticle in the rostral apex makes the rostrum simultaneously more flexible and fracture resistant.
-	
+		
 	\section{Load cycling of \textit{Curculio caryae}}
-		To confirm that repeated, proscribed straightening of the rostrum does not result in damage to the cuticle, we performed displacement-controlled fatigue testing on a typical female specimen of \textit{Curculio caryae}, a species that exhibits extreme ($80-90\degree$) rostral curvature \cite{AguirreUribe1978, Gibson1969}.
+		
+		\begin{figure*}
+			\centering
+			\includegraphics[width=180mm]{fig5.pdf}
+			\caption{\textbf{Fatigue testing of a female C. caryae.}
+				\textbf{a}, Shows the fatigue testing setup, wherein the head capsule was fixed to a pedestal and the rostrum was attached to a strip of rip-stop nylon fabric using cyanoacrylate adhesive.
+				The specimen was loaded in tension, and not compression, isolating the effect of tension on the fatigue behavior of the rostrum.
+				\textbf{b}, An overlay of the pre- and post-fatigue states of the head show a clear effect from repeated proscribed strain; however,
+				\textbf{c}, Demonstrates that this effect is apparently not permanent.
+			The first two panels to the left correspond to the pre- and post-fatigue states of the rostrum, respecively, but the third panel shows that the head has returned to its original shape after 24 hours soaking in a water/ethanol mixture.
+				\textbf{d}, The two plots presented here are the raw force and displacment data from the fatigue test.
+				The plot on the right shows clear viscoelastic behavior, indicated by histeresis in the stress-strain response of the specimen, and exhibits a logarithmic decrease stress amplitude over time.
+			}
+			\label{fig::fatigue}
+		\end{figure*}
+		
+		To confirm that repeated, proscribed straightening of the rostrum does not result in damage to the cuticle, we performed displacement-controlled fatigue testing on a typical female specimen of \textit{Curculio caryae}, a species that exhibits extreme ($80-90\degree$, Fig.~\ref{fig::fatigue}) rostral curvature \cite{AguirreUribe1978, Gibson1969}.
 		The specimen was aligned so that uniaxial tension would induce elongation of the distal portion of the rostrum with minimal off-axis deflection of the un-curved section.
 		The strain per cycle was fixed at an amplitude sufficient to completely elongate the snout and generate a tensile load of 1.0\,N  in the straightened configuration (ca. 20\% ultimate strength) at a frequency of $0.33\,\text{Hz}$.
 		The test was terminated after a period of two weeks (ca.~400K cycles) when the stress amplitude appeared to reach an asymptotic minimum.		
 		The rostrum behaved viscoelastically, indicated by histeresis in the stress-strain relationship during each cycle.
 		Strain amplitude decreased logarithmically with cycle number, and the specimen initially appeared to have deformed plastically during the test.
-		We believed that this indicated damage to the specimen; however, after cleaning the specimen in a 24 hour wash with ethanol and water, we observed that rostrum returned to its original shape.
+		We believed that this indicated damage to the specimen; however, after cleaning the specimen in a 24 hour wash with ethanol and water, we observed that rostrum returned to its original shape (Fig.~\ref{fig::fatigue}).
 		
 		We cannot fully account for the stress relaxation of the rostrum after testing, but we speculate that it arose from the general mechanism associated with cuticle viscoelasticity.
 		The endocuticle is made of aligned \textalpha-chitin nanofibrils whose crystalline structure is enforced by hydrogen bonds between individual chitin chains and with the protein matrix along their length; macroscopic viscoelastic behavior results from slippage between these chains in response to shearing between the chitin molecules \cite{Vincent2004, Evans1967, Sun2012}.
@@ -144,17 +194,29 @@
 		We therefore expect that under normal conditions in life, repeated bending of the snout does not exceed the yield strength of the cuticle.
 			
 	\section{Fractography of test specimens}
-		Although it was not always possible to identify void nucleation and crack initiation sites given the complex failure modes evident in the fractured specimens, we observed several patterns characteristic of both the micro-scale behavior of the cuticle and the meso-scale behavior of the rostrum during uniaxial tensile failure, which we describe here (see \cite{Greenhalgh2009} for general approach).
+		
+		\begin{figure*}
+			\centering
+			\includegraphics[width=180mm]{fig6.pdf}
+			\caption{\textbf{Fractography of the \textit{Curculio} rostrum.}
+				\textbf{a}, Light micrograph showing the fracture surface of a tensile tested rostrum, in the species \textit{C.~caryae}, exhibiting a typical failure mode, illustrated in (\textbf{b}).
+				The small, black arrows indicate the winding direction of the macrofiber lamina; green arrows and dotted lines indicate the direction of crack.
+				Scanning electron micrographs highlight: (\textbf{c}) shear cusp formation, (\textbf{d}) tensile failure and off-axis macrofiber fiber-pulling, (\textbf{e}) interlaminar delamination, (\textbf{f},\textbf{h}), crack formation near invaginated exocuticle (\textbf{g}) ventral crack-front coalescence and shear cusp formation.
+			}
+			\label{fig::fracture}
+		\end{figure*}
+		
+		Although it was not always possible to identify void nucleation and crack initiation sites given the complex failure modes evident in the fractured specimens, we observed several patterns characteristic of both the micro-scale behavior of the cuticle and the meso-scale behavior of the rostrum during uniaxial tensile failure (Fig.~\ref{fig::fracture}), which we describe here.
 		
 		In transverse view, the exocuticle consistently presented a nearly continuous fracture surface, characteristic of comparatively brittle failure, presumably due to the relatively homogeneous arrangement of \textalpha-chitin laminae in the Bouligand structure \cite{Nikolov2010, Nikolov2011}.
-		The exocuticle typically appeared to fracture at lower strains than the endocuticle, with shear-cusp formation evident both at the fracture surface and across exocuticle (but with endocuticle intact) adjacent to the plane of fracture.
+		The exocuticle typically appeared to fracture at lower strains than the endocuticle, with shear-cusp formation evident both at the fracture surface and across exocuticle adjacent to the plane of fracture \cite{Greenhalgh2009}.
 		Conversely, the endocuticle exhibited severe delamination, off-axis ply-splitting, and fiber-pulling away from the fracture surface, indicating the relatively high toughness of the unidirectional \textalpha-chitin organization within the macrofibers \cite{Kamp2010, Kamp2015}.
 		Because the exocuticle of weevils is anchored to the endocuticle by cross-linking fibers (see \cite{Kamp2015, Longhai2017}), exocuticular shear-cusp formation in uniaxial tension suggests extension-shear coupling within individual endocuticle laminae, implying that ply-splitting occurred via mode II fracture between macrofibers at high strain \cite{Jones2014, Reddy2004}.
 		We hypothesize that intra-laminar extension-shear coupling also yielded off-axis, in-plane resultant forces as a function of lamina orientation angle; mode III shearing then occurred between laminae with opposing in-plane resultant forces, causing the observed inter-ply delamination.
 		Tensile failure of the macrofiber laminae would ultimately occur via mixed-mode I/II (transverse tension/intra-laminar shear) fracture due to an increase in applied stress caused by ply-splitting in adjacent laminae \cite{Greenhalgh2009}.
 		
 		At the meso-scale, most specimens fractured along a single plane across and between the occipital sulci, which are cuticle invaginations that traverse the entire length of the rostrum \cite{Davis2014, Dennell1942}.
-		These sulci increase the volume fraction of exocuticle in the ventral part of the snout and contain large interfaces ideal for void nucleation.
+		These sulci increase the volume fraction of exocuticle in the ventral part of the snout and contain large interfaces ideal for void nucleation (see Fig.~\ref{fig::fracture}).
 		The exocuticle of the occipital sulci usually displayed shear cusps oriented outward from the center of the invagination, continuing dorsolaterally and ventromedially.
 		Ventrally the cusps converged toward a prominent scarp where the crack fronts joined, although in specimens with large cross-sectional areas of endocuticle, this was often obscured by delaminated endocuticular macrofibers.
 		
@@ -546,10 +608,9 @@
 	\end{thebibliography}
 
 	\begin{acknowledgements}
-		\info{do this!!!}
-		%brief and 'without effusive statements'
-		%thank everyone who helped with data collection, dave (SEM), charlie (specimens), paige (if I use confocal data), Sal (if I use histology/staining data or confocal data, he helped with specimen clearing).
-		%Financial support/ funding sources/ grants.
+		The authors are grateful to Robert Anderson (CMNC), Lourdes Chamorro (USNM), and Charlie O'Brien (CWOB) for their assistance and provision of specimens used in this study.
+		The authors thank Salvatore Anzaldo, Andrew Johnston, Brian Reilly, Sangmi Lee, and other ASUHIC members for their assistance in procuring, treating, and maintaining specimen loans upon entry into the ASUHIC.
+		The authors would also like to thank David Lowry (ASU CLAS Bioimaging Center) for his training and assistance with resin embedding, scanning electron microscopy, and microtomography, and Salvatore Anzaldo for his assistance with histological staining.
 	\end{acknowledgements}
 
 	\section*{Author contributions}
@@ -568,7 +629,6 @@
 	
 	\newpage
 
-%provide detailed methods here, subsection for each method, statistical analysis, statements of code and data avilability.
 	\section*{Methods}
 		\subsection*{Specimen acquisition and taxon sampling}
 			Specimens for use in tensile and fatigue testing came from the Hasbrouck Insect Collection at Arizona State University [\textbf{\texttt{ASUC}}].  This set of specimens was supplemented with material housed in the following collections, using the codens of Arnett et al. \cite{Arnett1993}:
@@ -637,7 +697,8 @@
 				The apex of the rostrum was fixed to a strip of ripstop nylon fabric equal in length to the head using cyanoacrylate glue.
 				As with tensile testing, the specimen was placed in de-ionized water for 24 hours, then coated in petroleum jelly using a cotton swab immediately prior to load cycling.
 				
-				The end of the fabric was gripped and used to elongate the snout in tension by pulling; in this way, the rostrum would return to its original configuration in a spring-like manner, as in living specimens, rather than being forced to return to the initial position.
+				The end of the fabric was gripped and used to elongate the snout in tension by pulling on the fabric, thus isolating the effect of tension on the fatigue life of the rostral cuticle.
+				In this way, the rostrum would return to its original configuration in a spring-like manner, as in living specimens, rather than being forced to return to the initial position.
 				The snout was aligned such that complete elongation of the curved section would take place in tension with minimal off-axis deflection of the un-curved section.
 				The specimen was subjected to displacement-controlled loading sufficient to fully extend the snout and generate a load stress of 1\,N, or approximately 20\% of the tensile strength of the species average.
 				Load cycling took place at a rate of 0.33Hz, and was continued for 14 days (ca.~400K cycles), until the tensile stress in the sample approached an asymptotic minimum.
@@ -885,9 +946,9 @@
 				In general, phylogenetic regression is very robust with respect to missing or incomplete branch length data; underestimation of branch length causes overestimation of phylogenetic signal, which was not found to be statistically significant for any of our models, and we therefore believe that this procedure does not affect the findings of this study \cite{Munkemuller2012, Molina2017, Stone2011star}.
 				
 				Other models of trait evolution were considered during model exploration, including Ornstein-Uhlenbeck [\texttt{R:`ape':corMartins}] and variable rate (AC/DC) [\texttt{R:`ape':corBlomberg}] models \cite{Munkemuller2012, Ape}.
-				However, neither of these produced a significantly better fit to the data than the Brownian motion model for any comparison, as measured by likelihood score and residual variance, viz. $R^2_{\sigma}$, and $R^2_{\beta*}$ [\texttt{R:`r2glmm':r2beta}] (see Supplementary Data).
-				$R^{2}_{\sigma}$ is the proportion of generalized variance explained by fixed effects, and is generally used to compare between covariance structures \cite{Nakagawa2013, Jaeger2017, R2glmm}.
-				$R^2_{\beta*}$ measures the multivariate association between the outcome and the fixed effects within a given correlation structure, and is generally used to compare between fixed effects  \cite{Nakagawa2013, Jaeger2017, R2glmm}.
+				However, neither of these produced a significantly better fit to the data than the Brownian motion model for any comparison, as measured by likelihood score and residual variance, viz. $R^2_{\sigma}$, and $R^2_{\beta^*}$ [\texttt{R:`r2glmm':r2beta}] (see Supplementary Data).
+				$R^{2}_{\sigma}$ is the proportion of generalized variance explained by fixed effects, and is generally used to compare between covariance structures \cite{Nakagawa2013, Jaeger2016, R2glmm}.
+				$R^2_{\beta^*}$ measures the multivariate association between the outcome and the fixed effects within a given correlation structure, and is generally used to compare between fixed effects  \cite{Nakagawa2013, Jaeger2016, R2glmm}.
 				We additionally estimated the phylogenetic signal in the residual variance of each model using two measures of spatial autocorrelation (Abouheif's $\bar{C}$ and Moran's $I$) and two measures of phylogenetic signal (Pagel's $\lambda$ and Blomberg's $\kappa$) using the \texttt{R} package \texttt{`phytools'} \cite{Munkemuller2012, Phytools}.
 				
 				In all models, we tested whether the inclusion of phylogenetic correlation in the model error produced significantly better model fit, using a likelihood-ratio test [\texttt{R:`lmtest':lrtest}] and $R^{2}_{\sigma}$-difference test [\texttt{R:`r2glmm':r2beta(method=`sgv')}] between the fully-specified model and a model lacking the phylogenetic effect \cite{Lmtest, R2glmm}.
@@ -899,7 +960,7 @@
 				
 				To test the relationship between relative layer thicknesses and tensile strength, we fitted a fully-specified model with the cross-sectional area of exocuticle and endocuticle at the site of fracture as fixed effects, including an interaction term, and with maximum tensile force sustained prior to fracture as a response variable.
 				This model was then compared to models with only cross-sectional area of either endocuticle or exocuticle, but not both, as the sole fixed effect in the model.
-				We then tested the whether one or both regions was significantly correlated to the maximum force sustained in tension by using likelihood-ratio tests and $R^{2}_{\beta*}$-difference tests between each of the three models.
+				We then tested the whether one or both regions was significantly correlated to the maximum force sustained in tension by using likelihood-ratio tests and $R^{2}_{\beta^*}$-difference tests between each of the three models.
 				We found that only the cross-sectional area of endocuticle was a significant fixed effect, and therefore we elected to remove cross-sectional area of exocuticle as a fixed effect to make the model more parsimonious.
 				The final model generated for our first aim featured the ratio of exocuticle to endocuticle in cross-section as a fixed effect, with ultimate tensile strength as the response variable.
 				
@@ -1032,13 +1093,13 @@
 				133--142,
 				(2013).
 		
-			\bibitem{Jaeger2017}
+			\bibitem{Jaeger2016}
 				Jaeger, B. C., Edwards, L. J., Das, K., and Sen, P. K.
 				An $\text{R}^2$ statistic for fixed effects in the generalized linear mixed model
 				\textit{J. Appl. Stat.}
 				\textbf{44:6,}
 				1086--1105,
-				(2017).
+				(2016).
 			
 			\bibitem{R2glmm}
 				Jaeger, B.
