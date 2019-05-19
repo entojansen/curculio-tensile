@@ -697,7 +697,7 @@ main = function() {
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$U)
   raw.data$cofactor = log(raw.data$Etanl)
-  comparison = c('ln(Fracture Toughness [Jm-3])', 'ln(Elastic Modulus [MPa])')
+  comparison = c('ln(Work of Fracture [Jm-3])', 'ln(Elastic Modulus [MPa])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 
@@ -710,7 +710,7 @@ main = function() {
   writeLines(strrep('=',80))
   raw.data$phenotype = log(raw.data$U)
   raw.data$cofactor = log(raw.data$Esec)
-  comparison = c('ln(Fracture Toughness [Jm-3])', 'ln(Secant Modulus [MPa])')
+  comparison = c('ln(Work of Fracture [Jm-3])', 'ln(Secant Modulus [MPa])')
   Analysis3(phylo.vcv, tree.star, raw.data, comparison)
   Analysis4(phylo.vcv, raw.data, comparison)
 

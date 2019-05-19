@@ -18,8 +18,8 @@ Linear mixed-effects model fit by maximum likelihood
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 1.452565e-05 0.6988585
+        (Intercept)  Residual
+StdDev: 1.47222e-05 0.6988585
 
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
@@ -30,10 +30,8 @@ cofactor    204.67365 27.443213 12  7.458079  0.0000
 cofactor -0.937
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.5631828 -0.4547487 -0.3134237  0.1820794 
-       Max 
- 2.8729745 
+       Min         Q1        Med         Q3        Max 
+-1.5631828 -0.4547487 -0.3134237  0.1820794  2.8729745 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -55,13 +53,13 @@ W = 0.86287, p-value = 0.01094
 2 cofactor 0.859    0.952    0.712
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-     AIC      BIC   logLik
-  39.937 43.71475 -15.9685
+       AIC      BIC    logLik
+  46.49261 50.27037 -19.24631
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 1.277361e-05 0.7746334
+        (Intercept)  Residual
+StdDev:   0.3346582 0.8549784
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -69,47 +67,42 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
-(Intercept)  -0.72005   0.52251 12 -1.378057  0.1933
-cofactor    207.66938  30.07667 12  6.904667  0.0000
+(Intercept)  -0.60848   0.67523 12 -0.901154  0.3852
+cofactor    209.23572  38.30416 12  5.462480  0.0001
  Correlation: 
          (Intr)
-cofactor -0.946
+cofactor -0.936
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.4407347 -0.4617825 -0.2887970  0.1355895 
-       Max 
- 2.5515369 
+        Min          Q1         Med          Q3         Max 
+-1.27751384 -0.48680663 -0.23909253  0.07758264  1.62808300 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF   F-value p-value
-(Intercept)     1    12 254.30171  <.0001
-cofactor        1    12  47.67442  <.0001
+(Intercept)     1    12 144.36488  <.0001
+cofactor        1    12  29.83869   1e-04
 Levene's Test for Homogeneity of Variance (center = median)
-      Df F value  Pr(>F)  
-group  5  2.5551 0.08034 .
-      13                  
----
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+      Df F value Pr(>F)
+group  5   2.237 0.1125
+      13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.87835, p-value = 0.0201
+W = 0.92528, p-value = 0.1417
 
-    Effect Rsq upper.CL lower.CL
-1    Model   1        1        1
-2 cofactor   1        1        1
+    Effect   Rsq upper.CL lower.CL
+1    Model 0.933    0.978    0.862
+2 cofactor 0.933    0.978    0.862
 $d
-[1] -0.1413515
+[1] -0.07391626
 
 $ci
-[1] -0.29751149 -0.04772095
+[1] -0.15497447 -0.02182315
 
 $p
-[1] 0
+[1] 5e-04
 
 --------------------------------------------------------------------------------
 
@@ -126,7 +119,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 1.880549e-06 0.2504206
+StdDev: 1.880546e-06 0.2504206
 
 Fixed effects: log(phenotype) ~ cofactor 
                Value Std.Error DF   t-value p-value
@@ -137,10 +130,8 @@ cofactor    64.51922  9.833675 12  6.561049  0.0000
 cofactor -0.937
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.59532233 -0.78561202 -0.00728833  0.35425967 
-        Max 
- 2.46096554 
+        Min          Q1         Med          Q3         Max 
+-1.59532233 -0.78561202 -0.00728833  0.35425967  2.46096554 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -162,13 +153,13 @@ W = 0.95651, p-value = 0.5058
 2 cofactor 0.825    0.941    0.644
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-         AIC      BIC   logLik
-  -0.1330704 3.644686 4.066535
+       AIC     BIC   logLik
+  4.849454 8.62721 1.575273
 
 Random effects:
  Formula: ~1 | species
-         (Intercept) Residual
-StdDev: 2.792714e-06 0.269863
+        (Intercept)  Residual
+StdDev:   0.1230478 0.2818893
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -176,44 +167,42 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
                Value Std.Error DF   t-value p-value
-(Intercept) -0.18502   0.18203 12 -1.016453  0.3295
-cofactor    65.20230  10.47796 12  6.222803  0.0000
+(Intercept) -0.12742  0.228645 12 -0.557279  0.5876
+cofactor    63.85621 12.946157 12  4.932445  0.0003
  Correlation: 
          (Intr)
-cofactor -0.946
+cofactor -0.934
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.56489004 -0.81756326 -0.09492754  0.25616334 
-        Max 
- 2.19265595 
+       Min         Q1        Med         Q3        Max 
+-1.3569143 -0.7514013 -0.1263181  0.2601205  1.3879102 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF   F-value p-value
-(Intercept)     1    12 227.09108  <.0001
-cofactor        1    12  38.72327  <.0001
+(Intercept)     1    12 128.83823  <.0001
+cofactor        1    12  24.32901   3e-04
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.9814 0.4651
+group  5  0.5647 0.7257
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.95638, p-value = 0.5033
+W = 0.96527, p-value = 0.6794
 
-    Effect Rsq upper.CL lower.CL
-1    Model   1        1        1
-2 cofactor   1        1        1
+    Effect   Rsq upper.CL lower.CL
+1    Model 0.915    0.972    0.827
+2 cofactor 0.915    0.972    0.827
 $d
-[1] -0.1754105
+[1] -0.0907978
 
 $ci
-[1] -0.34312133 -0.05863917
+[1] -0.19543805 -0.02849268
 
 $p
-[1] 0
+[1] 5e-04
 
 --------------------------------------------------------------------------------
 
@@ -229,8 +218,8 @@ Linear mixed-effects model fit by maximum likelihood
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 1.413638e-05 0.7298951
+        (Intercept)  Residual
+StdDev: 1.41364e-05 0.7298951
 
 Fixed effects: phenotype ~ log(cofactor) 
                   Value Std.Error DF  t-value p-value
@@ -241,10 +230,8 @@ log(cofactor)  3.849191  0.546669 12 7.041173       0
 log(cofactor) 0.997 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.7978797 -0.6493403 -0.1094924  0.4539460 
-       Max 
- 2.4098949 
+       Min         Q1        Med         Q3        Max 
+-1.7978797 -0.6493403 -0.1094924  0.4539460  2.4098949 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -266,55 +253,53 @@ W = 0.96049, p-value = 0.5821
 2 log(cofactor) 0.844    0.947    0.683
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC      BIC   logLik
-  41.13559 44.91335 -16.5678
+       AIC      BIC    logLik
+  46.14852 49.92627 -19.07426
 
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 1.029424e-05 0.7994563
+StdDev: 6.531427e-05 0.9121923
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
-                  Value Std.Error DF t-value p-value
-(Intercept)   18.894763 2.4563537 12 7.69220       0
-log(cofactor)  3.898713 0.5896286 12 6.61215       0
+                  Value Std.Error DF  t-value p-value
+(Intercept)   20.166636 2.7680561 12 7.285487       0
+log(cofactor)  4.170849 0.6654833 12 6.267398       0
  Correlation: 
               (Intr)
 log(cofactor) 0.997 
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.63160834 -0.57862183 -0.07987127  0.41498277 
-        Max 
- 2.20111226 
+       Min         Q1        Med         Q3        Max 
+-1.6010423 -0.6570865 -0.1916801  0.1478170  1.7149799 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 238.75485  <.0001
-log(cofactor)     1    12  43.72052  <.0001
+(Intercept)       1    12 207.12307  <.0001
+log(cofactor)     1    12  39.28028  <.0001
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.9882 0.1476
+group  5  1.2595 0.3381
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.96646, p-value = 0.7042
+W = 0.96646, p-value = 0.7041
 
          Effect Rsq upper.CL lower.CL
 1         Model   1        1        1
 2 log(cofactor)   1        1        1
 $d
-[1] -0.1559267
+[1] -0.1558688
 
 $ci
-[1] -0.31907561 -0.05381148
+[1] -0.31380301 -0.05493487
 
 $p
 [1] 0
@@ -334,7 +319,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept) Residual
-StdDev: 4.330278e-07   0.2312
+StdDev: 4.330228e-07   0.2312
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
                  Value Std.Error DF  t-value p-value
@@ -345,10 +330,8 @@ log(cofactor) 1.265934 0.1731617 12 7.310703       0
 log(cofactor) 0.997 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--2.0410211 -0.6670324 -0.2487904  0.3847870 
-       Max 
- 2.2801485 
+       Min         Q1        Med         Q3        Max 
+-2.0410211 -0.6670324 -0.2487904  0.3847870  2.2801485 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -370,13 +353,13 @@ W = 0.94321, p-value = 0.301
 2 log(cofactor) 0.854    0.951    0.702
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC       BIC   logLik
-  -3.475233 0.3025229 5.737616
+       AIC      BIC   logLik
+  1.415069 5.192825 3.292466
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 2.225805e-06 0.2471419
+        (Intercept)  Residual
+StdDev:  0.05787534 0.2740456
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -384,41 +367,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
                  Value Std.Error DF  t-value p-value
-(Intercept)   6.212684 0.7593510 12 8.181570       0
-log(cofactor) 1.281652 0.1822763 12 7.031367       0
+(Intercept)   6.464760 0.8801017 12 7.345469       0
+log(cofactor) 1.333644 0.2114985 12 6.305691       0
  Correlation: 
               (Intr)
 log(cofactor) 0.997 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.9609138 -0.6574536 -0.2706197  0.3111564 
-       Max 
- 2.0723463 
+       Min         Q1        Med         Q3        Max 
+-1.8313788 -0.6059318 -0.4628514  0.1919480  1.5309202 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 270.76586  <.0001
-log(cofactor)     1    12  49.44013  <.0001
+(Intercept)       1    12 205.32862  <.0001
+log(cofactor)     1    12  39.76175  <.0001
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5   0.797 0.5709
+group  5  0.9296 0.4931
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.92872, p-value = 0.164
+W = 0.95073, p-value = 0.4067
 
-         Effect Rsq upper.CL lower.CL
-1         Model   1        1        1
-2 log(cofactor)   1        1        1
+         Effect   Rsq upper.CL lower.CL
+1         Model 0.989    0.996    0.977
+2 log(cofactor) 0.989    0.996    0.977
 $d
-[1] -0.1462766
+[1] -0.1352321
 
 $ci
-[1] -0.30358305 -0.04770169
+[1] -0.2817255 -0.0448665
 
 $p
 [1] 0
@@ -430,18 +411,17 @@ Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
   #Df   LogLik Df   Chisq Pr(>Chisq)    
-1   4 -15.9685                          
-2   4 -16.5678  0  1.1986  < 2.2e-16 ***
-3   4   4.0665  0 41.2687  < 2.2e-16 ***
-4   4   5.7376  0  3.3422  < 2.2e-16 ***
+1   4 -19.2463                          
+2   4 -19.0743  0  0.3441  < 2.2e-16 ***
+3   4   1.5753  0 41.2991  < 2.2e-16 ***
+4   4   3.2925  0  3.4344  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-                df        AIC
-simple.brownian  4 39.9369962
-x.brownian       4 41.1355939
-y.brownian       4 -0.1330704
-xy.brownian      4 -3.4752330
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
+                df       AIC
+simple.brownian  4 46.492611
+x.brownian       4 46.148516
+y.brownian       4  4.849454
+xy.brownian      4  1.415069
 ================================================================================
 ================================================================================
 Comparison 1b: fmax vs. exo
@@ -473,10 +453,8 @@ cofactor    103.20205  41.64541 12 2.478114  0.0291
 cofactor -0.521
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.5680120 -0.4978605 -0.1559111  0.3849042 
-       Max 
- 2.1076104 
+       Min         Q1        Med         Q3        Max 
+-1.5680120 -0.4978605 -0.1559111  0.3849042  2.1076104 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -499,60 +477,55 @@ W = 0.94554, p-value = 0.3309
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  56.55165 60.32941 -24.27583
+  58.83548 62.61323 -25.41774
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:   0.7690135 0.9922646
+StdDev:    1.005648 0.9878792
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
-                Value Std.Error DF t-value p-value
-(Intercept)   1.97428   0.50899 12 3.87884  0.0022
-cofactor    105.92863  48.31652 12 2.19239  0.0488
+               Value Std.Error DF  t-value p-value
+(Intercept)  2.17406   0.58257 12 3.731858  0.0029
+cofactor    98.16527  49.02419 12 2.002384  0.0684
  Correlation: 
          (Intr)
-cofactor -0.624
+cofactor -0.552
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.3549395 -0.3182420 -0.1060447  0.3777765 
-       Max 
- 2.0706818 
+       Min         Q1        Med         Q3        Max 
+-1.5373104 -0.3707125 -0.1589185  0.3578723  1.4948318 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF  F-value p-value
-(Intercept)     1    12 45.09081  <.0001
-cofactor        1    12  4.80657  0.0488
+(Intercept)     1    12 33.61175  0.0001
+cofactor        1    12  4.00954  0.0684
 Levene's Test for Homogeneity of Variance (center = median)
-      Df F value  Pr(>F)  
-group  5  2.6939 0.06965 .
-      13                  
----
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+      Df F value Pr(>F)
+group  5  1.7887 0.1844
+      13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.91667, p-value = 0.09821
+W = 0.97362, p-value = 0.8458
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.533     0.83    0.161
-2 cofactor 0.533     0.83    0.161
+1    Model 0.372    0.754    0.026
+2 cofactor 0.372    0.754    0.026
 $d
-[1] -0.19799
+[1] -0.03639469
 
 $ci
-[1] -0.24012524 -0.08465209
+[1] -0.069084298  0.001431907
 
 $p
-[1] 0
+[1] 0.022
 
 --------------------------------------------------------------------------------
 
@@ -580,10 +553,8 @@ cofactor    20.617830 14.911724 12 1.382659  0.1920
 cofactor -0.528
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--2.06801806 -0.37426269 -0.09008912  0.53497612 
-        Max 
- 1.67140135 
+        Min          Q1         Med          Q3         Max 
+-2.06801806 -0.37426269 -0.09008912  0.53497612  1.67140135 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -606,54 +577,52 @@ W = 0.98366, p-value = 0.9762
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  15.53316 19.31091 -3.766579
+  17.27526 21.05301 -4.637629
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:   0.2721626 0.3332337
+StdDev:   0.3346907 0.3316403
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
-                Value Std.Error DF  t-value p-value
-(Intercept)  0.735978  0.175222 12 4.200269  0.0012
-cofactor    21.809009 16.292125 12 1.338623  0.2055
+               Value Std.Error DF  t-value p-value
+(Intercept)  0.79237  0.194599 12 4.071807  0.0015
+cofactor    19.27667 16.448798 12 1.171920  0.2640
  Correlation: 
          (Intr)
-cofactor -0.612
+cofactor -0.554
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.89194946 -0.31143511  0.01645971  0.45991524 
-        Max 
- 1.68517741 
+       Min         Q1        Med         Q3        Max 
+-1.8696489 -0.3152334 -0.1113084  0.4627267  1.1321901 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF  F-value p-value
-(Intercept)     1    12 40.24392  <.0001
-cofactor        1    12  1.79191  0.2055
+(Intercept)     1    12 32.15243  0.0001
+cofactor        1    12  1.37340  0.2640
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.8742 0.5245
+group  5  0.5405 0.7426
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.98152, p-value = 0.9585
+W = 0.9306, p-value = 0.1776
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.283    0.705    0.005
-2 cofactor 0.283    0.705    0.005
+1    Model 0.509    0.819    0.133
+2 cofactor 0.509    0.819    0.133
 $d
-[1] -0.1463779
+[1] -0.3717984
 
 $ci
-[1] -0.159585412 -0.004006551
+[1] -0.3797103 -0.1287814
 
 $p
 [1] 0
@@ -684,10 +653,8 @@ log(cofactor) 0.993325 0.5054216 12 1.965340  0.0729
 log(cofactor) 0.986 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.7142281 -0.4923451 -0.1405828  0.5279692 
-       Max 
- 1.9974675 
+       Min         Q1        Med         Q3        Max 
+-1.7142281 -0.4923451 -0.1405828  0.5279692  1.9974675 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -710,12 +677,12 @@ W = 0.98217, p-value = 0.9645
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  58.41731 62.19506 -25.20865
+  60.43202 64.20977 -26.21601
 
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:   0.8066593 1.042579
+StdDev:    1.020634 1.039661
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -723,44 +690,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
                  Value Std.Error DF  t-value p-value
-(Intercept)   7.527510 2.9488384 12 2.552704  0.0253
-log(cofactor) 0.937197 0.5632936 12 1.663780  0.1220
+(Intercept)   7.392778 3.0483989 12 2.425135  0.0320
+log(cofactor) 0.881931 0.5798511 12 1.520960  0.1542
  Correlation: 
               (Intr)
-log(cofactor) 0.99  
+log(cofactor) 0.987 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.4562926 -0.3215999 -0.1635935  0.4254892 
-       Max 
- 1.9728165 
+       Min         Q1        Med         Q3        Max 
+-1.4850079 -0.4509161 -0.1453328  0.4232930  1.2577476 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF  F-value p-value
-(Intercept)       1    12 40.94012  <.0001
-log(cofactor)     1    12  2.76817   0.122
+(Intercept)       1    12 32.16588  0.0001
+log(cofactor)     1    12  2.31332  0.1542
 Levene's Test for Homogeneity of Variance (center = median)
-      Df F value  Pr(>F)  
-group  5  3.3725 0.03586 *
-      13                  
----
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+      Df F value Pr(>F)
+group  5  2.2229 0.1142
+      13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.96081, p-value = 0.5884
+W = 0.97178, p-value = 0.8115
 
          Effect   Rsq upper.CL lower.CL
-1         Model 0.762    0.918    0.523
-2 log(cofactor) 0.762    0.918    0.523
+1         Model 0.651    0.877    0.327
+2 log(cofactor) 0.651    0.877    0.327
 $d
-[1] -0.5019795
+[1] -0.3908348
 
 $ci
-[1] -0.5895138 -0.2346108
+[1] -0.4413065 -0.1758217
 
 $p
 [1] 0
@@ -783,21 +745,16 @@ Random effects:
 StdDev:   0.3090393 0.3081185
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)   1.7724119 0.9264961 12 1.9130270
-log(cofactor) 0.1689497 0.1750016 12 0.9654181
-              p-value
-(Intercept)    0.0799
-log(cofactor)  0.3534
+                  Value Std.Error DF   t-value p-value
+(Intercept)   1.7724119 0.9264961 12 1.9130270  0.0799
+log(cofactor) 0.1689497 0.1750016 12 0.9654181  0.3534
  Correlation: 
               (Intr)
 log(cofactor) 0.986 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--2.0986505 -0.3851319 -0.1063804  0.7137330 
-       Max 
- 1.6186842 
+       Min         Q1        Med         Q3        Max 
+-2.0986505 -0.3851319 -0.1063804  0.7137330  1.6186842 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -820,57 +777,52 @@ W = 0.98072, p-value = 0.9504
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  16.51387 20.29162 -4.256934
+  18.12153 21.89929 -5.060765
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:    0.280129 0.3416404
+StdDev:   0.3394365 0.3400382
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)   1.7646236 0.9748145 12 1.8102147
-log(cofactor) 0.1708361 0.1861061 12 0.9179503
-              p-value
-(Intercept)    0.0954
-log(cofactor)  0.3767
+                  Value Std.Error DF   t-value p-value
+(Intercept)   1.6688690 0.9993473 12 1.6699590  0.1208
+log(cofactor) 0.1446179 0.1900393 12 0.7609894  0.4614
  Correlation: 
               (Intr)
-log(cofactor) 0.989 
+log(cofactor) 0.986 
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.91828590 -0.30644924 -0.07014608  0.62436440 
-        Max 
- 1.63937805 
+       Min         Q1        Med         Q3        Max 
+-1.8808224 -0.3494617 -0.1224661  0.6225276  0.9803464 
 
 Number of Observations: 19
 Number of Groups: 6 
-              numDF denDF  F-value p-value
-(Intercept)       1    12 38.06896  <.0001
-log(cofactor)     1    12  0.84263  0.3767
+              numDF denDF   F-value p-value
+(Intercept)       1    12 31.124953  0.0001
+log(cofactor)     1    12  0.579105  0.4614
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.8609 0.5323
+group  5  0.4872   0.78
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.98083, p-value = 0.9515
+W = 0.92254, p-value = 0.1261
 
-         Effect   Rsq upper.CL lower.CL
-1         Model 0.872    0.957     0.74
-2 log(cofactor) 0.872    0.957     0.74
+         Effect  Rsq upper.CL lower.CL
+1         Model 0.26    0.691    0.004
+2 log(cofactor) 0.26    0.691    0.004
 $d
-[1] -0.7948292
+[1] -0.1825349
 
 $ci
-[1] -0.8152463 -0.3958271
+[1] -0.203174837 -0.002306132
 
 $p
 [1] 0
@@ -882,18 +834,17 @@ Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
   #Df   LogLik Df   Chisq Pr(>Chisq)    
-1   4 -24.2758                          
-2   4 -25.2087  0  1.8657  < 2.2e-16 ***
-3   4  -3.7666  0 42.8841  < 2.2e-16 ***
-4   4  -4.2569  0  0.9807  < 2.2e-16 ***
+1   4 -25.4177                          
+2   4 -26.2160  0  1.5965  < 2.2e-16 ***
+3   4  -4.6376  0 43.1568  < 2.2e-16 ***
+4   4  -5.0608  0  0.8463  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
                 df      AIC
-simple.brownian  4 56.55165
-x.brownian       4 58.41731
-y.brownian       4 15.53316
-xy.brownian      4 16.51387
+simple.brownian  4 58.83548
+x.brownian       4 60.43202
+y.brownian       4 17.27526
+xy.brownian      4 18.12153
 ================================================================================
 ================================================================================
 Comparison 1c: uts vs. ratio
@@ -925,10 +876,8 @@ cofactor    -92.10914  41.55221 12 -2.216708  0.0467
 cofactor -0.877
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.5405259 -0.5494926 -0.3351262  0.2717919 
-       Max 
- 2.6697140 
+       Min         Q1        Med         Q3        Max 
+-1.5405259 -0.5494926 -0.3351262  0.2717919  2.6697140 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -950,13 +899,13 @@ W = 0.90022, p-value = 0.04911
 2 cofactor 0.342    0.739    0.016
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC     BIC    logLik
-  185.3473 189.125 -88.67364
+       AIC      BIC    logLik
+  190.5304 194.3082 -91.26522
 
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:  0.00371994 35.55999
+StdDev:    18.89843 36.39991
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -964,41 +913,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
-(Intercept) 152.98987  17.08653 12  8.953829  0.0000
-cofactor    -91.36518  38.88422 12 -2.349673  0.0367
+(Intercept)  164.0498  21.10093 12  7.774532  0.0000
+cofactor    -104.6264  44.78069 12 -2.336417  0.0376
  Correlation: 
          (Intr)
-cofactor -0.891
+cofactor -0.841
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.4958289 -0.5309871 -0.2827132  0.2382074 
-       Max 
- 2.4429903 
+       Min         Q1        Med         Q3        Max 
+-1.2884595 -0.5371885 -0.2097447  0.1254340  1.4675818 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF   F-value p-value
-(Intercept)     1    12 228.45943  <.0001
-cofactor        1    12   5.52096  0.0367
+(Intercept)     1    12 115.02394  <.0001
+cofactor        1    12   5.45884  0.0376
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.8236 0.1773
+group  5   1.533 0.2467
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.91082, p-value = 0.07663
+W = 0.95778, p-value = 0.5295
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.999        1    0.997
-2 cofactor 0.999        1    0.997
+1    Model 0.576    0.847    0.215
+2 cofactor 0.576    0.847    0.215
 $d
-[1] -0.6563579
+[1] -0.2331407
 
 $ci
-[1] -0.9771685 -0.2691555
+[1] -0.28520145 -0.09514151
 
 $p
 [1] 0
@@ -1018,7 +965,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:  0.06725741 0.2361867
+StdDev:  0.06725742 0.2361867
 
 Fixed effects: log(phenotype) ~ cofactor 
                 Value Std.Error DF  t-value p-value
@@ -1029,10 +976,8 @@ cofactor    -0.828383 0.3116388 12 -2.65815  0.0209
 cofactor -0.869
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.8463468 -0.6455644 -0.2025454  0.3954217 
-       Max 
- 2.2170884 
+       Min         Q1        Med         Q3        Max 
+-1.8463467 -0.6455644 -0.2025454  0.3954217  2.2170884 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1054,13 +999,13 @@ W = 0.96789, p-value = 0.7336
 2 cofactor 0.424     0.78    0.056
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC      BIC logLik
-  -1.112199 2.665556 4.5561
+       AIC      BIC   logLik
+  2.810292 6.588048 2.594854
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:  0.02841794 0.2611235
+StdDev:   0.1301822 0.2622733
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -1068,41 +1013,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
                 Value Std.Error DF  t-value p-value
-(Intercept)  5.031990 0.1271469 12 39.57620  0.0000
-cofactor    -0.793121 0.2880555 12 -2.75336  0.0175
+(Intercept)  5.109458 0.1502024 12 34.01715  0.0000
+cofactor    -0.895151 0.3204555 12 -2.79337  0.0162
  Correlation: 
          (Intr)
-cofactor -0.889
+cofactor -0.844
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.8181345 -0.6134348 -0.2020802  0.3662396 
-       Max 
- 2.0907507 
+       Min         Q1        Med         Q3        Max 
+-1.6278476 -0.6515780 -0.2232015  0.2460866  1.4129775 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF  F-value p-value
-(Intercept)     1    12 6558.141  <.0001
-cofactor        1    12    7.581  0.0175
+(Intercept)     1    12 3486.505  <.0001
+cofactor        1    12    7.803  0.0162
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.9057 0.5064
+group  5  0.8493 0.5391
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.97078, p-value = 0.7919
+W = 0.97844, p-value = 0.9227
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.843    0.947    0.681
-2 cofactor 0.843    0.947    0.681
+1    Model 0.873    0.957    0.741
+2 cofactor 0.873    0.957    0.741
 $d
-[1] -0.4193523
+[1] -0.4492521
 
 $ci
-[1] -0.6190963 -0.1727456
+[1] -0.681241 -0.174659
 
 $p
 [1] 0
@@ -1122,24 +1065,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:  0.02709811 32.33513
+StdDev:  0.02709782 32.33513
 
 Fixed effects: phenotype ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    72.72636  22.15322 12  3.282879
-log(cofactor) -40.70467  18.59877 12 -2.188568
-              p-value
-(Intercept)    0.0065
-log(cofactor)  0.0491
+                  Value Std.Error DF   t-value p-value
+(Intercept)    72.72636  22.15322 12  3.282879  0.0065
+log(cofactor) -40.70467  18.59877 12 -2.188568  0.0491
  Correlation: 
               (Intr)
 log(cofactor) 0.935 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.6589770 -0.6043978 -0.1484124  0.3139587 
-       Max 
- 2.7581105 
+       Min         Q1        Med         Q3        Max 
+-1.6589770 -0.6043978 -0.1484124  0.3139587  2.7581105 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1161,58 +1099,53 @@ W = 0.90489, p-value = 0.05969
 2 log(cofactor) 0.343     0.74    0.016
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-      AIC      BIC    logLik
-  185.208 188.9858 -88.60401
+       AIC      BIC    logLik
+  190.5585 194.3362 -91.27923
 
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev: 0.003843367 35.42991
+StdDev:    18.86352 36.44478
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    73.79697  19.77896 12  3.731085
-log(cofactor) -41.51758  17.41022 12 -2.384667
-              p-value
-(Intercept)    0.0029
-log(cofactor)  0.0345
+                  Value Std.Error DF   t-value p-value
+(Intercept)    74.44184  23.62761 12  3.150629  0.0084
+log(cofactor) -46.29474  19.87290 12 -2.329541  0.0381
  Correlation: 
               (Intr)
-log(cofactor) 0.921 
+log(cofactor) 0.875 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.5778638 -0.6166704 -0.1904936  0.2274466 
-       Max 
- 2.4569510 
+       Min         Q1        Med         Q3        Max 
+-1.3754723 -0.5145437 -0.2837832  0.1665598  1.4606935 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 230.14011  <.0001
-log(cofactor)     1    12   5.68664  0.0345
+(Intercept)       1    12 115.11139  <.0001
+log(cofactor)     1    12   5.42676  0.0381
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.6104 0.2258
+group  5  1.3381 0.3088
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.91548, p-value = 0.09339
+W = 0.95637, p-value = 0.5032
 
-         Effect Rsq upper.CL lower.CL
-1         Model   1        1        1
-2 log(cofactor)   1        1        1
+         Effect   Rsq upper.CL lower.CL
+1         Model 0.868    0.956    0.731
+2 log(cofactor) 0.868    0.956    0.731
 $d
-[1] -0.6566016
+[1] -0.5245993
 
 $ci
-[1] -0.9872086 -0.2623840
+[1] -0.7156531 -0.2106114
 
 $p
 [1] 0
@@ -1235,21 +1168,16 @@ Random effects:
 StdDev:  0.03565122 0.2431368
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    4.328228 0.1674943 12 25.841048
-log(cofactor) -0.360636 0.1403007 12 -2.570451
-              p-value
-(Intercept)    0.0000
-log(cofactor)  0.0245
+                  Value Std.Error DF   t-value p-value
+(Intercept)    4.328228 0.1674943 12 25.841048  0.0000
+log(cofactor) -0.360636 0.1403007 12 -2.570451  0.0245
  Correlation: 
               (Intr)
 log(cofactor) 0.931 
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.96721576 -0.64841399 -0.04926403  0.44828513 
-        Max 
- 2.30131602 
+        Min          Q1         Med          Q3         Max 
+-1.96721576 -0.64841399 -0.04926403  0.44828512  2.30131602 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1271,58 +1199,53 @@ W = 0.97352, p-value = 0.844
 2 log(cofactor) 0.416    0.776     0.05
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC      BIC   logLik
-  -1.137428 2.640328 4.568714
+       AIC      BIC   logLik
+  3.002342 6.780098 2.498829
 
 Random effects:
  Formula: ~1 | species
-        (Intercept)  Residual
-StdDev:  0.01237684 0.2624643
+        (Intercept) Residual
+StdDev:   0.1273762 0.264866
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    4.348971 0.1467774 12 29.629703
-log(cofactor) -0.356040 0.1291722 12 -2.756325
-              p-value
-(Intercept)    0.0000
-log(cofactor)  0.0174
+                  Value Std.Error DF   t-value p-value
+(Intercept)    4.346042 0.1691788 12 25.689045  0.0000
+log(cofactor) -0.392986 0.1429984 12 -2.748183  0.0177
  Correlation: 
               (Intr)
-log(cofactor) 0.92  
+log(cofactor) 0.881 
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.91787764 -0.65864039 -0.06746679  0.37181428 
-        Max 
- 2.11398510 
+       Min         Q1        Med         Q3        Max 
+-1.7211974 -0.6327484 -0.2639773  0.3271246  1.4433133 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF  F-value p-value
-(Intercept)       1    12 6742.686  <.0001
-log(cofactor)     1    12    7.597  0.0174
+(Intercept)       1    12 3525.181  <.0001
+log(cofactor)     1    12    7.553  0.0177
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.6515 0.6657
+group  5  0.7154  0.623
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.97099, p-value = 0.7962
+W = 0.97472, p-value = 0.8653
 
          Effect   Rsq upper.CL lower.CL
-1         Model 0.913    0.971    0.822
-2 log(cofactor) 0.913    0.971    0.822
+1         Model 0.666    0.883    0.352
+2 log(cofactor) 0.666    0.883    0.352
 $d
-[1] -0.4971255
+[1] -0.2505032
 
 $ci
-[1] -0.7724583 -0.2032431
+[1] -0.33698304 -0.09825795
 
 $p
 [1] 0
@@ -1333,19 +1256,18 @@ Model 1: phenotype ~ cofactor
 Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
-  #Df  LogLik Df    Chisq Pr(>Chisq)    
-1   4 -88.674                           
-2   4 -88.604  0   0.1393  < 2.2e-16 ***
-3   4   4.556  0 186.3202  < 2.2e-16 ***
-4   4   4.569  0   0.0252  < 2.2e-16 ***
+  #Df  LogLik Df   Chisq Pr(>Chisq)    
+1   4 -91.265                          
+2   4 -91.279  0   0.028  < 2.2e-16 ***
+3   4   2.595  0 187.748  < 2.2e-16 ***
+4   4   2.499  0   0.192  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
                 df        AIC
-simple.brownian  4 185.347288
-x.brownian       4 185.208025
-y.brownian       4  -1.112199
-xy.brownian      4  -1.137428
+simple.brownian  4 190.530446
+x.brownian       4 190.558463
+y.brownian       4   2.810292
+xy.brownian      4   3.002342
 ================================================================================
 ================================================================================
 Comparison 2a: ufs vs. Etanl
@@ -1369,21 +1291,16 @@ Random effects:
 StdDev:  0.02815979 0.04458408
 
 Fixed effects: phenotype ~ cofactor 
-                 Value  Std.Error DF   t-value
-(Intercept)  0.2051013 0.02560626 12  8.009810
-cofactor    -0.0000783 0.00002071 12 -3.780517
-            p-value
-(Intercept)  0.0000
-cofactor     0.0026
+                 Value  Std.Error DF   t-value p-value
+(Intercept)  0.2051013 0.02560626 12  8.009810  0.0000
+cofactor    -0.0000783 0.00002071 12 -3.780517  0.0026
  Correlation: 
          (Intr)
 cofactor -0.757
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--0.77148088 -0.58123261 -0.29139007  0.09768854 
-        Max 
- 2.77660161 
+        Min          Q1         Med          Q3         Max 
+-0.77148088 -0.58123261 -0.29139007  0.09768854  2.77660161 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1406,60 +1323,55 @@ W = 0.75473, p-value = 0.0002699
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
         AIC       BIC   logLik
-  -59.35309 -55.57533 33.67654
+  -54.74435 -50.96659 31.37217
 
 Random effects:
  Formula: ~1 | species
-        (Intercept)   Residual
-StdDev:  0.02336816 0.05180574
+        (Intercept)  Residual
+StdDev:  0.04460047 0.0517933
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
-                  Value   Std.Error DF   t-value
-(Intercept)  0.21036074 0.024972294 12  8.423765
-cofactor    -0.00008169 0.000020013 12 -4.082015
-            p-value
-(Intercept)  0.0000
-cofactor     0.0015
+                  Value  Std.Error DF   t-value p-value
+(Intercept)  0.21814616 0.03260680 12  6.690205  0.0000
+cofactor    -0.00008203 0.00002356 12 -3.481655  0.0045
  Correlation: 
          (Intr)
-cofactor -0.793
+cofactor -0.727
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--0.84250414 -0.62156078 -0.26586046  0.05334421 
-        Max 
- 2.50660075 
+        Min          Q1         Med          Q3         Max 
+-1.37847567 -0.58544760 -0.20762764  0.02956975  1.52514653 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF  F-value p-value
-(Intercept)     1    12 72.49806  <.0001
-cofactor        1    12 16.66285  0.0015
+(Intercept)     1    12 36.67848  0.0001
+cofactor        1    12 12.12192  0.0045
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  2.0138 0.1435
+group  5  1.5067 0.2543
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.76333, p-value = 0.0003514
+W = 0.90829, p-value = 0.06888
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.825    0.941    0.645
-2 cofactor 0.825    0.941    0.645
+1    Model 0.692    0.893    0.395
+2 cofactor 0.692    0.893    0.395
 $d
-[1] -0.2294461
+[1] -0.0959109
 
 $ci
-[1] -0.40777861 -0.08517534
+[1] -0.18233666 -0.02384673
 
 $p
-[1] 0
+[1] 0.003
 
 --------------------------------------------------------------------------------
 
@@ -1479,21 +1391,16 @@ Random effects:
 StdDev:  0.07151349 0.2628217
 
 Fixed effects: log(phenotype) ~ cofactor 
-                 Value  Std.Error DF    t-value
-(Intercept) -1.4684205 0.12547924 12 -11.702497
-cofactor    -0.0007727 0.00011331 12  -6.819404
-            p-value
-(Intercept)       0
-cofactor          0
+                 Value  Std.Error DF    t-value p-value
+(Intercept) -1.4684205 0.12547924 12 -11.702497       0
+cofactor    -0.0007727 0.00011331 12  -6.819404       0
  Correlation: 
          (Intr)
 cofactor -0.82 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.4499680 -0.6965377 -0.2328735  0.3747247 
-       Max 
- 2.3455009 
+       Min         Q1        Med         Q3        Max 
+-1.4499680 -0.6965377 -0.2328735  0.3747247  2.3455009 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1515,58 +1422,53 @@ W = 0.90776, p-value = 0.06734
 2 cofactor 0.834    0.944    0.663
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC      BIC   logLik
-  2.837859 6.615615 2.581071
+       AIC      BIC    logLik
+  6.191188 9.968944 0.9044059
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:   0.1016974 0.2725191
+StdDev:   0.1885115 0.2694933
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
-                Value  Std.Error DF    t-value
-(Intercept) -1.427214 0.12416859 12 -11.494166
-cofactor    -0.000801 0.00010125 12  -7.910895
-            p-value
-(Intercept)       0
-cofactor          0
+                 Value  Std.Error DF   t-value p-value
+(Intercept) -1.4157131 0.15350742 12 -9.222441       0
+cofactor    -0.0007884 0.00011586 12 -6.804755       0
  Correlation: 
          (Intr)
-cofactor -0.802
+cofactor -0.754
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.3219396 -0.6624822 -0.1726555  0.2346372 
-       Max 
- 1.9205306 
+       Min         Q1        Med         Q3        Max 
+-1.0360812 -0.6804104 -0.1424531  0.2023267  1.6915638 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF  F-value p-value
-(Intercept)     1    12 891.5330  <.0001
-cofactor        1    12  62.5823  <.0001
+(Intercept)     1    12 478.1721  <.0001
+cofactor        1    12  46.3047  <.0001
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.8954 0.5123
+group  5  0.7182 0.6212
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.89207, p-value = 0.03504
+W = 0.95698, p-value = 0.5144
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.999        1    0.997
-2 cofactor 0.999        1    0.997
+1    Model 0.972    0.991    0.943
+2 cofactor 0.972    0.991    0.943
 $d
-[1] -0.1644143
+[1] -0.1379773
 
 $ci
-[1] -0.32379796 -0.05630056
+[1] -0.27431647 -0.04594893
 
 $p
 [1] 0
@@ -1586,24 +1488,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)   Residual
-StdDev: 2.001866e-06 0.04276948
+StdDev: 2.001908e-06 0.04276948
 
 Fixed effects: phenotype ~ log(cofactor) 
-                   Value  Std.Error DF   t-value
-(Intercept)    0.8052986 0.12410788 12  6.488699
-log(cofactor) -0.1016204 0.01864817 12 -5.449347
-              p-value
-(Intercept)     0e+00
-log(cofactor)   1e-04
+                   Value  Std.Error DF   t-value p-value
+(Intercept)    0.8052986 0.12410788 12  6.488699   0e+00
+log(cofactor) -0.1016204 0.01864817 12 -5.449347   1e-04
  Correlation: 
               (Intr)
 log(cofactor) -0.997
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.3205869 -0.5917912 -0.2349009  0.3380640 
-       Max 
- 3.1187707 
+       Min         Q1        Med         Q3        Max 
+-1.3205869 -0.5917912 -0.2349009  0.3380640  3.1187707 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1615,8 +1512,7 @@ Levene's Test for Homogeneity of Variance (center = median)
 group  5  3.3353 0.03713 *
       13                  
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
@@ -1628,64 +1524,58 @@ W = 0.87595, p-value = 0.01827
 2 log(cofactor) 0.764    0.919    0.527
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC       BIC   logLik
-  -65.79568 -62.01793 36.89784
+       AIC       BIC   logLik
+  -60.0769 -56.29914 34.03845
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)   Residual
-StdDev: 4.735656e-06 0.04794003
+        (Intercept)  Residual
+StdDev:  0.02913352 0.0485437
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
-                   Value  Std.Error DF   t-value
-(Intercept)    0.8282018 0.11275109 12  7.345400
-log(cofactor) -0.1043537 0.01685446 12 -6.191461
-              p-value
-(Intercept)         0
-log(cofactor)       0
+                   Value  Std.Error DF   t-value p-value
+(Intercept)    0.8466590 0.14235429 12  5.947548   1e-04
+log(cofactor) -0.1060653 0.02113983 12 -5.017322   3e-04
  Correlation: 
               (Intr)
-log(cofactor) -0.996
+log(cofactor) -0.993
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.3092960 -0.6223129 -0.3229719  0.2119280 
-       Max 
- 2.6390774 
+       Min         Q1        Med         Q3        Max 
+-1.2841949 -0.5921565 -0.2549534  0.2175715  1.4677682 
 
 Number of Observations: 19
 Number of Groups: 6 
-              numDF denDF   F-value p-value
-(Intercept)       1    12 162.11488  <.0001
-log(cofactor)     1    12  38.33419  <.0001
+              numDF denDF  F-value p-value
+(Intercept)       1    12 69.11011  <.0001
+log(cofactor)     1    12 25.17352   3e-04
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value  Pr(>F)  
-group  5  2.4517 0.08949 .
+group  5   2.763 0.06492 .
       13                  
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.887, p-value = 0.02848
+W = 0.95557, p-value = 0.4886
 
-         Effect Rsq upper.CL lower.CL
-1         Model   1        1        1
-2 log(cofactor)   1        1        1
+         Effect   Rsq upper.CL lower.CL
+1         Model 0.857    0.952    0.708
+2 log(cofactor) 0.857    0.952    0.708
 $d
-[1] -0.2355304
+[1] -0.09245828
 
 $ci
-[1] -0.4842209 -0.0782352
+[1] -0.1871376 -0.0277520
 
 $p
-[1] 0
+[1] 0.002
 
 --------------------------------------------------------------------------------
 
@@ -1702,24 +1592,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 1.362087e-06 0.2205048
+StdDev: 1.362137e-06 0.2205048
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    3.546772 0.6398575 12  5.543065
-log(cofactor) -0.861265 0.0961436 12 -8.958117
-              p-value
-(Intercept)     1e-04
-log(cofactor)   0e+00
+                  Value Std.Error DF   t-value p-value
+(Intercept)    3.546772 0.6398575 12  5.543065   1e-04
+log(cofactor) -0.861265 0.0961436 12 -8.958117   0e+00
  Correlation: 
               (Intr)
 log(cofactor) -0.997
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.55630426 -0.75893355  0.05923759  0.70968471 
-        Max 
- 1.96768544 
+        Min          Q1         Med          Q3         Max 
+-1.55630426 -0.75893355  0.05923759  0.70968471  1.96768544 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1741,58 +1626,53 @@ W = 0.96483, p-value = 0.6703
 2 log(cofactor) 0.898    0.966    0.791
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC       BIC   logLik
-  -5.580143 -1.802387 6.790071
+        AIC      BIC   logLik
+  -2.418591 1.359165 5.209295
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 3.464716e-06 0.2338244
+        (Intercept)  Residual
+StdDev:  0.02805075 0.2522209
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF    t-value
-(Intercept)    3.958981 0.5499361 12   7.198983
-log(cofactor) -0.923206 0.0822065 12 -11.230322
-              p-value
-(Intercept)         0
-log(cofactor)       0
+                  Value Std.Error DF    t-value p-value
+(Intercept)    4.266436 0.5865901 12   7.273284       0
+log(cofactor) -0.965919 0.0878050 12 -11.000734       0
  Correlation: 
               (Intr)
-log(cofactor) -0.996
+log(cofactor) -0.995
 
 Standardized Within-Group Residuals:
-         Min           Q1          Med           Q3 
--1.620183763 -0.524585202  0.004507301  0.620603373 
-         Max 
- 1.807982067 
+       Min         Q1        Med         Q3        Max 
+-1.7031611 -0.4646712 -0.1828606  0.4454772  1.7546710 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 1845.0967  <.0001
-log(cofactor)     1    12  126.1201  <.0001
+(Intercept)       1    12 1463.9878  <.0001
+log(cofactor)     1    12  121.0162  <.0001
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.8575 0.1707
+group  5  1.4087 0.2846
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.96901, p-value = 0.7564
+W = 0.97491, p-value = 0.8684
 
-         Effect Rsq upper.CL lower.CL
-1         Model   1        1        1
-2 log(cofactor)   1        1        1
+         Effect   Rsq upper.CL lower.CL
+1         Model 0.987    0.996    0.974
+2 log(cofactor) 0.987    0.996    0.974
 $d
-[1] -0.1024247
+[1] -0.08983634
 
 $ci
-[1] -0.2087507 -0.0341805
+[1] -0.1825432 -0.0296269
 
 $p
 [1] 0
@@ -1804,18 +1684,17 @@ Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
   #Df LogLik Df   Chisq Pr(>Chisq)    
-1   4 33.677                          
-2   4 36.898  0  6.4426  < 2.2e-16 ***
-3   4  2.581  0 68.6335  < 2.2e-16 ***
-4   4  6.790  0  8.4180  < 2.2e-16 ***
+1   4 31.372                          
+2   4 34.038  0  5.3326  < 2.2e-16 ***
+3   4  0.904  0 66.2681  < 2.2e-16 ***
+4   4  5.209  0  8.6098  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
                 df        AIC
-simple.brownian  4 -59.353089
-x.brownian       4 -65.795682
-y.brownian       4   2.837859
-xy.brownian      4  -5.580143
+simple.brownian  4 -54.744345
+x.brownian       4 -60.076898
+y.brownian       4   6.191188
+xy.brownian      4  -2.418591
 ================================================================================
 ================================================================================
 Comparison 2b: ufs vs. Esec
@@ -1839,21 +1718,16 @@ Random effects:
 StdDev:  0.02104012 0.05046461
 
 Fixed effects: phenotype ~ cofactor 
-                  Value   Std.Error DF   t-value
-(Intercept)  0.20779950 0.027626784 12  7.521668
-cofactor    -0.00006622 0.000019859 12 -3.334494
-            p-value
-(Intercept)  0.0000
-cofactor     0.0059
+                  Value   Std.Error DF   t-value p-value
+(Intercept)  0.20779950 0.027626784 12  7.521668  0.0000
+cofactor    -0.00006622 0.000019859 12 -3.334494  0.0059
  Correlation: 
          (Intr)
 cofactor -0.825
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.00422359 -0.42692837 -0.26493741  0.02240184 
-        Max 
- 2.98719132 
+        Min          Q1         Med          Q3         Max 
+-1.00422359 -0.42692837 -0.26493741  0.02240183  2.98719132 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1875,61 +1749,56 @@ W = 0.75744, p-value = 0.0002931
 2 cofactor 0.548    0.836    0.179
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC       BIC   logLik
-  -56.8845 -53.10675 32.44225
+        AIC       BIC   logLik
+  -51.88769 -48.10993 29.94384
 
 Random effects:
  Formula: ~1 | species
         (Intercept)   Residual
-StdDev:  0.02039945 0.05684218
+StdDev:   0.0471779 0.05615786
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
-                 Value   Std.Error DF   t-value
-(Intercept)  0.2167411 0.027848457 12  7.782878
-cofactor    -0.0000722 0.000019481 12 -3.705966
-            p-value
-(Intercept)   0.000
-cofactor      0.003
+                 Value  Std.Error DF   t-value p-value
+(Intercept)  0.2165749 0.03698667 12  5.855486  0.0001
+cofactor    -0.0000659 0.00002305 12 -2.859225  0.0144
  Correlation: 
          (Intr)
-cofactor -0.836
+cofactor -0.764
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--0.98223453 -0.44548923 -0.19535096 -0.05151469 
-        Max 
- 2.57012759 
+        Min          Q1         Med          Q3         Max 
+-1.33035455 -0.46335635 -0.22920685  0.08273405  1.56587426 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF  F-value p-value
-(Intercept)     1    12 73.00021  <.0001
-cofactor        1    12 13.73418   0.003
+(Intercept)     1    12 32.40174  0.0001
+cofactor        1    12  8.17516  0.0144
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.5112 0.2529
+group  5  1.2398 0.3459
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.77081, p-value = 0.0004437
+W = 0.91289, p-value = 0.08366
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.995    0.998     0.99
-2 cofactor 0.995    0.998     0.99
+1    Model 0.625    0.867    0.286
+2 cofactor 0.625    0.867    0.286
 $d
-[1] -0.4471959
+[1] -0.0768038
 
 $ci
-[1] -0.8148415 -0.1566122
+[1] -0.15205793 -0.01206271
 
 $p
-[1] 0
+[1] 0.007
 
 --------------------------------------------------------------------------------
 
@@ -1946,24 +1815,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 6.249438e-06 0.3108937
+StdDev: 6.097648e-06 0.3108937
 
 Fixed effects: log(phenotype) ~ cofactor 
-                 Value  Std.Error DF   t-value
-(Intercept) -1.4363538 0.14940678 12 -9.613712
-cofactor    -0.0006453 0.00011422 12 -5.649834
-            p-value
-(Intercept)   0e+00
-cofactor      1e-04
+                 Value  Std.Error DF   t-value p-value
+(Intercept) -1.4363538 0.14940678 12 -9.613712   0e+00
+cofactor    -0.0006453 0.00011422 12 -5.649834   1e-04
  Correlation: 
          (Intr)
 cofactor -0.863
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.2371984 -0.7471713 -0.1255163  0.2506925 
-       Max 
- 2.4783811 
+       Min         Q1        Med         Q3        Max 
+-1.2371984 -0.7471713 -0.1255163  0.2506925  2.4783811 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -1985,61 +1849,56 @@ W = 0.89633, p-value = 0.04178
 2 cofactor 0.777    0.924    0.552
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC      BIC     logLik
-  9.231927 13.00968 -0.6159635
+       AIC     BIC   logLik
+  12.63414 16.4119 -2.31707
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:   0.1000304 0.3288956
+StdDev:   0.2271345 0.3178858
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
-                 Value  Std.Error DF   t-value
-(Intercept) -1.3589648 0.15562135 12 -8.732509
-cofactor    -0.0007136 0.00011001 12 -6.486551
-            p-value
-(Intercept)       0
-cofactor          0
+                 Value  Std.Error DF   t-value p-value
+(Intercept) -1.3933812 0.19536883 12 -7.132055   0e+00
+cofactor    -0.0006638 0.00012583 12 -5.275548   2e-04
  Correlation: 
          (Intr)
-cofactor -0.842
+cofactor -0.787
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.2134672 -0.5375212 -0.1483032  0.1846666 
-       Max 
- 2.0504185 
+       Min         Q1        Med         Q3        Max 
+-1.1292980 -0.6707851 -0.2094629  0.2240394  1.7022697 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF  F-value p-value
-(Intercept)     1    12 691.3056  <.0001
-cofactor        1    12  42.0753  <.0001
+(Intercept)     1    12 334.4147  <.0001
+cofactor        1    12  27.8314   2e-04
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.4963 0.7737
+group  5  0.3859 0.8497
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.87106, p-value = 0.01505
+W = 0.94401, p-value = 0.311
 
-    Effect  Rsq upper.CL lower.CL
-1    Model 0.94     0.98    0.878
-2 cofactor 0.94     0.98    0.878
+    Effect   Rsq upper.CL lower.CL
+1    Model 0.864    0.954    0.723
+2 cofactor 0.864    0.954    0.723
 $d
-[1] -0.1630871
+[1] -0.08726104
 
 $ci
-[1] -0.3255480 -0.0535162
+[1] -0.18669133 -0.02351407
 
 $p
-[1] 0
+[1] 0.002
 
 --------------------------------------------------------------------------------
 
@@ -2056,24 +1915,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)   Residual
-StdDev: 2.104136e-06 0.05055557
+StdDev: 2.142245e-06 0.05055557
 
 Fixed effects: phenotype ~ log(cofactor) 
-                   Value Std.Error DF   t-value
-(Intercept)    0.8208047 0.1705852 12  4.811699
-log(cofactor) -0.1000201 0.0246833 12 -4.052137
-              p-value
-(Intercept)    0.0004
-log(cofactor)  0.0016
+                   Value Std.Error DF   t-value p-value
+(Intercept)    0.8208047 0.1705852 12  4.811699  0.0004
+log(cofactor) -0.1000201 0.0246833 12 -4.052137  0.0016
  Correlation: 
               (Intr)
 log(cofactor) -0.997
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.43427914 -0.45453044 -0.17842557  0.09785261 
-        Max 
- 3.28771082 
+        Min          Q1         Med          Q3         Max 
+-1.43427914 -0.45453044 -0.17842557  0.09785261  3.28771082 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -2096,60 +1950,55 @@ W = 0.80386, p-value = 0.001301
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
         AIC       BIC   logLik
-  -59.20428 -55.42653 33.60214
+  -53.11564 -49.33788 30.55782
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)   Residual
-StdDev: 1.386776e-05 0.05702038
+        (Intercept)   Residual
+StdDev:  0.03855116 0.05697417
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
-                   Value  Std.Error DF   t-value
-(Intercept)    0.8851200 0.16039765 12  5.518286
-log(cofactor) -0.1088024 0.02313699 12 -4.702530
-              p-value
-(Intercept)     1e-04
-log(cofactor)   5e-04
+                   Value  Std.Error DF   t-value p-value
+(Intercept)    0.8501186 0.21356799 12  3.980553  0.0018
+log(cofactor) -0.1025800 0.03056028 12 -3.356643  0.0057
  Correlation: 
               (Intr)
-log(cofactor) -0.997
+log(cofactor) -0.995
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.41831196 -0.44832000 -0.20110494 -0.02775933 
-        Max 
- 2.77930446 
+        Min          Q1         Med          Q3         Max 
+-1.27582772 -0.56008950 -0.12280955  0.07839771  1.50344246 
 
 Number of Observations: 19
 Number of Groups: 6 
-              numDF denDF   F-value p-value
-(Intercept)       1    12 114.59329  <.0001
-log(cofactor)     1    12  22.11379   5e-04
+              numDF denDF  F-value p-value
+(Intercept)       1    12 42.96045  <.0001
+log(cofactor)     1    12 11.26705  0.0057
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.7544 0.1917
+group  5   1.732 0.1966
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.83744, p-value = 0.004219
+W = 0.92694, p-value = 0.1521
 
-         Effect   Rsq upper.CL lower.CL
-1         Model 0.999        1    0.999
-2 log(cofactor) 0.999        1    0.999
+         Effect  Rsq upper.CL lower.CL
+1         Model 0.74    0.911    0.482
+2 log(cofactor) 0.74    0.911    0.482
 $d
-[1] -0.3574469
+[1] -0.09790378
 
 $ci
-[1] -0.6954124 -0.1332614
+[1] -0.19044628 -0.02355222
 
 $p
-[1] 0
+[1] 0.0035
 
 --------------------------------------------------------------------------------
 
@@ -2166,24 +2015,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 4.370025e-06 0.2841921
+StdDev: 4.143324e-06 0.2841921
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    3.999730 0.9589243 12  4.171059
-log(cofactor) -0.894349 0.1387542 12 -6.445564
-              p-value
-(Intercept)    0.0013
-log(cofactor)  0.0000
+                  Value Std.Error DF   t-value p-value
+(Intercept)    3.999730 0.9589243 12  4.171059  0.0013
+log(cofactor) -0.894349 0.1387542 12 -6.445564  0.0000
  Correlation: 
               (Intr)
 log(cofactor) -0.997
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.7574903 -0.8477933  0.1041812  0.3234646 
-       Max 
- 2.4316692 
+       Min         Q1        Med         Q3        Max 
+-1.7574903 -0.8477933  0.1041812  0.3234646  2.4316692 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -2205,58 +2049,53 @@ W = 0.95941, p-value = 0.5608
 2 log(cofactor) 0.819    0.939    0.634
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC      BIC   logLik
-  5.878223 9.655979 1.060889
+       AIC      BIC     logLik
+  9.986502 13.76426 -0.9932511
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 5.722397e-07 0.3161151
+        (Intercept)  Residual
+StdDev:   0.1548211 0.3176725
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    4.751111 0.8892278 12  5.342962
-log(cofactor) -1.004315 0.1282690 12 -7.829756
-              p-value
-(Intercept)     2e-04
-log(cofactor)   0e+00
+                  Value Std.Error DF   t-value p-value
+(Intercept)    4.747137 1.0914751 12  4.349285   9e-04
+log(cofactor) -0.998803 0.1565428 12 -6.380379   0e+00
  Correlation: 
               (Intr)
-log(cofactor) -0.997
+log(cofactor) -0.996
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.74060639 -0.55625359 -0.01688807  0.29903441 
-        Max 
- 2.05033788 
+        Min          Q1         Med          Q3         Max 
+-1.62993737 -0.68552312 -0.03623807  0.34605876  1.30483946 
 
 Number of Observations: 19
 Number of Groups: 6 
-              numDF denDF   F-value p-value
-(Intercept)       1    12 1009.5047  <.0001
-log(cofactor)     1    12   61.3051  <.0001
+              numDF denDF  F-value p-value
+(Intercept)       1    12 512.8830  <.0001
+log(cofactor)     1    12  40.7092  <.0001
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.5977 0.7027
+group  5  0.3787 0.8545
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.96802, p-value = 0.7363
+W = 0.96083, p-value = 0.5889
 
-         Effect Rsq upper.CL lower.CL
-1         Model   1        1        1
-2 log(cofactor)   1        1        1
+         Effect   Rsq upper.CL lower.CL
+1         Model 0.984    0.995    0.966
+2 log(cofactor) 0.984    0.995    0.966
 $d
-[1] -0.1806244
+[1] -0.1641459
 
 $ci
-[1] -0.37187815 -0.06365151
+[1] -0.3300582 -0.0547161
 
 $p
 [1] 0
@@ -2267,19 +2106,18 @@ Model 1: phenotype ~ cofactor
 Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
-  #Df LogLik Df   Chisq Pr(>Chisq)    
-1   4 32.442                          
-2   4 33.602  0  2.3198  < 2.2e-16 ***
-3   4 -0.616  0 68.4362  < 2.2e-16 ***
-4   4  1.061  0  3.3537  < 2.2e-16 ***
+  #Df  LogLik Df   Chisq Pr(>Chisq)    
+1   4 29.9438                          
+2   4 30.5578  0  1.2279  < 2.2e-16 ***
+3   4 -2.3171  0 65.7498  < 2.2e-16 ***
+4   4 -0.9933  0  2.6476  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
                 df        AIC
-simple.brownian  4 -56.884504
-x.brownian       4 -59.204282
-y.brownian       4   9.231927
-xy.brownian      4   5.878223
+simple.brownian  4 -51.887688
+x.brownian       4 -53.115637
+y.brownian       4  12.634139
+xy.brownian      4   9.986502
 ================================================================================
 ================================================================================
 Comparison 2c: U vs. Etanl
@@ -2300,7 +2138,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept) Residual
-StdDev: 0.0003629457 5.266987
+StdDev: 0.0003629403 5.266987
 
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
@@ -2311,10 +2149,8 @@ cofactor    -0.004886 0.0022058 12 -2.215116  0.0468
 cofactor -0.84 
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--0.84812188 -0.68402892 -0.19214439  0.09053415 
-        Max 
- 3.39477118 
+        Min          Q1         Med          Q3         Max 
+-0.84812188 -0.68402892 -0.19214439  0.09053415  3.39477118 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -2326,8 +2162,7 @@ Levene's Test for Homogeneity of Variance (center = median)
 group  5  3.3006 0.03837 *
       13                  
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
@@ -2339,58 +2174,55 @@ W = 0.74208, p-value = 0.0001846
 2 cofactor 0.349    0.742    0.018
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC     BIC   logLik
-  117.6832 121.461 -54.8416
+      AIC      BIC    logLik
+  124.305 128.0828 -58.15252
 
 Random effects:
  Formula: ~1 | species
-         (Intercept) Residual
-StdDev: 0.0003997315  5.99297
+        (Intercept) Residual
+StdDev:    3.865977  6.16339
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
-               Value Std.Error DF   t-value p-value
-(Intercept) 12.69135 2.2996430 12  5.518834  0.0001
-cofactor    -0.00523 0.0019705 12 -2.654139  0.0210
+                Value Std.Error DF   t-value p-value
+(Intercept) 13.834942  3.345289 12  4.135649  0.0014
+cofactor    -0.005417  0.002572 12 -2.106145  0.0569
  Correlation: 
          (Intr)
-cofactor -0.823
+cofactor -0.766
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--0.82045580 -0.68932218 -0.26116619  0.03624161 
-        Max 
- 2.87727674 
+        Min          Q1         Med          Q3         Max 
+-1.34729423 -0.61800386 -0.13958869  0.04661893  1.56766761 
 
 Number of Observations: 19
 Number of Groups: 6 
-            numDF denDF  F-value p-value
-(Intercept)     1    12 34.43443  0.0001
-cofactor        1    12  7.04445  0.0210
+            numDF denDF   F-value p-value
+(Intercept)     1    12 15.385591  0.0020
+cofactor        1    12  4.435846  0.0569
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value  Pr(>F)  
-group  5  2.4468 0.08995 .
+group  5  2.8833 0.05754 .
       13                  
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.74805, p-value = 0.0002206
+W = 0.92583, p-value = 0.1451
 
     Effect Rsq upper.CL lower.CL
-1    Model   1        1        1
-2 cofactor   1        1        1
+1    Model 0.5    0.815    0.123
+2 cofactor 0.5    0.815    0.123
 $d
-[1] -0.6511453
+[1] -0.1511442
 
 $ci
-[1] -0.9778890 -0.2522855
+[1] -0.19376424 -0.05814492
 
 $p
 [1] 0
@@ -2410,24 +2242,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 1.358474e-05 0.4902855
+StdDev: 1.358494e-05 0.4902855
 
 Fixed effects: log(phenotype) ~ cofactor 
-                 Value  Std.Error DF   t-value
-(Intercept)  2.4376844 0.21945684 12 11.107808
-cofactor    -0.0007102 0.00020533 12 -3.458869
-            p-value
-(Intercept)  0.0000
-cofactor     0.0047
+                 Value  Std.Error DF   t-value p-value
+(Intercept)  2.4376844 0.21945684 12 11.107808  0.0000
+cofactor    -0.0007102 0.00020533 12 -3.458869  0.0047
  Correlation: 
          (Intr)
 cofactor -0.84 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.3744654 -0.7802765 -0.1065462  0.4195502 
-       Max 
- 2.3419200 
+       Min         Q1        Med         Q3        Max 
+-1.3744654 -0.7802765 -0.1065462  0.4195502  2.3419200 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -2450,57 +2277,52 @@ W = 0.91352, p-value = 0.08592
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  25.32199 29.09975 -8.660995
+  29.64701 33.42477 -10.82351
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 1.263201e-05 0.5273078
+        (Intercept) Residual
+StdDev:   0.2240331 0.545658
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
-                 Value  Std.Error DF   t-value
-(Intercept)  2.5626664 0.20234034 12 12.665129
-cofactor    -0.0008276 0.00017338 12 -4.773199
-            p-value
-(Intercept)   0e+00
-cofactor      5e-04
+                 Value  Std.Error DF   t-value p-value
+(Intercept)  2.6266347 0.25361058 12 10.356960  0.0000
+cofactor    -0.0008395 0.00020541 12 -4.086889  0.0015
  Correlation: 
          (Intr)
-cofactor -0.823
+cofactor -0.795
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.3155356 -0.7662206 -0.1937099  0.2970942 
-       Max 
- 2.0189592 
+       Min         Q1        Med         Q3        Max 
+-1.1185498 -0.7651380 -0.2273898  0.2702607  1.7203484 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF   F-value p-value
-(Intercept)     1    12 236.37281  <.0001
-cofactor        1    12  22.78343   5e-04
+(Intercept)     1    12 137.11698  <.0001
+cofactor        1    12  16.70266  0.0015
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.9668 0.4729
+group  5  0.6249 0.6839
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.91254, p-value = 0.08244
+W = 0.96145, p-value = 0.6013
 
-    Effect Rsq upper.CL lower.CL
-1    Model   1        1        1
-2 cofactor   1        1        1
+    Effect   Rsq upper.CL lower.CL
+1    Model 0.958    0.986    0.914
+2 cofactor 0.958    0.986    0.914
 $d
-[1] -0.4334848
+[1] -0.3915156
 
 $ci
-[1] -0.7874835 -0.1565800
+[1] -0.6997467 -0.1421896
 
 $p
 [1] 0
@@ -2520,7 +2342,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept) Residual
-StdDev: 0.0002050666 4.854021
+StdDev: 0.0002050665 4.854021
 
 Fixed effects: phenotype ~ log(cofactor) 
                  Value Std.Error DF   t-value p-value
@@ -2531,10 +2353,8 @@ log(cofactor) -6.27578   2.11643 12 -2.965268  0.0118
 log(cofactor) -0.997
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.2011535 -0.5552337 -0.2167575  0.1658472 
-       Max 
- 3.2418965 
+       Min         Q1        Med         Q3        Max 
+-1.2011535 -0.5552337 -0.2167575  0.1658472  3.2418965 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -2546,8 +2366,7 @@ Levene's Test for Homogeneity of Variance (center = median)
 group  5  4.4779 0.0136 *
       13                 
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
@@ -2560,12 +2379,12 @@ W = 0.83886, p-value = 0.004442
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  114.3865 118.1643 -53.19327
+  121.2069 124.9847 -56.60345
 
 Random effects:
  Formula: ~1 | species
-         (Intercept) Residual
-StdDev: 0.0002108549 5.494971
+        (Intercept) Residual
+StdDev:     2.57411 6.043852
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -2573,44 +2392,41 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
                  Value Std.Error DF   t-value p-value
-(Intercept)   51.49661 12.923728 12  3.984656  0.0018
-log(cofactor) -6.57982  1.931888 12 -3.405900  0.0052
+(Intercept)   59.96916 16.252241 12  3.689901  0.0031
+log(cofactor) -7.69861  2.420614 12 -3.180436  0.0079
  Correlation: 
               (Intr)
-log(cofactor) -0.996
+log(cofactor) -0.994
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.1561473 -0.5370167 -0.2622723  0.1157267 
-       Max 
- 2.7639255 
+       Min         Q1        Med         Q3        Max 
+-1.1858622 -0.6269642 -0.2745641  0.1751270  1.6238763 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF  F-value p-value
-(Intercept)       1    12 40.95872  <.0001
-log(cofactor)     1    12 11.60015  0.0052
+(Intercept)       1    12 24.52754  0.0003
+log(cofactor)     1    12 10.11518  0.0079
 Levene's Test for Homogeneity of Variance (center = median)
-      Df F value Pr(>F)  
-group  5  3.9645  0.021 *
-      13                 
+      Df F value  Pr(>F)  
+group  5   3.875 0.02271 *
+      13                  
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.85359, p-value = 0.007678
+W = 0.94704, p-value = 0.3515
 
-         Effect Rsq upper.CL lower.CL
-1         Model   1        1    0.999
-2 log(cofactor)   1        1    0.999
+         Effect   Rsq upper.CL lower.CL
+1         Model 0.739     0.91     0.48
+2 log(cofactor) 0.739     0.91     0.48
 $d
-[1] -0.5098872
+[1] -0.2491792
 
 $ci
-[1] -0.8811845 -0.1916670
+[1] -0.37749672 -0.09236574
 
 $p
 [1] 0
@@ -2630,24 +2446,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 8.561607e-06 0.4506131
+StdDev: 8.561358e-06 0.4506131
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    7.217496 1.3075827 12  5.519725
-log(cofactor) -0.816924 0.1964745 12 -4.157916
-              p-value
-(Intercept)    0.0001
-log(cofactor)  0.0013
+                  Value Std.Error DF   t-value p-value
+(Intercept)    7.217496 1.3075827 12  5.519725  0.0001
+log(cofactor) -0.816924 0.1964745 12 -4.157916  0.0013
  Correlation: 
               (Intr)
 log(cofactor) -0.997
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.25683743 -0.87357768 -0.01821886  0.56103207 
-        Max 
- 2.01858789 
+        Min          Q1         Med          Q3         Max 
+-1.25683743 -0.87357768 -0.01821886  0.56103207  2.01858789 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -2669,58 +2480,53 @@ W = 0.92872, p-value = 0.164
 2 log(cofactor) 0.654    0.878    0.332
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC     BIC    logLik
-  21.73605 25.5138 -6.868024
+       AIC      BIC    logLik
+  25.04395 28.82171 -8.521976
 
 Random effects:
  Formula: ~1 | species
-        (Intercept)  Residual
-StdDev: 7.19806e-06 0.4798231
+         (Intercept)  Residual
+StdDev: 2.617516e-05 0.5234637
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    8.028940 1.1285052 12  7.114668
-log(cofactor) -0.939959 0.1686932 12 -5.572003
-              p-value
-(Intercept)     0e+00
-log(cofactor)   1e-04
+                  Value Std.Error DF   t-value p-value
+(Intercept)    8.777962 1.1989234 12  7.321537   0e+00
+log(cofactor) -1.044415 0.1795643 12 -5.816384   1e-04
  Correlation: 
               (Intr)
-log(cofactor) -0.996
+log(cofactor) -0.995
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.34553857 -0.69712584 -0.07921662  0.49508523 
-        Max 
- 1.94822615 
+       Min         Q1        Med         Q3        Max 
+-1.4767651 -0.6639426 -0.2856563  0.3301078  1.8975712 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 285.47202  <.0001
-log(cofactor)     1    12  31.04722   1e-04
+(Intercept)       1    12 258.73313  <.0001
+log(cofactor)     1    12  33.83032   1e-04
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.5434 0.2438
+group  5  1.2732 0.3328
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.94909, p-value = 0.3813
+W = 0.97892, p-value = 0.9291
 
          Effect Rsq upper.CL lower.CL
 1         Model   1        1        1
 2 log(cofactor)   1        1        1
 $d
-[1] -0.3462476
+[1] -0.3462261
 
 $ci
-[1] -0.6685164 -0.1226825
+[1] -0.6701083 -0.1268263
 
 $p
 [1] 0
@@ -2732,18 +2538,17 @@ Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
   #Df  LogLik Df   Chisq Pr(>Chisq)    
-1   4 -54.842                          
-2   4 -53.193  0  3.2966  < 2.2e-16 ***
-3   4  -8.661  0 89.0646  < 2.2e-16 ***
-4   4  -6.868  0  3.5859  < 2.2e-16 ***
+1   4 -58.153                          
+2   4 -56.603  0  3.0981  < 2.2e-16 ***
+3   4 -10.824  0 91.5599  < 2.2e-16 ***
+4   4  -8.522  0  4.6031  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
                 df       AIC
-simple.brownian  4 117.68320
-x.brownian       4 114.38655
-y.brownian       4  25.32199
-xy.brownian      4  21.73605
+simple.brownian  4 124.30503
+x.brownian       4 121.20689
+y.brownian       4  29.64701
+xy.brownian      4  25.04395
 ================================================================================
 ================================================================================
 Comparison 2d: U vs. Esec
@@ -2764,7 +2569,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept) Residual
-StdDev: 0.0003748708 5.453125
+StdDev: 0.0003748676 5.453125
 
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
@@ -2775,10 +2580,8 @@ cofactor    -0.003714 0.0020034 12 -1.853839  0.0885
 cofactor -0.863
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.01584496 -0.55339602 -0.24946191  0.02249022 
-        Max 
- 3.42638767 
+        Min          Q1         Med          Q3         Max 
+-1.01584496 -0.55339602 -0.24946191  0.02249022  3.42638767 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -2790,8 +2593,7 @@ Levene's Test for Homogeneity of Variance (center = median)
 group  5  2.7146 0.06819 .
       13                  
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
@@ -2803,13 +2605,13 @@ W = 0.7325, p-value = 0.0001393
 2 cofactor 0.273    0.699    0.004
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC      BIC    logLik
-  119.1065 122.8842 -55.55324
+       AIC      BIC   logLik
+  125.8396 129.6174 -58.9198
 
 Random effects:
  Formula: ~1 | species
-         (Intercept) Residual
-StdDev: 0.0003744829 6.221692
+        (Intercept) Residual
+StdDev:    4.192503 6.354968
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -2817,41 +2619,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
-(Intercept) 12.852234 2.6269217 12  4.892508  0.0004
-cofactor    -0.004418 0.0019174 12 -2.304150  0.0399
+(Intercept) 13.303300  3.782724 12  3.516857  0.0042
+cofactor    -0.004003  0.002470 12 -1.620378  0.1311
  Correlation: 
          (Intr)
-cofactor -0.856
+cofactor -0.796
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.00323225 -0.54936532 -0.22539075 -0.08021339 
-        Max 
- 2.89514653 
+        Min          Q1         Med          Q3         Max 
+-1.36374968 -0.55062928 -0.18163356  0.06925084  1.56687876 
 
 Number of Observations: 19
 Number of Groups: 6 
-            numDF denDF  F-value p-value
-(Intercept)     1    12 31.94921  0.0001
-cofactor        1    12  5.30911  0.0399
+            numDF denDF   F-value p-value
+(Intercept)     1    12 13.543743  0.0031
+cofactor        1    12  2.625624  0.1311
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  2.1559 0.1228
+group  5  2.2596 0.1098
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.75438, p-value = 0.000267
+W = 0.91596, p-value = 0.09529
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.999        1    0.998
-2 cofactor 0.999        1    0.998
+1    Model 0.692    0.893    0.395
+2 cofactor 0.692    0.893    0.395
 $d
-[1] -0.7262841
+[1] -0.4187542
 
 $ci
-[1] -0.9931777 -0.3068989
+[1] -0.4832450 -0.1947424
 
 $p
 [1] 0
@@ -2871,24 +2671,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 1.342407e-05 0.5295335
+StdDev: 1.344276e-05 0.5295335
 
 Fixed effects: log(phenotype) ~ cofactor 
-                 Value  Std.Error DF   t-value
-(Intercept)  2.4144256 0.25447889 12  9.487724
-cofactor    -0.0005443 0.00019454 12 -2.798108
-            p-value
-(Intercept)  0.0000
-cofactor     0.0161
+                 Value  Std.Error DF   t-value p-value
+(Intercept)  2.4144256 0.25447889 12  9.487724  0.0000
+cofactor    -0.0005443 0.00019454 12 -2.798108  0.0161
  Correlation: 
          (Intr)
 cofactor -0.863
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.32777017 -0.74632111 -0.06930007  0.37229784 
-        Max 
- 2.38484538 
+        Min          Q1         Med          Q3         Max 
+-1.32777017 -0.74632111 -0.06930007  0.37229784  2.38484538 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -2910,58 +2705,53 @@ W = 0.92624, p-value = 0.1476
 2 cofactor 0.461    0.798    0.085
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-      AIC      BIC    logLik
-  29.4161 33.19385 -10.70805
+       AIC      BIC    logLik
+  33.41863 37.19638 -12.70931
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 2.530311e-05 0.5872931
+        (Intercept)  Residual
+StdDev:   0.3088905 0.5804384
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
-                 Value  Std.Error DF   t-value
-(Intercept)  2.5923039 0.24796680 12 10.454238
-cofactor    -0.0007027 0.00018099 12 -3.882217
-            p-value
-(Intercept)  0.0000
-cofactor     0.0022
+                 Value Std.Error DF   t-value p-value
+(Intercept)  2.5734390  0.319359 12  8.058139  0.0000
+cofactor    -0.0006453  0.000215 12 -3.000534  0.0111
  Correlation: 
          (Intr)
-cofactor -0.856
+cofactor -0.816
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.3424375 -0.6174799 -0.1441844  0.2446497 
-       Max 
- 2.0167079 
+       Min         Q1        Med         Q3        Max 
+-1.2558376 -0.6419893 -0.2367171  0.3301011  1.6106204 
 
 Number of Observations: 19
 Number of Groups: 6 
-            numDF denDF   F-value p-value
-(Intercept)     1    12 190.55311  <.0001
-cofactor        1    12  15.07161  0.0022
+            numDF denDF  F-value p-value
+(Intercept)     1    12 94.13641  <.0001
+cofactor        1    12  9.00320  0.0111
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.5882 0.7093
+group  5  0.4156 0.8297
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.91056, p-value = 0.07581
+W = 0.95336, p-value = 0.4499
 
-    Effect Rsq upper.CL lower.CL
-1    Model   1        1        1
-2 cofactor   1        1        1
+    Effect   Rsq upper.CL lower.CL
+1    Model 0.713    0.901    0.433
+2 cofactor 0.713    0.901    0.433
 $d
-[1] -0.5388877
+[1] -0.2520836
 
 $ci
-[1] -0.8935834 -0.2042162
+[1] -0.3658758 -0.1024814
 
 $p
 [1] 0
@@ -2980,8 +2770,8 @@ Linear mixed-effects model fit by maximum likelihood
 
 Random effects:
  Formula: ~1 | species
-         (Intercept) Residual
-StdDev: 0.0002488799  5.32073
+        (Intercept) Residual
+StdDev: 0.000251299  5.32073
 
 Fixed effects: phenotype ~ log(cofactor) 
                  Value Std.Error DF   t-value p-value
@@ -2992,10 +2782,8 @@ log(cofactor) -5.49016  2.597798 12 -2.113391  0.0562
 log(cofactor) -0.997
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.1995484 -0.4652645 -0.1972934  0.0168710 
-       Max 
- 3.3966701 
+       Min         Q1        Med         Q3        Max 
+-1.1995484 -0.4652645 -0.1972934  0.0168710  3.3966701 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3007,8 +2795,7 @@ Levene's Test for Homogeneity of Variance (center = median)
 group  5  3.2036 0.04208 *
       13                  
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
@@ -3021,12 +2808,12 @@ W = 0.76994, p-value = 0.0004318
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  118.1541 121.9319 -55.07706
+  125.2964 129.0741 -58.64819
 
 Random effects:
  Formula: ~1 | species
-         (Intercept) Residual
-StdDev: 0.0002407317 6.067703
+        (Intercept) Residual
+StdDev:    3.632877  6.45151
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -3034,44 +2821,41 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
                  Value Std.Error DF   t-value p-value
-(Intercept)   50.90664 17.068373 12  2.982512  0.0114
-log(cofactor) -6.25571  2.462073 12 -2.540830  0.0259
+(Intercept)   52.64466  23.00411 12  2.288489  0.0410
+log(cofactor) -6.35548   3.29617 12 -1.928140  0.0778
  Correlation: 
               (Intr)
-log(cofactor) -0.997
+log(cofactor) -0.996
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.15750821 -0.44517707 -0.20579618 -0.04172965 
-        Max 
- 2.88189182 
+        Min          Q1         Med          Q3         Max 
+-1.30970873 -0.51280949 -0.12929097  0.07024106  1.62131710 
 
 Number of Observations: 19
 Number of Groups: 6 
-              numDF denDF  F-value p-value
-(Intercept)       1    12 33.59144  0.0001
-log(cofactor)     1    12  6.45582  0.0259
+              numDF denDF   F-value p-value
+(Intercept)       1    12 16.051808  0.0017
+log(cofactor)     1    12  3.717722  0.0778
 Levene's Test for Homogeneity of Variance (center = median)
-      Df F value  Pr(>F)  
-group  5  3.0751 0.04764 *
-      13                  
+      Df F value Pr(>F)  
+group  5  2.8298 0.0607 .
+      13                 
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.80024, p-value = 0.001152
+W = 0.93245, p-value = 0.1921
 
-         Effect   Rsq upper.CL lower.CL
-1         Model 0.999        1    0.999
-2 log(cofactor) 0.999        1    0.999
+         Effect  Rsq upper.CL lower.CL
+1         Model 0.51     0.82    0.134
+2 log(cofactor) 0.51     0.82    0.134
 $d
-[1] -0.6716669
+[1] -0.1817028
 
 $ci
-[1] -0.9822544 -0.2731160
+[1] -0.21736888 -0.07931652
 
 $p
 [1] 0
@@ -3091,24 +2875,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 9.817259e-06 0.5123479
+StdDev: 9.817237e-06 0.5123479
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    7.120786 1.7287706 12  4.118989
-log(cofactor) -0.771946 0.2501492 12 -3.085942
-              p-value
-(Intercept)    0.0014
-log(cofactor)  0.0094
+                  Value Std.Error DF   t-value p-value
+(Intercept)    7.120786 1.7287706 12  4.118989  0.0014
+log(cofactor) -0.771946 0.2501492 12 -3.085942  0.0094
  Correlation: 
               (Intr)
 log(cofactor) -0.997
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.5801002 -0.9202651 -0.0195231  0.4077265 
-       Max 
- 2.3186217 
+       Min         Q1        Med         Q3        Max 
+-1.5801002 -0.9202651 -0.0195231  0.4077265  2.3186217 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3131,57 +2910,52 @@ W = 0.95525, p-value = 0.4828
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  28.00644 31.78419 -10.00322
+  32.16724 35.94499 -12.08362
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 1.194318e-05 0.5659058
+        (Intercept)  Residual
+StdDev:   0.2284927 0.5868126
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                  Value Std.Error DF   t-value
-(Intercept)    8.415174 1.5918862 12  5.286291
-log(cofactor) -0.961734 0.2296259 12 -4.188267
-              p-value
-(Intercept)    0.0002
-log(cofactor)  0.0013
+                  Value Std.Error DF   t-value p-value
+(Intercept)    8.651421 1.9158831 12  4.515631  0.0007
+log(cofactor) -0.986726 0.2751413 12 -3.586251  0.0037
  Correlation: 
               (Intr)
-log(cofactor) -0.997
+log(cofactor) -0.996
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.58113533 -0.59632515 -0.05464827  0.38253800 
-        Max 
- 1.97254433 
+       Min         Q1        Med         Q3        Max 
+-1.5349111 -0.6038602 -0.1151023  0.3642676  1.4312340 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 205.22843  <.0001
-log(cofactor)     1    12  17.54158  0.0013
+(Intercept)       1    12 123.82611  <.0001
+log(cofactor)     1    12  12.86119  0.0037
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.6097 0.6944
+group  5  0.3869 0.8491
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.96574, p-value = 0.6892
+W = 0.95941, p-value = 0.5608
 
-         Effect Rsq upper.CL lower.CL
-1         Model   1        1        1
-2 log(cofactor)   1        1        1
+         Effect   Rsq upper.CL lower.CL
+1         Model 0.809    0.935    0.614
+2 log(cofactor) 0.809    0.935    0.614
 $d
-[1] -0.4901281
+[1] -0.2994071
 
 $ci
-[1] -0.8547868 -0.1758700
+[1] -0.4850053 -0.1102824
 
 $p
 [1] 0
@@ -3193,18 +2967,17 @@ Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
   #Df  LogLik Df   Chisq Pr(>Chisq)    
-1   4 -55.553                          
-2   4 -55.077  0  0.9523  < 2.2e-16 ***
-3   4 -10.708  0 88.7380  < 2.2e-16 ***
-4   4 -10.003  0  1.4097  < 2.2e-16 ***
+1   4 -58.920                          
+2   4 -58.648  0  0.5432  < 2.2e-16 ***
+3   4 -12.709  0 91.8778  < 2.2e-16 ***
+4   4 -12.084  0  1.2514  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
                 df       AIC
-simple.brownian  4 119.10647
-x.brownian       4 118.15413
-y.brownian       4  29.41610
-xy.brownian      4  28.00644
+simple.brownian  4 125.83961
+x.brownian       4 125.29638
+y.brownian       4  33.41863
+xy.brownian      4  32.16724
 ================================================================================
 ================================================================================
 Comparison 3a: Etan low vs. length
@@ -3225,7 +2998,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:  0.03491552 536.1818
+StdDev:  0.03491519 536.1818
 
 Fixed effects: phenotype ~ cofactor 
                Value Std.Error DF  t-value p-value
@@ -3236,10 +3009,8 @@ cofactor     80.4656   47.8203 12 1.682668  0.1183
 cofactor -0.921
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.1489570 -0.5502091 -0.2340353 -0.1043322 
-       Max 
- 2.6271731 
+       Min         Q1        Med         Q3        Max 
+-1.1489570 -0.5502091 -0.2340353 -0.1043322  2.6271731 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3262,12 +3033,12 @@ W = 0.73548, p-value = 0.0001519
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  294.9809 298.7587 -143.4905
+  295.0653 298.8431 -143.5326
 
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:    490.1908 497.9817
+StdDev:    495.5763   497.65
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -3275,41 +3046,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                Value Std.Error DF   t-value p-value
-(Intercept) 491.8887  558.2563 12 0.8811163  0.3956
-cofactor     83.3368   80.4798 12 1.0355003  0.3209
+(Intercept) 477.8785  560.8940 12 0.8519944  0.4109
+cofactor     84.8500   80.8376 12 1.0496354  0.3146
  Correlation: 
          (Intr)
-cofactor -0.904
+cofactor -0.903
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.24762793 -0.45440615 -0.14620180 -0.07470099 
-        Max 
- 2.15921091 
+        Min          Q1         Med          Q3         Max 
+-1.24098737 -0.45046223 -0.14129189 -0.05477712  2.16330581 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF   F-value p-value
-(Intercept)     1    12 18.091220  0.0011
-cofactor        1    12  1.072261  0.3209
+(Intercept)     1    12 17.617844  0.0012
+cofactor        1    12  1.101734  0.3146
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.8667 0.5289
+group  5  0.6172 0.6892
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.81194, p-value = 0.001713
+W = 0.71902, p-value = 9.452e-05
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.328    0.731    0.012
-2 cofactor 0.328    0.731    0.012
+1    Model 0.313    0.723    0.009
+2 cofactor 0.313    0.723    0.009
 $d
-[1] -0.09156766
+[1] -0.07672868
 
 $ci
-[1] -0.110758067 -0.009707385
+[1] -0.09645834 -0.00772503
 
 $p
 [1] 0
@@ -3329,7 +3098,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 8.327063e-06 0.4915701
+StdDev: 8.194989e-06 0.4915701
 
 Fixed effects: log(phenotype) ~ cofactor 
                Value Std.Error DF   t-value p-value
@@ -3340,10 +3109,8 @@ cofactor    0.095734 0.0438415 12  2.183643  0.0496
 cofactor -0.921
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.49832494 -0.72112189 -0.04657175  0.11881827 
-        Max 
- 2.39490378 
+        Min          Q1         Med          Q3         Max 
+-1.49832494 -0.72112189 -0.04657175  0.11881827  2.39490378 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3366,12 +3133,12 @@ W = 0.88625, p-value = 0.02763
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  29.02811 32.80587 -10.51406
+  29.35466 33.13241 -10.67733
 
 Random effects:
  Formula: ~1 | species
-        (Intercept) Residual
-StdDev:   0.4191835 0.464362
+        (Intercept)  Residual
+StdDev:   0.4380807 0.4631044
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -3379,41 +3146,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
                Value Std.Error DF   t-value p-value
-(Intercept) 6.039399 0.4953902 12 12.191197  0.0000
-cofactor    0.107805 0.0717425 12  1.502661  0.1588
+(Intercept) 6.000517 0.5067892 12 11.840263  0.0000
+cofactor    0.112173 0.0732463 12  1.531449  0.1516
  Correlation: 
          (Intr)
-cofactor -0.908
+cofactor -0.906
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.44276384 -0.60534076 -0.07326363  0.13908440 
-        Max 
- 2.28504844 
+        Min          Q1         Med          Q3         Max 
+-1.41942841 -0.53136978 -0.05726218  0.17645387  2.29997731 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF  F-value p-value
-(Intercept)     1    12 1042.059  <.0001
-cofactor        1    12    2.258  0.1588
+(Intercept)     1    12 971.7983  <.0001
+cofactor        1    12   2.3453  0.1516
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.0382 0.4361
+group  5  0.6729 0.6513
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.91188, p-value = 0.08015
+W = 0.77277, p-value = 0.0004719
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.518    0.823    0.143
-2 cofactor 0.518    0.823    0.143
+1    Model 0.499    0.815    0.123
+2 cofactor 0.499    0.815    0.123
 $d
-[1] -0.1755527
+[1] -0.1568262
 
 $ci
-[1] -0.21803889 -0.07397755
+[1] -0.19927487 -0.05992435
 
 $p
 [1] 0
@@ -3433,24 +3198,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:  0.03494448 533.9156
+StdDev:  0.03494555 533.9156
 
 Fixed effects: phenotype ~ log(cofactor) 
-                  Value Std.Error DF    t-value
-(Intercept)   -142.9108  614.9173 12 -0.2324065
-log(cofactor)  583.0716  336.6322 12  1.7320732
-              p-value
-(Intercept)    0.8201
-log(cofactor)  0.1089
+                  Value Std.Error DF    t-value p-value
+(Intercept)   -142.9108  614.9173 12 -0.2324065  0.8201
+log(cofactor)  583.0716  336.6322 12  1.7320732  0.1089
  Correlation: 
               (Intr)
 log(cofactor) -0.978
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.2348005 -0.5342622 -0.3032046 -0.1022325 
-       Max 
- 2.5903320 
+       Min         Q1        Med         Q3        Max 
+-1.2348005 -0.5342622 -0.3032046 -0.1022325  2.5903320 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3473,57 +3233,52 @@ W = 0.73116, p-value = 0.0001339
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  294.7916 298.5693 -143.3958
+  294.8685 298.6462 -143.4342
 
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:    480.4331 497.9758
+StdDev:    485.3901 497.6382
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
-                  Value Std.Error DF    t-value
-(Intercept)   -121.7005  1040.904 12 -0.1169182
-log(cofactor)  642.7176   573.868 12  1.1199746
-              p-value
-(Intercept)    0.9089
-log(cofactor)  0.2846
+                  Value Std.Error DF    t-value p-value
+(Intercept)   -147.0639 1044.4910 12 -0.1407996  0.8904
+log(cofactor)  654.6475  575.9849 12  1.1365706  0.2779
  Correlation: 
               (Intr)
 log(cofactor) -0.974
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.34328837 -0.41802018 -0.18362897 -0.09801471 
-        Max 
- 2.14047749 
+        Min          Q1         Med          Q3         Max 
+-1.33846723 -0.41346335 -0.18200122 -0.07378411  2.14405047 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 18.652915  0.0010
-log(cofactor)     1    12  1.254343  0.2846
+(Intercept)       1    12 18.185989  0.0011
+log(cofactor)     1    12  1.291793  0.2779
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.8887 0.5161
+group  5  0.6383 0.6747
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.81367, p-value = 0.001818
+W = 0.72553, p-value = 0.0001138
 
          Effect   Rsq upper.CL lower.CL
-1         Model 0.374    0.756    0.028
-2 log(cofactor) 0.374    0.756    0.028
+1         Model 0.359    0.748    0.021
+2 log(cofactor) 0.359    0.748    0.021
 $d
-[1] -0.1277544
+[1] -0.1124292
 
 $ci
-[1] -0.14715118 -0.03022702
+[1] -0.1336216 -0.0196849
 
 $p
 [1] 0
@@ -3543,7 +3298,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 7.847919e-06 0.4870266
+StdDev: 7.847956e-06 0.4870266
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
                  Value Std.Error DF  t-value p-value
@@ -3554,10 +3309,8 @@ log(cofactor) 0.698631 0.3070688 12 2.275160   0.042
 log(cofactor) -0.978
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.62133169 -0.64027301 -0.05199606  0.10723778 
-        Max 
- 2.35572431 
+        Min          Q1         Med          Q3         Max 
+-1.62133169 -0.64027301 -0.05199606  0.10723778  2.35572431 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3579,55 +3332,53 @@ W = 0.88444, p-value = 0.02567
 2 log(cofactor) 0.361    0.749    0.022
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-      AIC      BIC   logLik
-  28.7358 32.51355 -10.3679
+       AIC     BIC    logLik
+  29.05284 32.8306 -10.52642
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:    0.402505 0.4655208
+StdDev:   0.4208043 0.4641961
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
-                 Value Std.Error DF  t-value p-value
-(Intercept)   5.284062 0.9145901 12 5.777519  0.0001
-log(cofactor) 0.809591 0.5051174 12 1.602777  0.1350
+                Value Std.Error DF  t-value p-value
+(Intercept)   5.21384 0.9346700 12 5.578268  0.0001
+log(cofactor) 0.84298 0.5160489 12 1.633527  0.1283
  Correlation: 
               (Intr)
 log(cofactor) -0.975
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.5820601 -0.5887454 -0.1014291  0.1114741 
-       Max 
- 2.2547567 
+        Min          Q1         Med          Q3         Max 
+-1.56461685 -0.50594577 -0.08848169  0.14488667  2.26842990 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 1105.7313  <.0001
-log(cofactor)     1    12    2.5689   0.135
+(Intercept)       1    12 1032.1867  <.0001
+log(cofactor)     1    12    2.6684  0.1283
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.9457 0.4842
+group  5  0.6475 0.6685
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.91322, p-value = 0.08482
+W = 0.78051, p-value = 0.0006037
 
          Effect   Rsq upper.CL lower.CL
-1         Model 0.563    0.842    0.199
-2 log(cofactor) 0.563    0.842    0.199
+1         Model 0.545    0.835    0.176
+2 log(cofactor) 0.545    0.835    0.176
 $d
-[1] -0.2023444
+[1] -0.1842249
 
 $ci
-[1] -0.25531584 -0.08328542
+[1] -0.23252792 -0.07522848
 
 $p
 [1] 0
@@ -3639,18 +3390,17 @@ Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
   #Df   LogLik Df    Chisq Pr(>Chisq)    
-1   4 -143.490                           
-2   4 -143.396  0   0.1893  < 2.2e-16 ***
-3   4  -10.514  0 265.7634  < 2.2e-16 ***
-4   4  -10.368  0   0.2923  < 2.2e-16 ***
+1   4 -143.533                           
+2   4 -143.434  0   0.1968  < 2.2e-16 ***
+3   4  -10.677  0 265.5138  < 2.2e-16 ***
+4   4  -10.526  0   0.3018  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
                 df       AIC
-simple.brownian  4 294.98090
-x.brownian       4 294.79156
-y.brownian       4  29.02811
-xy.brownian      4  28.73580
+simple.brownian  4 295.06530
+x.brownian       4 294.86846
+y.brownian       4  29.35466
+xy.brownian      4  29.05284
 ================================================================================
 ================================================================================
 Comparison 3b: Esec vs. length
@@ -3671,7 +3421,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:  0.02755046 584.0699
+StdDev:   0.0276538 584.0699
 
 Fixed effects: phenotype ~ cofactor 
                Value Std.Error DF  t-value p-value
@@ -3682,10 +3432,8 @@ cofactor    113.1550   52.0912 12 2.172246  0.0506
 cofactor -0.921
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.2494641 -0.4929929 -0.2912915 -0.1452860 
-       Max 
- 2.2409932 
+       Min         Q1        Med         Q3        Max 
+-1.2494641 -0.4929929 -0.2912915 -0.1452860  2.2409932 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3708,12 +3456,12 @@ W = 0.69333, p-value = 4.635e-05
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  298.3658 302.1436 -145.1829
+  298.3049 302.0827 -145.1525
 
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:     399.946 592.8617
+StdDev:    396.1075 593.1031
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -3721,41 +3469,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                Value Std.Error DF  t-value p-value
-(Intercept) 573.5102  538.4537 12 1.065106  0.3078
-cofactor    103.0468   78.9059 12 1.305946  0.2161
+(Intercept) 579.3534  535.0546 12 1.082793  0.3002
+cofactor    102.5534   78.4654 12 1.306989  0.2157
  Correlation: 
          (Intr)
-cofactor -0.916
+cofactor -0.915
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.2262056 -0.3718151 -0.2418886 -0.1179685 
-       Max 
- 2.1586497 
+       Min         Q1        Med         Q3        Max 
+-1.2247009 -0.3758167 -0.2459776 -0.1204433  2.1572007 
 
 Number of Observations: 19
 Number of Groups: 6 
-            numDF denDF   F-value p-value
-(Intercept)     1    12 31.596885  0.0001
-cofactor        1    12  1.705496  0.2161
+            numDF denDF  F-value p-value
+(Intercept)     1    12 32.09562  0.0001
+cofactor        1    12  1.70822  0.2157
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.8566 0.5349
+group  5  0.6681 0.6545
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(simple.brownian, type = "normalized")
-W = 0.77317, p-value = 0.0004779
+W = 0.69571, p-value = 4.944e-05
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.481    0.807    0.105
-2 cofactor 0.481    0.807    0.105
+1    Model 0.444     0.79    0.071
+2 cofactor 0.444     0.79    0.071
 $d
-[1] -0.1414717
+[1] -0.1035667
 
 $ci
-[1] -0.17775627 -0.05455685
+[1] -0.13760080 -0.03763911
 
 $p
 [1] 0
@@ -3775,7 +3521,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 6.940855e-06 0.4130973
+StdDev: 6.940895e-06 0.4130973
 
 Fixed effects: log(phenotype) ~ cofactor 
                Value  Std.Error DF   t-value p-value
@@ -3786,10 +3532,8 @@ cofactor    0.101452 0.03684277 12  2.753643  0.0175
 cofactor -0.921
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.2543842 -0.6753521 -0.2267047  0.1142197 
-       Max 
- 2.4128349 
+       Min         Q1        Med         Q3        Max 
+-1.2543842 -0.6753521 -0.2267047  0.1142197  2.4128349 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3812,12 +3556,12 @@ W = 0.82165, p-value = 0.002399
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  22.74319 26.52095 -7.371596
+  22.60047 26.37822 -7.300234
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:    0.323076 0.4049999
+StdDev:   0.3169837 0.4052492
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -3825,41 +3569,39 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: log(phenotype) ~ cofactor 
                Value Std.Error DF   t-value p-value
-(Intercept) 6.366155 0.4029087 12 15.800492  0.0000
-cofactor    0.094141 0.0586759 12  1.604415  0.1346
+(Intercept) 6.375506 0.3982145 12 16.010233   0.000
+cofactor    0.093319 0.0580616 12  1.607247   0.134
  Correlation: 
          (Intr)
 cofactor -0.912
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.18131193 -0.48475408 -0.07761349  0.01025693 
-        Max 
- 2.36538993 
+         Min           Q1          Med           Q3          Max 
+-1.178363702 -0.492482099 -0.084912398  0.007026298  2.359475835 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF   F-value p-value
-(Intercept)     1    12 1762.6427  <.0001
-cofactor        1    12    2.5741  0.1346
+(Intercept)     1    12 1811.9807  <.0001
+cofactor        1    12    2.5832   0.134
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.0611 0.4248
+group  5  0.7827 0.5799
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(y.brownian, type = "normalized")
-W = 0.85392, p-value = 0.007774
+W = 0.72312, p-value = 0.0001062
 
     Effect   Rsq upper.CL lower.CL
-1    Model 0.567    0.844    0.203
-2 cofactor 0.567    0.844    0.203
+1    Model 0.853     0.95      0.7
+2 cofactor 0.853     0.95      0.7
 $d
-[1] -0.1136637
+[1] -0.3996034
 
 $ci
-[1] -0.17442822 -0.03935683
+[1] -0.6182587 -0.1539103
 
 $p
 [1] 0
@@ -3879,24 +3621,19 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:  0.02775388  578.586
+StdDev:  0.02775285  578.586
 
 Fixed effects: phenotype ~ log(cofactor) 
-                  Value Std.Error DF    t-value
-(Intercept)   -346.4829  666.3648 12 -0.5199598
-log(cofactor)  826.4324  364.7967 12  2.2654601
-              p-value
-(Intercept)    0.6125
-log(cofactor)  0.0428
+                  Value Std.Error DF    t-value p-value
+(Intercept)   -346.4829  666.3648 12 -0.5199598  0.6125
+log(cofactor)  826.4324  364.7967 12  2.2654601  0.0428
  Correlation: 
               (Intr)
 log(cofactor) -0.978
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.0946330 -0.4624484 -0.2697732 -0.1418463 
-       Max 
- 2.2615134 
+       Min         Q1        Med         Q3        Max 
+-1.0946330 -0.4624484 -0.2697732 -0.1418463  2.2615134 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -3919,57 +3656,52 @@ W = 0.67924, p-value = 3.178e-05
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  297.9205 301.6983 -144.9603
+  297.8556 301.6333 -144.9278
 
 Random effects:
  Formula: ~1 | species
         (Intercept) Residual
-StdDev:     383.546 590.3296
+StdDev:    379.3614 590.6387
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
  Parameter estimate(s):
 numeric(0)
 Fixed effects: phenotype ~ log(cofactor) 
-                  Value Std.Error DF    t-value
-(Intercept)   -221.2170  992.9015 12 -0.2227986
-log(cofactor)  815.4691  550.5335 12  1.4812343
-              p-value
-(Intercept)    0.8274
-log(cofactor)  0.1643
+                  Value Std.Error DF    t-value p-value
+(Intercept)   -210.6503  985.2387 12 -0.2138064  0.8343
+log(cofactor)  811.2431  546.6065 12  1.4841445  0.1636
  Correlation: 
               (Intr)
 log(cofactor) -0.977
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.1351366 -0.3041744 -0.2340586 -0.1629710 
-       Max 
- 2.1513161 
+       Min         Q1        Med         Q3        Max 
+-1.1343335 -0.3066469 -0.2385625 -0.1778877  2.1492706 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF  F-value p-value
-(Intercept)       1    12 33.34362  0.0001
-log(cofactor)     1    12  2.19405  0.1643
+(Intercept)       1    12 33.90797  0.0001
+log(cofactor)     1    12  2.20268  0.1636
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5   0.831 0.5501
+group  5  0.6817 0.6454
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(x.brownian, type = "normalized")
-W = 0.76101, p-value = 0.0003271
+W = 0.68737, p-value = 3.946e-05
 
          Effect   Rsq upper.CL lower.CL
-1         Model 0.547    0.836    0.178
-2 log(cofactor) 0.547    0.836    0.178
+1         Model 0.512    0.821    0.137
+2 log(cofactor) 0.512    0.821    0.137
 $d
-[1] -0.1879665
+[1] -0.1530767
 
 $ci
-[1] -0.23687666 -0.08408569
+[1] -0.19606936 -0.06164361
 
 $p
 [1] 0
@@ -3989,7 +3721,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept) Residual
-StdDev: 6.806103e-06 0.403862
+StdDev: 6.805997e-06 0.403862
 
 Fixed effects: log(phenotype) ~ log(cofactor) 
                  Value Std.Error DF   t-value p-value
@@ -4000,10 +3732,8 @@ log(cofactor) 0.751911 0.2546338 12  2.952911  0.0121
 log(cofactor) -0.978
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.09009121 -0.62709908 -0.14881241  0.02841992 
-        Max 
- 2.48751678 
+        Min          Q1         Med          Q3         Max 
+-1.09009121 -0.62709908 -0.14881241  0.02841992  2.48751678 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -4026,12 +3756,12 @@ W = 0.79377, p-value = 0.0009293
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  21.97757 25.75532 -6.988783
+  21.82962 25.60737 -6.914808
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:   0.3060925 0.4007488
+StdDev:   0.2997113 0.4010905
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -4039,44 +3769,42 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: log(phenotype) ~ log(cofactor) 
                  Value Std.Error DF  t-value p-value
-(Intercept)   5.618916 0.7347957 12 7.646909  0.0000
-log(cofactor) 0.756742 0.4065517 12 1.861367  0.0874
+(Intercept)   5.636584 0.7250005 12 7.774593  0.0000
+log(cofactor) 0.749311 0.4014293 12 1.866607  0.0866
  Correlation: 
               (Intr)
 log(cofactor) -0.976
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.18034175 -0.32935228 -0.09443902 -0.04870241 
-        Max 
- 2.37191877 
+        Min          Q1         Med          Q3         Max 
+-1.18046327 -0.36667996 -0.15086541 -0.05279163  2.36567818 
 
 Number of Observations: 19
 Number of Groups: 6 
               numDF denDF   F-value p-value
-(Intercept)       1    12 1912.7775  <.0001
-log(cofactor)     1    12    3.4647  0.0874
+(Intercept)       1    12 1970.0555  <.0001
+log(cofactor)     1    12    3.4842  0.0866
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  1.1725 0.3738
+group  5  0.8571 0.5345
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(xy.brownian, type = "normalized")
-W = 0.84214, p-value = 0.00501
+W = 0.70971, p-value = 7.272e-05
 
          Effect   Rsq upper.CL lower.CL
-1         Model 0.649    0.876    0.324
-2 log(cofactor) 0.649    0.876    0.324
+1         Model 0.622    0.866    0.283
+2 log(cofactor) 0.622    0.866    0.283
 $d
-[1] -0.1611389
+[1] -0.1347552
 
 $ci
-[1] -0.24542382 -0.05952708
+[1] -0.21175705 -0.04638704
 
 $p
-[1] 0
+[1] 5e-04
 
 Likelihood ratio test
 
@@ -4085,18 +3813,17 @@ Model 2: phenotype ~ log(cofactor)
 Model 3: log(phenotype) ~ cofactor
 Model 4: log(phenotype) ~ log(cofactor)
   #Df   LogLik Df    Chisq Pr(>Chisq)    
-1   4 -145.183                           
-2   4 -144.960  0   0.4453  < 2.2e-16 ***
-3   4   -7.372  0 275.1773  < 2.2e-16 ***
-4   4   -6.989  0   0.7656  < 2.2e-16 ***
+1   4 -145.152                           
+2   4 -144.928  0   0.4494  < 2.2e-16 ***
+3   4   -7.300  0 275.2551  < 2.2e-16 ***
+4   4   -6.915  0   0.7709  < 2.2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
                 df       AIC
-simple.brownian  4 298.36582
-x.brownian       4 297.92051
-y.brownian       4  22.74319
-xy.brownian      4  21.97757
+simple.brownian  4 298.30494
+x.brownian       4 297.85556
+y.brownian       4  22.60047
+xy.brownian      4  21.82962
 ================================================================================
 ================================================================================
 Comparison 5: log(fmax) ~ endo + exo
@@ -4111,13 +3838,13 @@ Compare with and without phylogenetic covariance
 --------------------------------------------------------------------------------
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC      BIC  logLik
-  0.8726198 6.539254 5.56369
+      AIC      BIC   logLik
+  5.66673 11.33336 3.166635
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 2.640944e-06 0.2494147
+        (Intercept)  Residual
+StdDev:  0.06743306 0.2736036
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -4125,44 +3852,42 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: log(fmax) ~ endo * exo 
                  Value Std.Error DF   t-value p-value
-(Intercept)    -0.5783    0.3773 10 -1.532559  0.1564
-endo           90.9303   19.9189 10  4.565021  0.0010
-exo            24.1254   44.5530 10  0.541498  0.6000
-endo:exo    -1490.7881 1459.9432 10 -1.021127  0.3313
+(Intercept)    -0.6067    0.4446 10 -1.364548  0.2023
+endo           96.5246   22.9684 10  4.202497  0.0018
+exo            20.7277   52.6154 10  0.393947  0.7019
+endo:exo    -1553.0660 1702.5213 10 -0.912215  0.3831
  Correlation: 
          (Intr) endo   exo   
-endo     -0.926              
-exo      -0.777  0.540       
-endo:exo  0.871 -0.734 -0.940
+endo     -0.928              
+exo      -0.784  0.554       
+endo:exo  0.870 -0.732 -0.947
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.8167986 -0.6343141 -0.1214517  0.3730476 
-       Max 
- 2.0662225 
+       Min         Q1        Med         Q3        Max 
+-1.7367597 -0.5657005 -0.1560286  0.2538354  1.5036870 
 
 Number of Observations: 19
 Number of Groups: 6 
             numDF denDF   F-value p-value
-(Intercept)     1    10 234.57686  <.0001
-endo            1    10  39.99974  0.0001
-exo             1    10   1.51768  0.2462
-endo:exo        1    10   1.04270  0.3313
+(Intercept)     1    10 172.09226  <.0001
+endo            1    10  30.43283  0.0003
+exo             1    10   2.15226  0.1731
+endo:exo        1    10   0.83214  0.3831
 Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(>F)
-group  5  0.6104 0.6939
+group  5  0.5022 0.7696
       13               
 
 	Shapiro-Wilk normality test
 
 data:  residuals(full.model, type = "normalized")
-W = 0.97665, p-value = 0.8968
+W = 0.97016, p-value = 0.7796
 
     Effect   Rsq upper.CL lower.CL
-1    Model 1.000    1.000    1.000
-2     endo 1.000    1.000    1.000
-4 endo:exo 0.999    1.000    0.998
-3      exo 0.995    0.998    0.991
+1    Model 0.991    0.997    0.982
+2     endo 0.982    0.994    0.963
+4 endo:exo 0.640    0.873    0.311
+3      exo 0.228    0.669    0.002
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC  logLik
@@ -4171,7 +3896,7 @@ Linear mixed-effects model fit by maximum likelihood
 Random effects:
  Formula: ~1 | species
          (Intercept)  Residual
-StdDev: 5.543268e-07 0.2325532
+StdDev: 5.543289e-07 0.2325532
 
 Fixed effects: log(fmax) ~ endo * exo 
                 Value Std.Error DF   t-value p-value
@@ -4186,10 +3911,8 @@ exo      -0.796  0.527
 endo:exo  0.879 -0.698 -0.960
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.90587184 -0.63727389 -0.04530068  0.49910917 
-        Max 
- 2.33208358 
+        Min          Q1         Med          Q3         Max 
+-1.90587184 -0.63727389 -0.04530068  0.49910917  2.33208358 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -4214,10 +3937,10 @@ W = 0.9821, p-value = 0.9638
 4 endo:exo 0.033    0.470    0.000
 3      exo 0.001    0.405    0.000
 $d
-[1] 0.1482096
+[1] 0.1393233
 
 $ci
-[1] 0.04733176 0.29259016
+[1] 0.0444742 0.2757189
 
 $p
 [1] 0
@@ -4229,125 +3952,97 @@ R2 calculation for hypothesis testing
 
 
 --------------------------------------------------------------------------------
-      Effect        F                 v1     
- endo    :1   Min.   : 0.7265   Min.   :1.0  
- endo:exo:1   1st Qu.: 2.4198   1st Qu.:1.0  
- exo     :1   Median :32.8375   Median :1.0  
- Model   :1   Mean   :38.5070   Mean   :1.5  
-              3rd Qu.:68.9247   3rd Qu.:1.5  
-              Max.   :87.6266   Max.   :3.0  
-       v2          ncp                Rsq         
- Min.   :18   Min.   :  0.7265   Min.   :0.03879  
- 1st Qu.:18   1st Qu.:  2.4198   1st Qu.:0.11636  
- Median :18   Median : 45.3054   Median :0.48590  
- Mean   :18   Mean   : 69.8524   Mean   :0.48081  
- 3rd Qu.:18   3rd Qu.:112.7380   3rd Qu.:0.85035  
- Max.   :18   Max.   :188.0724   Max.   :0.91265  
+      Effect        F                 v1            v2          ncp          
+ endo    :1   Min.   : 0.4049   Min.   :1.0   Min.   :18   Min.   :  0.4049  
+ endo:exo:1   1st Qu.: 1.9352   1st Qu.:1.0   1st Qu.:18   1st Qu.:  1.9352  
+ exo     :1   Median :26.6915   Median :1.0   Median :18   Median : 38.4986  
+ Model   :1   Mean   :32.0849   Mean   :1.5   Mean   :18   Mean   : 57.5537  
+              3rd Qu.:56.8412   3rd Qu.:1.5   3rd Qu.:18   3rd Qu.: 94.1171  
+              Max.   :74.5519   Max.   :3.0   Max.   :18   Max.   :152.8128  
+      Rsq            upper.CL         lower.CL        
+ Min.   :0.0220   Min.   :0.3112   Min.   :0.0000841  
+ 1st Qu.:0.0952   1st Qu.:0.4253   1st Qu.:0.0005030  
+ Median :0.4626   Median :0.6864   Median :0.3310785  
+ Mean   :0.4604   Mean   :0.6590   Mean   :0.3699272  
+ 3rd Qu.:0.8278   3rd Qu.:0.9200   3rd Qu.:0.7005026  
+ Max.   :0.8946   Max.   :0.9520   Max.   :0.8174677  
+   Effect        F               v1          v2          ncp             Rsq        
+ endo :1   Min.   :85.27   Min.   :1   Min.   :18   Min.   :85.27   Min.   :0.8257  
+ Model:1   1st Qu.:85.27   1st Qu.:1   1st Qu.:18   1st Qu.:85.27   1st Qu.:0.8257  
+           Median :85.27   Median :1   Median :18   Median :85.27   Median :0.8257  
+           Mean   :85.27   Mean   :1   Mean   :18   Mean   :85.27   Mean   :0.8257  
+           3rd Qu.:85.27   3rd Qu.:1   3rd Qu.:18   3rd Qu.:85.27   3rd Qu.:0.8257  
+           Max.   :85.27   Max.   :1   Max.   :18   Max.   :85.27   Max.   :0.8257  
+    upper.CL        lower.CL     
+ Min.   :0.919   Min.   :0.6959  
+ 1st Qu.:0.919   1st Qu.:0.6959  
+ Median :0.919   Median :0.6959  
+ Mean   :0.919   Mean   :0.6959  
+ 3rd Qu.:0.919   3rd Qu.:0.6959  
+ Max.   :0.919   Max.   :0.6959  
+   Effect        F               v1          v2          ncp             Rsq         
+ exo  :1   Min.   :1.487   Min.   :1   Min.   :18   Min.   :1.487   Min.   :0.07633  
+ Model:1   1st Qu.:1.487   1st Qu.:1   1st Qu.:18   1st Qu.:1.487   1st Qu.:0.07633  
+           Median :1.487   Median :1   Median :18   Median :1.487   Median :0.07633  
+           Mean   :1.487   Mean   :1   Mean   :18   Mean   :1.487   Mean   :0.07633  
+           3rd Qu.:1.487   3rd Qu.:1   3rd Qu.:18   3rd Qu.:1.487   3rd Qu.:0.07633  
+           Max.   :1.487   Max.   :1   Max.   :18   Max.   :1.487   Max.   :0.07633  
     upper.CL         lower.CL        
- Min.   :0.3469   Min.   :0.0001160  
- 1st Qu.:0.4528   1st Qu.:0.0008484  
- Median :0.7045   Median :0.3518358  
- Mean   :0.6790   Mean   :0.3880210  
- 3rd Qu.:0.9307   3rd Qu.:0.7390085  
- Max.   :0.9602   Max.   :0.8482966  
-   Effect        F             v1          v2    
- endo :1   Min.   :152   Min.   :1   Min.   :18  
- Model:1   1st Qu.:152   1st Qu.:1   1st Qu.:18  
-           Median :152   Median :1   Median :18  
-           Mean   :152   Mean   :1   Mean   :18  
-           3rd Qu.:152   3rd Qu.:1   3rd Qu.:18  
-           Max.   :152   Max.   :1   Max.   :18  
-      ncp           Rsq            upper.CL     
- Min.   :152   Min.   :0.8941   Min.   :0.9512  
- 1st Qu.:152   1st Qu.:0.8941   1st Qu.:0.9512  
- Median :152   Median :0.8941   Median :0.9512  
- Mean   :152   Mean   :0.8941   Mean   :0.9512  
- 3rd Qu.:152   3rd Qu.:0.8941   3rd Qu.:0.9512  
- Max.   :152   Max.   :0.8941   Max.   :0.9512  
-    lower.CL     
- Min.   :0.8144  
- 1st Qu.:0.8144  
- Median :0.8144  
- Mean   :0.8144  
- 3rd Qu.:0.8144  
- Max.   :0.8144  
-   Effect        F               v1          v2    
- exo  :1   Min.   :2.521   Min.   :1   Min.   :18  
- Model:1   1st Qu.:2.521   1st Qu.:1   1st Qu.:18  
-           Median :2.521   Median :1   Median :18  
-           Mean   :2.521   Mean   :1   Mean   :18  
-           3rd Qu.:2.521   3rd Qu.:1   3rd Qu.:18  
-           Max.   :2.521   Max.   :1   Max.   :18  
-      ncp             Rsq            upper.CL     
- Min.   :2.521   Min.   :0.1229   Min.   :0.4671  
- 1st Qu.:2.521   1st Qu.:0.1229   1st Qu.:0.4671  
- Median :2.521   Median :0.1229   Median :0.4671  
- Mean   :2.521   Mean   :0.1229   Mean   :0.4671  
- 3rd Qu.:2.521   3rd Qu.:0.1229   3rd Qu.:0.4671  
- Max.   :2.521   Max.   :0.1229   Max.   :0.4671  
-    lower.CL        
- Min.   :0.0006929  
- 1st Qu.:0.0006929  
- Median :0.0006929  
- Mean   :0.0006929  
- 3rd Qu.:0.0006929  
- Max.   :0.0006929  
+ Min.   :0.4085   Min.   :0.0002479  
+ 1st Qu.:0.4085   1st Qu.:0.0002479  
+ Median :0.4085   Median :0.0002479  
+ Mean   :0.4085   Mean   :0.0002479  
+ 3rd Qu.:0.4085   3rd Qu.:0.0002479  
+ Max.   :0.4085   Max.   :0.0002479  
 $d
-[1] 0.01853102
+[1] 0.06891381
 
 $ci
-[1] -0.0007300378  0.0474484615
-
-$p
-[1] 0.0545
-
-$d
-[1] 0.7897817
-
-$ci
-[1] 0.4950857 0.8647142
+[1] 0.02669818 0.13002662
 
 $p
 [1] 0
 
 $d
-[1] 0.7712507
+[1] 0.8182919
 
 $ci
-[1] 0.4162507 0.9262507
+[1] 0.5320081 0.8527663
 
 $p
-[1] -1.155742e-12
+[1] 0
 
-           Model df        AIC      BIC   logLik
-full.model     1  6  0.8726198 6.539254 5.563690
-endo.model     2  4 -0.1330704 3.644686 4.066535
-             Test L.Ratio p-value
-full.model                       
-endo.model 1 vs 2 2.99431  0.2238
+$d
+[1] 0.7493781
+
+$ci
+[1] 0.3943781 0.8893781
+
+$p
+[1] 4.88154e-12
+
+           Model df      AIC      BIC   logLik   Test  L.Ratio p-value
+full.model     1  6 5.666730 11.33336 3.166635                        
+endo.model     2  4 4.849454  8.62721 1.575273 1 vs 2 3.182724  0.2036
 Likelihood ratio test
 
 Model 1: log(fmax) ~ endo * exo
 Model 2: log(fmax) ~ endo
   #Df LogLik Df  Chisq Pr(>Chisq)
-1   6 5.5637                     
-2   4 4.0665 -2 2.9943     0.2238
-           Model df      AIC       BIC    logLik
-full.model     1  6  0.87262  6.539254  5.563690
-exo.model      2  4 15.53316 19.310914 -3.766579
-             Test  L.Ratio p-value
-full.model                        
-exo.model  1 vs 2 18.66054   1e-04
+1   6 3.1666                     
+2   4 1.5753 -2 3.1827     0.2036
+           Model df      AIC      BIC    logLik   Test  L.Ratio p-value
+full.model     1  6  5.66673 11.33336  3.166635                        
+exo.model      2  4 17.27526 21.05301 -4.637629 1 vs 2 15.60853   4e-04
 Likelihood ratio test
 
 Model 1: log(fmax) ~ endo * exo
 Model 2: log(fmax) ~ exo
-  #Df  LogLik Df Chisq Pr(>Chisq)    
-1   6  5.5637                        
-2   4 -3.7666 -2 18.66   8.87e-05 ***
+  #Df  LogLik Df  Chisq Pr(>Chisq)    
+1   6  3.1666                         
+2   4 -4.6376 -2 15.608   0.000408 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 *** 0.001 ** 0.01 * 0.05 . 0.1   1
 ================================================================================
 ================================================================================
 Model 1a: log(fmax) ~ log(endo)
@@ -4362,13 +4057,13 @@ Redundant readout of chosen model, see above
 --------------------------------------------------------------------------------
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC       BIC   logLik
-  -3.475233 0.3025229 5.737616
+       AIC      BIC   logLik
+  1.415069 5.192825 3.292466
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 2.225805e-06 0.2471419
+        (Intercept)  Residual
+StdDev:  0.05787534 0.2740456
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -4376,17 +4071,15 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                Value Std.Error DF  t-value p-value
-(Intercept) 6.212684 0.7593510 12 8.181570       0
-cofactor    1.281652 0.1822763 12 7.031367       0
+(Intercept) 6.464760 0.8801017 12 7.345469       0
+cofactor    1.333644 0.2114985 12 6.305691       0
  Correlation: 
          (Intr)
 cofactor 0.997 
 
 Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.9609138 -0.6574536 -0.2706197  0.3111564 
-       Max 
- 2.0723463 
+       Min         Q1        Med         Q3        Max 
+-1.8313788 -0.6059318 -0.4628514  0.1919480  1.5309202 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -4406,8 +4099,8 @@ Number of tests:   1
 
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
-  Test         Obs    Std.Obs   Alter Pvalue
-1   dt -0.08923807 -0.7225354 greater  0.741
+  Test        Obs   Std.Obs   Alter Pvalue
+1   dt -0.1378843 -1.027828 greater  0.867
 
 --------------------------------------------------------------------------------
 
@@ -4426,7 +4119,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test        Obs   Std.Obs   Alter Pvalue
-1   dt -0.1509528 -0.747668 greater  0.757
+1   dt -0.2006249 -1.071713 greater  0.867
 
 --------------------------------------------------------------------------------
 
@@ -4439,10 +4132,10 @@ $lambda
 [1] 6.610696e-05
 
 $logL
-[1] -26.15728
+[1] -24.75061
 
 $logL0
-[1] -26.157
+[1] -24.75028
 
 $P
 [1] 1
@@ -4455,10 +4148,10 @@ Blomberg's kappa
 
 --------------------------------------------------------------------------------
 $K
-[1] 0.4169606
+[1] 0.3945796
 
 $P
-[1] 0.722
+[1] 0.898
 
 --------------------------------------------------------------------------------
 
@@ -4467,48 +4160,34 @@ R2 hypothesis testing
 
 
 --------------------------------------------------------------------------------
-   Effect        F               v1          v2    
- Model:1   Min.   :192.5   Min.   :1   Min.   :18  
-           1st Qu.:192.5   1st Qu.:1   1st Qu.:18  
-           Median :192.5   Median :1   Median :18  
-           Mean   :192.5   Mean   :1   Mean   :18  
-           3rd Qu.:192.5   3rd Qu.:1   3rd Qu.:18  
-           Max.   :192.5   Max.   :1   Max.   :18  
-      ncp             Rsq            upper.CL     
- Min.   :192.5   Min.   :0.9145   Min.   :0.9607  
- 1st Qu.:192.5   1st Qu.:0.9145   1st Qu.:0.9607  
- Median :192.5   Median :0.9145   Median :0.9607  
- Mean   :192.5   Mean   :0.9145   Mean   :0.9607  
- 3rd Qu.:192.5   3rd Qu.:0.9145   3rd Qu.:0.9607  
- Max.   :192.5   Max.   :0.9145   Max.   :0.9607  
-    lower.CL   
- Min.   :0.85  
- 1st Qu.:0.85  
- Median :0.85  
- Mean   :0.85  
- 3rd Qu.:0.85  
- Max.   :0.85  
-   Effect        F                v1   
- Model:1   Min.   :655028   Min.   :1  
-           1st Qu.:655028   1st Qu.:1  
-           Median :655028   Median :1  
-           Mean   :655028   Mean   :1  
-           3rd Qu.:655028   3rd Qu.:1  
-           Max.   :655028   Max.   :1  
-       v2             ncp              Rsq   
- Min.   :10.24   Min.   :655028   Min.   :1  
- 1st Qu.:10.24   1st Qu.:655028   1st Qu.:1  
- Median :10.24   Median :655028   Median :1  
- Mean   :10.24   Mean   :655028   Mean   :1  
- 3rd Qu.:10.24   3rd Qu.:655028   3rd Qu.:1  
- Max.   :10.24   Max.   :655028   Max.   :1  
-    upper.CL    lower.CL
- Min.   :1   Min.   :1  
- 1st Qu.:1   1st Qu.:1  
- Median :1   Median :1  
- Mean   :1   Mean   :1  
- 3rd Qu.:1   3rd Qu.:1  
- Max.   :1   Max.   :1  
+   Effect        F               v1          v2          ncp             Rsq        
+ Model:1   Min.   :162.6   Min.   :1   Min.   :18   Min.   :162.6   Min.   :0.9003  
+           1st Qu.:162.6   1st Qu.:1   1st Qu.:18   1st Qu.:162.6   1st Qu.:0.9003  
+           Median :162.6   Median :1   Median :18   Median :162.6   Median :0.9003  
+           Mean   :162.6   Mean   :1   Mean   :18   Mean   :162.6   Mean   :0.9003  
+           3rd Qu.:162.6   3rd Qu.:1   3rd Qu.:18   3rd Qu.:162.6   3rd Qu.:0.9003  
+           Max.   :162.6   Max.   :1   Max.   :18   Max.   :162.6   Max.   :0.9003  
+    upper.CL         lower.CL     
+ Min.   :0.9541   Min.   :0.8252  
+ 1st Qu.:0.9541   1st Qu.:0.8252  
+ Median :0.9541   Median :0.8252  
+ Mean   :0.9541   Mean   :0.8252  
+ 3rd Qu.:0.9541   3rd Qu.:0.8252  
+ Max.   :0.9541   Max.   :0.8252  
+   Effect        F               v1          v2             ncp             Rsq        
+ Model:1   Min.   :915.3   Min.   :1   Min.   :10.24   Min.   :915.3   Min.   :0.9889  
+           1st Qu.:915.3   1st Qu.:1   1st Qu.:10.24   1st Qu.:915.3   1st Qu.:0.9889  
+           Median :915.3   Median :1   Median :10.24   Median :915.3   Median :0.9889  
+           Mean   :915.3   Mean   :1   Mean   :10.24   Mean   :915.3   Mean   :0.9889  
+           3rd Qu.:915.3   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:915.3   3rd Qu.:0.9889  
+           Max.   :915.3   Max.   :1   Max.   :10.24   Max.   :915.3   Max.   :0.9889  
+    upper.CL         lower.CL     
+ Min.   :0.9963   Min.   :0.9775  
+ 1st Qu.:0.9963   1st Qu.:0.9775  
+ Median :0.9963   Median :0.9775  
+ Mean   :0.9963   Mean   :0.9775  
+ 3rd Qu.:0.9963   3rd Qu.:0.9775  
+ Max.   :0.9963   Max.   :0.9775  
 ================================================================================
 ================================================================================
 Model 1b: log(fmax) ~ exo
@@ -4524,12 +4203,12 @@ Redundant readout of chosen model, see above
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  16.51387 20.29162 -4.256934
+  18.12153 21.89929 -5.060765
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:    0.280129 0.3416404
+StdDev:   0.3394365 0.3400382
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -4537,17 +4216,15 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
-(Intercept) 1.7646236 0.9748145 12 1.8102147  0.0954
-cofactor    0.1708361 0.1861061 12 0.9179503  0.3767
+(Intercept) 1.6688690 0.9993473 12 1.6699590  0.1208
+cofactor    0.1446179 0.1900393 12 0.7609894  0.4614
  Correlation: 
          (Intr)
-cofactor 0.989 
+cofactor 0.986 
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.91828590 -0.30644924 -0.07014608  0.62436440 
-        Max 
- 1.63937805 
+       Min         Q1        Med         Q3        Max 
+-1.8808224 -0.3494617 -0.1224661  0.6225276  0.9803464 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -4568,7 +4245,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test        Obs   Std.Obs   Alter Pvalue
-1   dt -0.1577063 -1.315085 greater  0.938
+1   dt -0.1664261 -1.272207 greater   0.93
 
 --------------------------------------------------------------------------------
 
@@ -4586,8 +4263,8 @@ Number of tests:   1
 
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
-  Test       Obs   Std.Obs   Alter Pvalue
-1   dt -0.216285 -1.203637 greater  0.917
+  Test        Obs   Std.Obs   Alter Pvalue
+1   dt -0.2229836 -1.210614 greater  0.918
 
 --------------------------------------------------------------------------------
 
@@ -4600,10 +4277,10 @@ $lambda
 [1] 6.610696e-05
 
 $logL
-[1] -23.14687
+[1] -23.18127
 
 $logL0
-[1] -23.14656
+[1] -23.18096
 
 $P
 [1] 1
@@ -4616,10 +4293,10 @@ Blomberg's kappa
 
 --------------------------------------------------------------------------------
 $K
-[1] 0.3995727
+[1] 0.3929312
 
 $P
-[1] 0.854
+[1] 0.889
 
 --------------------------------------------------------------------------------
 
@@ -4628,48 +4305,34 @@ R2 hypothesis testing
 
 
 --------------------------------------------------------------------------------
-   Effect        F               v1          v2    
- Model:1   Min.   :1.215   Min.   :1   Min.   :18  
-           1st Qu.:1.215   1st Qu.:1   1st Qu.:18  
-           Median :1.215   Median :1   Median :18  
-           Mean   :1.215   Mean   :1   Mean   :18  
-           3rd Qu.:1.215   3rd Qu.:1   3rd Qu.:18  
-           Max.   :1.215   Max.   :1   Max.   :18  
-      ncp             Rsq             upper.CL    
- Min.   :1.215   Min.   :0.06325   Min.   :0.389  
- 1st Qu.:1.215   1st Qu.:0.06325   1st Qu.:0.389  
- Median :1.215   Median :0.06325   Median :0.389  
- Mean   :1.215   Mean   :0.06325   Mean   :0.389  
- 3rd Qu.:1.215   3rd Qu.:0.06325   3rd Qu.:0.389  
- Max.   :1.215   Max.   :0.06325   Max.   :0.389  
-    lower.CL       
- Min.   :0.000189  
- 1st Qu.:0.000189  
- Median :0.000189  
- Mean   :0.000189  
- 3rd Qu.:0.000189  
- Max.   :0.000189  
-   Effect        F               v1   
- Model:1   Min.   :69.95   Min.   :1  
-           1st Qu.:69.95   1st Qu.:1  
-           Median :69.95   Median :1  
-           Mean   :69.95   Mean   :1  
-           3rd Qu.:69.95   3rd Qu.:1  
-           Max.   :69.95   Max.   :1  
-       v2             ncp             Rsq        
- Min.   :10.24   Min.   :69.95   Min.   :0.8723  
- 1st Qu.:10.24   1st Qu.:69.95   1st Qu.:0.8723  
- Median :10.24   Median :69.95   Median :0.8723  
- Mean   :10.24   Mean   :69.95   Mean   :0.8723  
- 3rd Qu.:10.24   3rd Qu.:69.95   3rd Qu.:0.8723  
- Max.   :10.24   Max.   :69.95   Max.   :0.8723  
-    upper.CL         lower.CL     
- Min.   :0.9572   Min.   :0.7397  
- 1st Qu.:0.9572   1st Qu.:0.7397  
- Median :0.9572   Median :0.7397  
- Mean   :0.9572   Mean   :0.7397  
- 3rd Qu.:0.9572   3rd Qu.:0.7397  
- Max.   :0.9572   Max.   :0.7397  
+   Effect        F               v1          v2          ncp             Rsq         
+ Model:1   Min.   :0.673   Min.   :1   Min.   :18   Min.   :0.673   Min.   :0.03604  
+           1st Qu.:0.673   1st Qu.:1   1st Qu.:18   1st Qu.:0.673   1st Qu.:0.03604  
+           Median :0.673   Median :1   Median :18   Median :0.673   Median :0.03604  
+           Mean   :0.673   Mean   :1   Mean   :18   Mean   :0.673   Mean   :0.03604  
+           3rd Qu.:0.673   3rd Qu.:1   3rd Qu.:18   3rd Qu.:0.673   3rd Qu.:0.03604  
+           Max.   :0.673   Max.   :1   Max.   :18   Max.   :0.673   Max.   :0.03604  
+    upper.CL         lower.CL        
+ Min.   :0.3415   Min.   :0.0001099  
+ 1st Qu.:0.3415   1st Qu.:0.0001099  
+ Median :0.3415   Median :0.0001099  
+ Mean   :0.3415   Mean   :0.0001099  
+ 3rd Qu.:0.3415   3rd Qu.:0.0001099  
+ Max.   :0.3415   Max.   :0.0001099  
+   Effect        F               v1          v2             ncp             Rsq      
+ Model:1   Min.   :3.597   Min.   :1   Min.   :10.24   Min.   :3.597   Min.   :0.26  
+           1st Qu.:3.597   1st Qu.:1   1st Qu.:10.24   1st Qu.:3.597   1st Qu.:0.26  
+           Median :3.597   Median :1   Median :10.24   Median :3.597   Median :0.26  
+           Mean   :3.597   Mean   :1   Mean   :10.24   Mean   :3.597   Mean   :0.26  
+           3rd Qu.:3.597   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:3.597   3rd Qu.:0.26  
+           Max.   :3.597   Max.   :1   Max.   :10.24   Max.   :3.597   Max.   :0.26  
+    upper.CL         lower.CL      
+ Min.   :0.6908   Min.   :0.00354  
+ 1st Qu.:0.6908   1st Qu.:0.00354  
+ Median :0.6908   Median :0.00354  
+ Mean   :0.6908   Mean   :0.00354  
+ 3rd Qu.:0.6908   3rd Qu.:0.00354  
+ Max.   :0.6908   Max.   :0.00354  
 ================================================================================
 ================================================================================
 Model 1c:log(uts) ~ log(ratio)
@@ -4684,13 +4347,13 @@ Redundant readout of chosen model, see above
 --------------------------------------------------------------------------------
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC      BIC   logLik
-  -1.137428 2.640328 4.568714
+       AIC      BIC   logLik
+  3.002342 6.780098 2.498829
 
 Random effects:
  Formula: ~1 | species
-        (Intercept)  Residual
-StdDev:  0.01237684 0.2624643
+        (Intercept) Residual
+StdDev:   0.1273762 0.264866
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -4698,17 +4361,15 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
-(Intercept)  4.348971 0.1467774 12 29.629703  0.0000
-cofactor    -0.356040 0.1291722 12 -2.756325  0.0174
+(Intercept)  4.346042 0.1691788 12 25.689045  0.0000
+cofactor    -0.392986 0.1429984 12 -2.748183  0.0177
  Correlation: 
          (Intr)
-cofactor 0.92  
+cofactor 0.881 
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.91787764 -0.65864039 -0.06746679  0.37181428 
-        Max 
- 2.11398510 
+       Min         Q1        Med         Q3        Max 
+-1.7211974 -0.6327484 -0.2639773  0.3271246  1.4433133 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -4729,7 +4390,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test        Obs   Std.Obs   Alter Pvalue
-1   dt 0.06383542 0.4626242 greater  0.283
+1   dt -0.1531006 -1.218296 greater  0.919
 
 --------------------------------------------------------------------------------
 
@@ -4748,7 +4409,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test        Obs   Std.Obs   Alter Pvalue
-1   dt 0.01102308 0.5350795 greater  0.271
+1   dt -0.2160349 -1.203095 greater  0.923
 
 --------------------------------------------------------------------------------
 
@@ -4761,10 +4422,10 @@ $lambda
 [1] 6.610696e-05
 
 $logL
-[1] -26.19223
+[1] -24.74211
 
 $logL0
-[1] -26.19209
+[1] -24.74177
 
 $P
 [1] 1
@@ -4777,10 +4438,10 @@ Blomberg's kappa
 
 --------------------------------------------------------------------------------
 $K
-[1] 0.4980346
+[1] 0.3934738
 
 $P
-[1] 0.288
+[1] 0.907
 
 --------------------------------------------------------------------------------
 
@@ -4789,48 +4450,34 @@ R2 hypothesis testing
 
 
 --------------------------------------------------------------------------------
-   Effect        F               v1          v2    
- Model:1   Min.   :22.16   Min.   :1   Min.   :18  
-           1st Qu.:22.16   1st Qu.:1   1st Qu.:18  
-           Median :22.16   Median :1   Median :18  
-           Mean   :22.16   Mean   :1   Mean   :18  
-           3rd Qu.:22.16   3rd Qu.:1   3rd Qu.:18  
-           Max.   :22.16   Max.   :1   Max.   :18  
-      ncp             Rsq            upper.CL     
- Min.   :22.16   Min.   :0.5518   Min.   :0.7804  
- 1st Qu.:22.16   1st Qu.:0.5518   1st Qu.:0.7804  
- Median :22.16   Median :0.5518   Median :0.7804  
- Mean   :22.16   Mean   :0.5518   Mean   :0.7804  
- 3rd Qu.:22.16   3rd Qu.:0.5518   3rd Qu.:0.7804  
- Max.   :22.16   Max.   :0.5518   Max.   :0.7804  
-    lower.CL     
- Min.   :0.2735  
- 1st Qu.:0.2735  
- Median :0.2735  
- Mean   :0.2735  
- 3rd Qu.:0.2735  
- Max.   :0.2735  
-   Effect        F             v1          v2       
- Model:1   Min.   :107   Min.   :1   Min.   :10.24  
-           1st Qu.:107   1st Qu.:1   1st Qu.:10.24  
-           Median :107   Median :1   Median :10.24  
-           Mean   :107   Mean   :1   Mean   :10.24  
-           3rd Qu.:107   3rd Qu.:1   3rd Qu.:10.24  
-           Max.   :107   Max.   :1   Max.   :10.24  
-      ncp           Rsq            upper.CL     
- Min.   :107   Min.   :0.9127   Min.   :0.9709  
- 1st Qu.:107   1st Qu.:0.9127   1st Qu.:0.9709  
- Median :107   Median :0.9127   Median :0.9709  
- Mean   :107   Mean   :0.9127   Mean   :0.9709  
- 3rd Qu.:107   3rd Qu.:0.9127   3rd Qu.:0.9709  
- Max.   :107   Max.   :0.9127   Max.   :0.9709  
-    lower.CL     
- Min.   :0.8217  
- 1st Qu.:0.8217  
- Median :0.8217  
- Mean   :0.8217  
- 3rd Qu.:0.8217  
- Max.   :0.8217  
+   Effect        F               v1          v2          ncp             Rsq        
+ Model:1   Min.   :15.59   Min.   :1   Min.   :18   Min.   :15.59   Min.   :0.4642  
+           1st Qu.:15.59   1st Qu.:1   1st Qu.:18   1st Qu.:15.59   1st Qu.:0.4642  
+           Median :15.59   Median :1   Median :18   Median :15.59   Median :0.4642  
+           Mean   :15.59   Mean   :1   Mean   :18   Mean   :15.59   Mean   :0.4642  
+           3rd Qu.:15.59   3rd Qu.:1   3rd Qu.:18   3rd Qu.:15.59   3rd Qu.:0.4642  
+           Max.   :15.59   Max.   :1   Max.   :18   Max.   :15.59   Max.   :0.4642  
+    upper.CL         lower.CL     
+ Min.   :0.7305   Min.   :0.1695  
+ 1st Qu.:0.7305   1st Qu.:0.1695  
+ Median :0.7305   Median :0.1695  
+ Mean   :0.7305   Mean   :0.1695  
+ 3rd Qu.:0.7305   3rd Qu.:0.1695  
+ Max.   :0.7305   Max.   :0.1695  
+   Effect        F               v1          v2             ncp             Rsq        
+ Model:1   Min.   :20.42   Min.   :1   Min.   :10.24   Min.   :20.42   Min.   :0.6661  
+           1st Qu.:20.42   1st Qu.:1   1st Qu.:10.24   1st Qu.:20.42   1st Qu.:0.6661  
+           Median :20.42   Median :1   Median :10.24   Median :20.42   Median :0.6661  
+           Mean   :20.42   Mean   :1   Mean   :10.24   Mean   :20.42   Mean   :0.6661  
+           3rd Qu.:20.42   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:20.42   3rd Qu.:0.6661  
+           Max.   :20.42   Max.   :1   Max.   :10.24   Max.   :20.42   Max.   :0.6661  
+    upper.CL         lower.CL     
+ Min.   :0.8831   Min.   :0.3522  
+ 1st Qu.:0.8831   1st Qu.:0.3522  
+ Median :0.8831   Median :0.3522  
+ Mean   :0.8831   Mean   :0.3522  
+ 3rd Qu.:0.8831   3rd Qu.:0.3522  
+ Max.   :0.8831   Max.   :0.3522  
 ================================================================================
 ================================================================================
 Model 2a: log(ufs) ~ log(Etanl)
@@ -4845,13 +4492,13 @@ Redundant readout of chosen model, see above
 --------------------------------------------------------------------------------
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-        AIC       BIC   logLik
-  -5.580143 -1.802387 6.790071
+        AIC      BIC   logLik
+  -2.418591 1.359165 5.209295
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 3.464716e-06 0.2338244
+        (Intercept)  Residual
+StdDev:  0.02805075 0.2522209
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -4859,17 +4506,15 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF    t-value p-value
-(Intercept)  3.958981 0.5499361 12   7.198983       0
-cofactor    -0.923206 0.0822065 12 -11.230322       0
+(Intercept)  4.266436 0.5865901 12   7.273284       0
+cofactor    -0.965919 0.0878050 12 -11.000734       0
  Correlation: 
          (Intr)
-cofactor -0.996
+cofactor -0.995
 
 Standardized Within-Group Residuals:
-         Min           Q1          Med           Q3 
--1.620183763 -0.524585202  0.004507301  0.620603373 
-         Max 
- 1.807982067 
+       Min         Q1        Med         Q3        Max 
+-1.7031611 -0.4646712 -0.1828606  0.4454772  1.7546710 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -4890,7 +4535,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test         Obs    Std.Obs   Alter Pvalue
-1   dt -0.04169178 -0.3246057 greater  0.559
+1   dt -0.03886482 -0.2793617 greater  0.543
 
 --------------------------------------------------------------------------------
 
@@ -4909,7 +4554,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test        Obs    Std.Obs   Alter Pvalue
-1   dt -0.1051867 -0.3102764 greater   0.57
+1   dt -0.0993468 -0.3468022 greater  0.572
 
 --------------------------------------------------------------------------------
 
@@ -4922,10 +4567,10 @@ $lambda
 [1] 6.610696e-05
 
 $logL
-[1] -26.59743
+[1] -26.76534
 
 $logL0
-[1] -26.59714
+[1] -26.76506
 
 $P
 [1] 1
@@ -4938,10 +4583,10 @@ Blomberg's kappa
 
 --------------------------------------------------------------------------------
 $K
-[1] 0.4345794
+[1] 0.4345257
 
 $P
-[1] 0.613
+[1] 0.609
 
 --------------------------------------------------------------------------------
 
@@ -4950,48 +4595,34 @@ R2 hypothesis testing
 
 
 --------------------------------------------------------------------------------
-   Effect        F               v1          v2    
- Model:1   Min.   :329.2   Min.   :1   Min.   :18  
-           1st Qu.:329.2   1st Qu.:1   1st Qu.:18  
-           Median :329.2   Median :1   Median :18  
-           Mean   :329.2   Mean   :1   Mean   :18  
-           3rd Qu.:329.2   3rd Qu.:1   3rd Qu.:18  
-           Max.   :329.2   Max.   :1   Max.   :18  
-      ncp             Rsq            upper.CL     
- Min.   :329.2   Min.   :0.9482   Min.   :0.9762  
- 1st Qu.:329.2   1st Qu.:0.9482   1st Qu.:0.9762  
- Median :329.2   Median :0.9482   Median :0.9762  
- Mean   :329.2   Mean   :0.9482   Mean   :0.9762  
- 3rd Qu.:329.2   3rd Qu.:0.9482   3rd Qu.:0.9762  
- Max.   :329.2   Max.   :0.9482   Max.   :0.9762  
-    lower.CL     
- Min.   :0.9091  
- 1st Qu.:0.9091  
- Median :0.9091  
- Mean   :0.9091  
- 3rd Qu.:0.9091  
- Max.   :0.9091  
-   Effect        F                v1   
- Model:1   Min.   :764841   Min.   :1  
-           1st Qu.:764841   1st Qu.:1  
-           Median :764841   Median :1  
-           Mean   :764841   Mean   :1  
-           3rd Qu.:764841   3rd Qu.:1  
-           Max.   :764841   Max.   :1  
-       v2             ncp              Rsq   
- Min.   :10.24   Min.   :764841   Min.   :1  
- 1st Qu.:10.24   1st Qu.:764841   1st Qu.:1  
- Median :10.24   Median :764841   Median :1  
- Mean   :10.24   Mean   :764841   Mean   :1  
- 3rd Qu.:10.24   3rd Qu.:764841   3rd Qu.:1  
- Max.   :10.24   Max.   :764841   Max.   :1  
-    upper.CL    lower.CL
- Min.   :1   Min.   :1  
- 1st Qu.:1   1st Qu.:1  
- Median :1   Median :1  
- Mean   :1   Mean   :1  
- 3rd Qu.:1   3rd Qu.:1  
- Max.   :1   Max.   :1  
+   Effect        F               v1          v2          ncp             Rsq        
+ Model:1   Min.   :334.2   Min.   :1   Min.   :18   Min.   :334.2   Min.   :0.9489  
+           1st Qu.:334.2   1st Qu.:1   1st Qu.:18   1st Qu.:334.2   1st Qu.:0.9489  
+           Median :334.2   Median :1   Median :18   Median :334.2   Median :0.9489  
+           Mean   :334.2   Mean   :1   Mean   :18   Mean   :334.2   Mean   :0.9489  
+           3rd Qu.:334.2   3rd Qu.:1   3rd Qu.:18   3rd Qu.:334.2   3rd Qu.:0.9489  
+           Max.   :334.2   Max.   :1   Max.   :18   Max.   :334.2   Max.   :0.9489  
+    upper.CL         lower.CL     
+ Min.   :0.9766   Min.   :0.9103  
+ 1st Qu.:0.9766   1st Qu.:0.9103  
+ Median :0.9766   Median :0.9103  
+ Mean   :0.9766   Mean   :0.9103  
+ 3rd Qu.:0.9766   3rd Qu.:0.9103  
+ Max.   :0.9766   Max.   :0.9103  
+   Effect        F             v1          v2             ncp           Rsq        
+ Model:1   Min.   :802   Min.   :1   Min.   :10.24   Min.   :802   Min.   :0.9874  
+           1st Qu.:802   1st Qu.:1   1st Qu.:10.24   1st Qu.:802   1st Qu.:0.9874  
+           Median :802   Median :1   Median :10.24   Median :802   Median :0.9874  
+           Mean   :802   Mean   :1   Mean   :10.24   Mean   :802   Mean   :0.9874  
+           3rd Qu.:802   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:802   3rd Qu.:0.9874  
+           Max.   :802   Max.   :1   Max.   :10.24   Max.   :802   Max.   :0.9874  
+    upper.CL         lower.CL     
+ Min.   :0.9958   Min.   :0.9743  
+ 1st Qu.:0.9958   1st Qu.:0.9743  
+ Median :0.9958   Median :0.9743  
+ Mean   :0.9958   Mean   :0.9743  
+ 3rd Qu.:0.9958   3rd Qu.:0.9743  
+ Max.   :0.9958   Max.   :0.9743  
 ================================================================================
 ================================================================================
 Model 2b: log(ufs) ~ log(Esec)
@@ -5006,13 +4637,13 @@ Redundant readout of chosen model, see above
 --------------------------------------------------------------------------------
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC      BIC   logLik
-  5.878223 9.655979 1.060889
+       AIC      BIC     logLik
+  9.986502 13.76426 -0.9932511
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 1.151272e-06 0.3161151
+        (Intercept)  Residual
+StdDev:   0.1548211 0.3176725
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -5020,17 +4651,15 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
-(Intercept)  4.751111 0.8892278 12  5.342962   2e-04
-cofactor    -1.004315 0.1282690 12 -7.829756   0e+00
+(Intercept)  4.747137 1.0914751 12  4.349285   9e-04
+cofactor    -0.998803 0.1565428 12 -6.380379   0e+00
  Correlation: 
          (Intr)
-cofactor -0.997
+cofactor -0.996
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.74060639 -0.55625359 -0.01688807  0.29903441 
-        Max 
- 2.05033788 
+        Min          Q1         Med          Q3         Max 
+-1.62993737 -0.68552313 -0.03623807  0.34605877  1.30483948 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -5050,8 +4679,8 @@ Number of tests:   1
 
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
-  Test         Obs    Std.Obs   Alter Pvalue
-1   dt -0.03535088 -0.2988281 greater  0.527
+  Test        Obs  Std.Obs   Alter Pvalue
+1   dt -0.1767016 -1.40783 greater  0.961
 
 --------------------------------------------------------------------------------
 
@@ -5069,8 +4698,8 @@ Number of tests:   1
 
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
-  Test         Obs    Std.Obs   Alter Pvalue
-1   dt -0.09582326 -0.3077831 greater   0.56
+  Test        Obs   Std.Obs   Alter Pvalue
+1   dt -0.2398086 -1.304939 greater  0.935
 
 --------------------------------------------------------------------------------
 
@@ -5083,10 +4712,10 @@ $lambda
 [1] 6.610696e-05
 
 $logL
-[1] -25.3173
+[1] -23.44496
 
 $logL0
-[1] -25.31707
+[1] -23.44459
 
 $P
 [1] 1
@@ -5099,10 +4728,10 @@ Blomberg's kappa
 
 --------------------------------------------------------------------------------
 $K
-[1] 0.4515248
+[1] 0.3841912
 
 $P
-[1] 0.531
+[1] 0.945
 
 --------------------------------------------------------------------------------
 
@@ -5111,48 +4740,34 @@ R2 hypothesis testing
 
 
 --------------------------------------------------------------------------------
-   Effect        F             v1          v2    
- Model:1   Min.   :170   Min.   :1   Min.   :18  
-           1st Qu.:170   1st Qu.:1   1st Qu.:18  
-           Median :170   Median :1   Median :18  
-           Mean   :170   Mean   :1   Mean   :18  
-           3rd Qu.:170   3rd Qu.:1   3rd Qu.:18  
-           Max.   :170   Max.   :1   Max.   :18  
-      ncp           Rsq            upper.CL     
- Min.   :170   Min.   :0.9043   Min.   :0.9559  
- 1st Qu.:170   1st Qu.:0.9043   1st Qu.:0.9559  
- Median :170   Median :0.9043   Median :0.9559  
- Mean   :170   Mean   :0.9043   Mean   :0.9559  
- 3rd Qu.:170   3rd Qu.:0.9043   3rd Qu.:0.9559  
- Max.   :170   Max.   :0.9043   Max.   :0.9559  
-    lower.CL     
- Min.   :0.8321  
- 1st Qu.:0.8321  
- Median :0.8321  
- Mean   :0.8321  
- 3rd Qu.:0.8321  
- Max.   :0.8321  
-   Effect        F                  v1   
- Model:1   Min.   :1.34e+10   Min.   :1  
-           1st Qu.:1.34e+10   1st Qu.:1  
-           Median :1.34e+10   Median :1  
-           Mean   :1.34e+10   Mean   :1  
-           3rd Qu.:1.34e+10   3rd Qu.:1  
-           Max.   :1.34e+10   Max.   :1  
-       v2             ncp                Rsq   
- Min.   :10.24   Min.   :1.34e+10   Min.   :1  
- 1st Qu.:10.24   1st Qu.:1.34e+10   1st Qu.:1  
- Median :10.24   Median :1.34e+10   Median :1  
- Mean   :10.24   Mean   :1.34e+10   Mean   :1  
- 3rd Qu.:10.24   3rd Qu.:1.34e+10   3rd Qu.:1  
- Max.   :10.24   Max.   :1.34e+10   Max.   :1  
-    upper.CL    lower.CL
- Min.   :1   Min.   :1  
- 1st Qu.:1   1st Qu.:1  
- Median :1   Median :1  
- Mean   :1   Mean   :1  
- 3rd Qu.:1   3rd Qu.:1  
- Max.   :1   Max.   :1  
+   Effect        F               v1          v2          ncp             Rsq       
+ Model:1   Min.   :95.93   Min.   :1   Min.   :18   Min.   :95.93   Min.   :0.842  
+           1st Qu.:95.93   1st Qu.:1   1st Qu.:18   1st Qu.:95.93   1st Qu.:0.842  
+           Median :95.93   Median :1   Median :18   Median :95.93   Median :0.842  
+           Mean   :95.93   Mean   :1   Mean   :18   Mean   :95.93   Mean   :0.842  
+           3rd Qu.:95.93   3rd Qu.:1   3rd Qu.:18   3rd Qu.:95.93   3rd Qu.:0.842  
+           Max.   :95.93   Max.   :1   Max.   :18   Max.   :95.93   Max.   :0.842  
+    upper.CL         lower.CL     
+ Min.   :0.9267   Min.   :0.7239  
+ 1st Qu.:0.9267   1st Qu.:0.7239  
+ Median :0.9267   Median :0.7239  
+ Mean   :0.9267   Mean   :0.7239  
+ 3rd Qu.:0.9267   3rd Qu.:0.7239  
+ Max.   :0.9267   Max.   :0.7239  
+   Effect        F               v1          v2             ncp             Rsq        
+ Model:1   Min.   :125.9   Min.   :1   Min.   :10.24   Min.   :125.9   Min.   :0.9248  
+           1st Qu.:125.9   1st Qu.:1   1st Qu.:10.24   1st Qu.:125.9   1st Qu.:0.9248  
+           Median :125.9   Median :1   Median :10.24   Median :125.9   Median :0.9248  
+           Mean   :125.9   Mean   :1   Mean   :10.24   Mean   :125.9   Mean   :0.9248  
+           3rd Qu.:125.9   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:125.9   3rd Qu.:0.9248  
+           Max.   :125.9   Max.   :1   Max.   :10.24   Max.   :125.9   Max.   :0.9248  
+    upper.CL        lower.CL     
+ Min.   :0.975   Min.   :0.8464  
+ 1st Qu.:0.975   1st Qu.:0.8464  
+ Median :0.975   Median :0.8464  
+ Mean   :0.975   Mean   :0.8464  
+ 3rd Qu.:0.975   3rd Qu.:0.8464  
+ Max.   :0.975   Max.   :0.8464  
 ================================================================================
 ================================================================================
 Model 2a: log(U) ~ log(Etanl)
@@ -5167,13 +4782,13 @@ Redundant readout of chosen model, see above
 --------------------------------------------------------------------------------
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
-       AIC     BIC    logLik
-  21.73605 25.5138 -6.868024
+       AIC      BIC    logLik
+  25.04395 28.82171 -8.521976
 
 Random effects:
  Formula: ~1 | species
-        (Intercept)  Residual
-StdDev: 7.19806e-06 0.4798231
+         (Intercept)  Residual
+StdDev: 2.617516e-05 0.5234637
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -5181,17 +4796,15 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
-(Intercept)  8.028940 1.1285052 12  7.114668   0e+00
-cofactor    -0.939959 0.1686932 12 -5.572003   1e-04
+(Intercept)  8.777962 1.1989234 12  7.321537   0e+00
+cofactor    -1.044415 0.1795643 12 -5.816384   1e-04
  Correlation: 
          (Intr)
-cofactor -0.996
+cofactor -0.995
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.34553857 -0.69712584 -0.07921662  0.49508523 
-        Max 
- 1.94822615 
+       Min         Q1        Med         Q3        Max 
+-1.4767651 -0.6639426 -0.2856563  0.3301078  1.8975712 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -5211,8 +4824,8 @@ Number of tests:   1
 
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
-  Test        Obs    Std.Obs   Alter Pvalue
-1   dt -0.0794964 -0.6476398 greater  0.711
+  Test         Obs    Std.Obs   Alter Pvalue
+1   dt -0.05868724 -0.4851516 greater  0.639
 
 --------------------------------------------------------------------------------
 
@@ -5231,7 +4844,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test        Obs    Std.Obs   Alter Pvalue
-1   dt -0.1440716 -0.6458992 greater  0.697
+1   dt -0.1194571 -0.4284498 greater  0.613
 
 --------------------------------------------------------------------------------
 
@@ -5244,10 +4857,10 @@ $lambda
 [1] 6.610696e-05
 
 $logL
-[1] -26.47157
+[1] -26.54778
 
 $logL0
-[1] -26.47127
+[1] -26.5475
 
 $P
 [1] 1
@@ -5260,10 +4873,10 @@ Blomberg's kappa
 
 --------------------------------------------------------------------------------
 $K
-[1] 0.4189665
+[1] 0.4259599
 
 $P
-[1] 0.725
+[1] 0.679
 
 --------------------------------------------------------------------------------
 
@@ -5272,48 +4885,34 @@ R2 hypothesis testing
 
 
 --------------------------------------------------------------------------------
-   Effect        F               v1          v2    
- Model:1   Min.   :81.05   Min.   :1   Min.   :18  
-           1st Qu.:81.05   1st Qu.:1   1st Qu.:18  
-           Median :81.05   Median :1   Median :18  
-           Mean   :81.05   Mean   :1   Mean   :18  
-           3rd Qu.:81.05   3rd Qu.:1   3rd Qu.:18  
-           Max.   :81.05   Max.   :1   Max.   :18  
-      ncp             Rsq            upper.CL     
- Min.   :81.05   Min.   :0.8183   Min.   :0.9155  
- 1st Qu.:81.05   1st Qu.:0.8183   1st Qu.:0.9155  
- Median :81.05   Median :0.8183   Median :0.9155  
- Mean   :81.05   Mean   :0.8183   Mean   :0.9155  
- 3rd Qu.:81.05   3rd Qu.:0.8183   3rd Qu.:0.9155  
- Max.   :81.05   Max.   :0.8183   Max.   :0.9155  
-    lower.CL     
- Min.   :0.6832  
- 1st Qu.:0.6832  
- Median :0.6832  
- Mean   :0.6832  
- 3rd Qu.:0.6832  
- Max.   :0.6832  
-   Effect        F                v1   
- Model:1   Min.   :186510   Min.   :1  
-           1st Qu.:186510   1st Qu.:1  
-           Median :186510   Median :1  
-           Mean   :186510   Mean   :1  
-           3rd Qu.:186510   3rd Qu.:1  
-           Max.   :186510   Max.   :1  
-       v2             ncp              Rsq        
- Min.   :10.24   Min.   :186510   Min.   :0.9999  
- 1st Qu.:10.24   1st Qu.:186510   1st Qu.:0.9999  
- Median :10.24   Median :186510   Median :0.9999  
- Mean   :10.24   Mean   :186510   Mean   :0.9999  
- 3rd Qu.:10.24   3rd Qu.:186510   3rd Qu.:0.9999  
- Max.   :10.24   Max.   :186510   Max.   :0.9999  
-    upper.CL    lower.CL     
- Min.   :1   Min.   :0.9999  
- 1st Qu.:1   1st Qu.:0.9999  
- Median :1   Median :0.9999  
- Mean   :1   Mean   :0.9999  
- 3rd Qu.:1   3rd Qu.:0.9999  
- Max.   :1   Max.   :0.9999  
+   Effect        F               v1          v2          ncp             Rsq        
+ Model:1   Min.   :95.28   Min.   :1   Min.   :18   Min.   :95.28   Min.   :0.8411  
+           1st Qu.:95.28   1st Qu.:1   1st Qu.:18   1st Qu.:95.28   1st Qu.:0.8411  
+           Median :95.28   Median :1   Median :18   Median :95.28   Median :0.8411  
+           Mean   :95.28   Mean   :1   Mean   :18   Mean   :95.28   Mean   :0.8411  
+           3rd Qu.:95.28   3rd Qu.:1   3rd Qu.:18   3rd Qu.:95.28   3rd Qu.:0.8411  
+           Max.   :95.28   Max.   :1   Max.   :18   Max.   :95.28   Max.   :0.8411  
+    upper.CL         lower.CL     
+ Min.   :0.9263   Min.   :0.7224  
+ 1st Qu.:0.9263   1st Qu.:0.7224  
+ Median :0.9263   Median :0.7224  
+ Mean   :0.9263   Mean   :0.7224  
+ 3rd Qu.:0.9263   3rd Qu.:0.7224  
+ Max.   :0.9263   Max.   :0.7224  
+   Effect        F                v1          v2             ncp        
+ Model:1   Min.   :134015   Min.   :1   Min.   :10.24   Min.   :134015  
+           1st Qu.:134015   1st Qu.:1   1st Qu.:10.24   1st Qu.:134015  
+           Median :134015   Median :1   Median :10.24   Median :134015  
+           Mean   :134015   Mean   :1   Mean   :10.24   Mean   :134015  
+           3rd Qu.:134015   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:134015  
+           Max.   :134015   Max.   :1   Max.   :10.24   Max.   :134015  
+      Rsq            upper.CL    lower.CL     
+ Min.   :0.9999   Min.   :1   Min.   :0.9998  
+ 1st Qu.:0.9999   1st Qu.:1   1st Qu.:0.9998  
+ Median :0.9999   Median :1   Median :0.9998  
+ Mean   :0.9999   Mean   :1   Mean   :0.9998  
+ 3rd Qu.:0.9999   3rd Qu.:1   3rd Qu.:0.9998  
+ Max.   :0.9999   Max.   :1   Max.   :0.9998  
 ================================================================================
 ================================================================================
 Model 2b: log(U) ~ log(Esec)
@@ -5329,12 +4928,12 @@ Redundant readout of chosen model, see above
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  28.00644 31.78419 -10.00322
+  32.16724 35.94499 -12.08362
 
 Random effects:
  Formula: ~1 | species
-         (Intercept)  Residual
-StdDev: 1.195767e-05 0.5659058
+        (Intercept)  Residual
+StdDev:   0.2284927 0.5868126
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -5342,17 +4941,15 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                 Value Std.Error DF   t-value p-value
-(Intercept)  8.415174 1.5918862 12  5.286291  0.0002
-cofactor    -0.961734 0.2296259 12 -4.188267  0.0013
+(Intercept)  8.651421 1.9158831 12  4.515631  0.0007
+cofactor    -0.986726 0.2751413 12 -3.586251  0.0037
  Correlation: 
          (Intr)
-cofactor -0.997
+cofactor -0.996
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.58113533 -0.59632515 -0.05464827  0.38253800 
-        Max 
- 1.97254433 
+       Min         Q1        Med         Q3        Max 
+-1.5349111 -0.6038602 -0.1151023  0.3642676  1.4312340 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -5372,169 +4969,8 @@ Number of tests:   1
 
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
-  Test         Obs    Std.Obs   Alter Pvalue
-1   dt -0.06778006 -0.4783861 greater  0.621
-
---------------------------------------------------------------------------------
-
-
-Moran's I
-
-
---------------------------------------------------------------------------------
-class: krandtest lightkrandtest 
-Monte-Carlo tests
-Call: as.krandtest(sim = matrix(res$result, ncol = nvar, byrow = TRUE), 
-    obs = res$obs, alter = alter, names = test.names)
-
-Number of tests:   1 
-
-Adjustment method for multiple comparisons:   none 
-Permutation number:   999 
-  Test        Obs    Std.Obs   Alter Pvalue
-1   dt -0.1304504 -0.5913365 greater  0.679
-
---------------------------------------------------------------------------------
-
-
-Pagel's lambda
-
-
---------------------------------------------------------------------------------
-$lambda
-[1] 6.610696e-05
-
-$logL
-[1] -25.52446
-
-$logL0
-[1] -25.52418
-
-$P
-[1] 1
-
---------------------------------------------------------------------------------
-
-
-Blomberg's kappa
-
-
---------------------------------------------------------------------------------
-$K
-[1] 0.4338875
-
-$P
-[1] 0.634
-
---------------------------------------------------------------------------------
-
-
-R2 hypothesis testing
-
-
---------------------------------------------------------------------------------
-   Effect        F               v1          v2    
- Model:1   Min.   :48.65   Min.   :1   Min.   :18  
-           1st Qu.:48.65   1st Qu.:1   1st Qu.:18  
-           Median :48.65   Median :1   Median :18  
-           Mean   :48.65   Mean   :1   Mean   :18  
-           3rd Qu.:48.65   3rd Qu.:1   3rd Qu.:18  
-           Max.   :48.65   Max.   :1   Max.   :18  
-      ncp             Rsq            upper.CL     
- Min.   :48.65   Min.   :0.7299   Min.   :0.8727  
- 1st Qu.:48.65   1st Qu.:0.7299   1st Qu.:0.8727  
- Median :48.65   Median :0.7299   Median :0.8727  
- Mean   :48.65   Mean   :0.7299   Mean   :0.8727  
- 3rd Qu.:48.65   3rd Qu.:0.7299   3rd Qu.:0.8727  
- Max.   :48.65   Max.   :0.7299   Max.   :0.8727  
-    lower.CL    
- Min.   :0.536  
- 1st Qu.:0.536  
- Median :0.536  
- Mean   :0.536  
- 3rd Qu.:0.536  
- Max.   :0.536  
-   Effect        F               v1   
- Model:1   Min.   :86089   Min.   :1  
-           1st Qu.:86089   1st Qu.:1  
-           Median :86089   Median :1  
-           Mean   :86089   Mean   :1  
-           3rd Qu.:86089   3rd Qu.:1  
-           Max.   :86089   Max.   :1  
-       v2             ncp             Rsq        
- Min.   :10.24   Min.   :86089   Min.   :0.9999  
- 1st Qu.:10.24   1st Qu.:86089   1st Qu.:0.9999  
- Median :10.24   Median :86089   Median :0.9999  
- Mean   :10.24   Mean   :86089   Mean   :0.9999  
- 3rd Qu.:10.24   3rd Qu.:86089   3rd Qu.:0.9999  
- Max.   :10.24   Max.   :86089   Max.   :0.9999  
-    upper.CL    lower.CL     
- Min.   :1   Min.   :0.9998  
- 1st Qu.:1   1st Qu.:0.9998  
- Median :1   Median :0.9998  
- Mean   :1   Mean   :0.9998  
- 3rd Qu.:1   3rd Qu.:0.9998  
- Max.   :1   Max.   :0.9998  
-================================================================================
-================================================================================
-Model 3a: log(Etanl) ~ log(length)
-================================================================================
-================================================================================
---------------------------------------------------------------------------------
-
-
-Redundant readout of chosen model, see above
-
-
---------------------------------------------------------------------------------
-Linear mixed-effects model fit by maximum likelihood
- Data: raw.data 
-      AIC      BIC   logLik
-  28.7358 32.51355 -10.3679
-
-Random effects:
- Formula: ~1 | species
-        (Intercept)  Residual
-StdDev:    0.402505 0.4655208
-
-Correlation Structure: corBrownian
- Formula: ~1 | species 
- Parameter estimate(s):
-numeric(0)
-Fixed effects: phenotype ~ cofactor 
-               Value Std.Error DF  t-value p-value
-(Intercept) 5.284062 0.9145901 12 5.777519  0.0001
-cofactor    0.809591 0.5051174 12 1.602777  0.1350
- Correlation: 
-         (Intr)
-cofactor -0.975
-
-Standardized Within-Group Residuals:
-       Min         Q1        Med         Q3 
--1.5820601 -0.5887454 -0.1014291  0.1114741 
-       Max 
- 2.2547567 
-
-Number of Observations: 19
-Number of Groups: 6 
---------------------------------------------------------------------------------
-
-
-Abouheif's Cmean
-
-
---------------------------------------------------------------------------------
-class: krandtest lightkrandtest 
-Monte-Carlo tests
-Call: as.krandtest(sim = matrix(res$result, ncol = nvar, byrow = TRUE), 
-    obs = res$obs, alter = alter, names = test.names)
-
-Number of tests:   1 
-
-Adjustment method for multiple comparisons:   none 
-Permutation number:   999 
-  Test       Obs   Std.Obs   Alter Pvalue
-1   dt -0.162149 -1.377024 greater  0.956
+  Test        Obs   Std.Obs   Alter Pvalue
+1   dt -0.1582943 -1.249247 greater  0.912
 
 --------------------------------------------------------------------------------
 
@@ -5553,7 +4989,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test        Obs   Std.Obs   Alter Pvalue
-1   dt -0.2331272 -1.403712 greater  0.961
+1   dt -0.2213866 -1.204019 greater  0.925
 
 --------------------------------------------------------------------------------
 
@@ -5566,10 +5002,10 @@ $lambda
 [1] 6.610696e-05
 
 $logL
-[1] -24.82506
+[1] -24.19247
 
 $logL0
-[1] -24.82465
+[1] -24.19212
 
 $P
 [1] 1
@@ -5582,10 +5018,10 @@ Blomberg's kappa
 
 --------------------------------------------------------------------------------
 $K
-[1] 0.3718295
+[1] 0.390273
 
 $P
-[1] 0.985
+[1] 0.931
 
 --------------------------------------------------------------------------------
 
@@ -5594,48 +5030,179 @@ R2 hypothesis testing
 
 
 --------------------------------------------------------------------------------
-   Effect        F               v1          v2    
- Model:1   Min.   :8.288   Min.   :1   Min.   :18  
-           1st Qu.:8.288   1st Qu.:1   1st Qu.:18  
-           Median :8.288   Median :1   Median :18  
-           Mean   :8.288   Mean   :1   Mean   :18  
-           3rd Qu.:8.288   3rd Qu.:1   3rd Qu.:18  
-           Max.   :8.288   Max.   :1   Max.   :18  
-      ncp             Rsq            upper.CL     
- Min.   :8.288   Min.   :0.3153   Min.   :0.6345  
- 1st Qu.:8.288   1st Qu.:0.3153   1st Qu.:0.6345  
- Median :8.288   Median :0.3153   Median :0.6345  
- Mean   :8.288   Mean   :0.3153   Mean   :0.6345  
- 3rd Qu.:8.288   3rd Qu.:0.3153   3rd Qu.:0.6345  
- Max.   :8.288   Max.   :0.3153   Max.   :0.6345  
-    lower.CL      
- Min.   :0.04405  
- 1st Qu.:0.04405  
- Median :0.04405  
- Mean   :0.04405  
- 3rd Qu.:0.04405  
- Max.   :0.04405  
-   Effect        F               v1   
- Model:1   Min.   :13.21   Min.   :1  
-           1st Qu.:13.21   1st Qu.:1  
-           Median :13.21   Median :1  
-           Mean   :13.21   Mean   :1  
-           3rd Qu.:13.21   3rd Qu.:1  
-           Max.   :13.21   Max.   :1  
-       v2             ncp             Rsq        
- Min.   :10.24   Min.   :13.21   Min.   :0.5634  
- 1st Qu.:10.24   1st Qu.:13.21   1st Qu.:0.5634  
- Median :10.24   Median :13.21   Median :0.5634  
- Mean   :10.24   Mean   :13.21   Mean   :0.5634  
- 3rd Qu.:10.24   3rd Qu.:13.21   3rd Qu.:0.5634  
- Max.   :10.24   Max.   :13.21   Max.   :0.5634  
+   Effect        F               v1          v2          ncp             Rsq        
+ Model:1   Min.   :33.37   Min.   :1   Min.   :18   Min.   :33.37   Min.   :0.6496  
+           1st Qu.:33.37   1st Qu.:1   1st Qu.:18   1st Qu.:33.37   1st Qu.:0.6496  
+           Median :33.37   Median :1   Median :18   Median :33.37   Median :0.6496  
+           Mean   :33.37   Mean   :1   Mean   :18   Mean   :33.37   Mean   :0.6496  
+           3rd Qu.:33.37   3rd Qu.:1   3rd Qu.:18   3rd Qu.:33.37   3rd Qu.:0.6496  
+           Max.   :33.37   Max.   :1   Max.   :18   Max.   :33.37   Max.   :0.6496  
     upper.CL         lower.CL     
- Min.   :0.8424   Min.   :0.1988  
- 1st Qu.:0.8424   1st Qu.:0.1988  
- Median :0.8424   Median :0.1988  
- Mean   :0.8424   Mean   :0.1988  
- 3rd Qu.:0.8424   3rd Qu.:0.1988  
- Max.   :0.8424   Max.   :0.1988  
+ Min.   :0.8323   Min.   :0.4107  
+ 1st Qu.:0.8323   1st Qu.:0.4107  
+ Median :0.8323   Median :0.4107  
+ Mean   :0.8323   Mean   :0.4107  
+ 3rd Qu.:0.8323   3rd Qu.:0.4107  
+ Max.   :0.8323   Max.   :0.4107  
+   Effect        F              v1          v2             ncp            Rsq        
+ Model:1   Min.   :43.4   Min.   :1   Min.   :10.24   Min.   :43.4   Min.   :0.8092  
+           1st Qu.:43.4   1st Qu.:1   1st Qu.:10.24   1st Qu.:43.4   1st Qu.:0.8092  
+           Median :43.4   Median :1   Median :10.24   Median :43.4   Median :0.8092  
+           Mean   :43.4   Mean   :1   Mean   :10.24   Mean   :43.4   Mean   :0.8092  
+           3rd Qu.:43.4   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:43.4   3rd Qu.:0.8092  
+           Max.   :43.4   Max.   :1   Max.   :10.24   Max.   :43.4   Max.   :0.8092  
+    upper.CL         lower.CL     
+ Min.   :0.9353   Min.   :0.6137  
+ 1st Qu.:0.9353   1st Qu.:0.6137  
+ Median :0.9353   Median :0.6137  
+ Mean   :0.9353   Mean   :0.6137  
+ 3rd Qu.:0.9353   3rd Qu.:0.6137  
+ Max.   :0.9353   Max.   :0.6137  
+================================================================================
+================================================================================
+Model 3a: log(Etanl) ~ log(length)
+================================================================================
+================================================================================
+--------------------------------------------------------------------------------
+
+
+Redundant readout of chosen model, see above
+
+
+--------------------------------------------------------------------------------
+Linear mixed-effects model fit by maximum likelihood
+ Data: raw.data 
+       AIC     BIC    logLik
+  29.05284 32.8306 -10.52642
+
+Random effects:
+ Formula: ~1 | species
+        (Intercept)  Residual
+StdDev:   0.4208043 0.4641961
+
+Correlation Structure: corBrownian
+ Formula: ~1 | species 
+ Parameter estimate(s):
+numeric(0)
+Fixed effects: phenotype ~ cofactor 
+              Value Std.Error DF  t-value p-value
+(Intercept) 5.21384 0.9346700 12 5.578268  0.0001
+cofactor    0.84298 0.5160489 12 1.633527  0.1283
+ Correlation: 
+         (Intr)
+cofactor -0.975
+
+Standardized Within-Group Residuals:
+        Min          Q1         Med          Q3         Max 
+-1.56461685 -0.50594577 -0.08848169  0.14488667  2.26842990 
+
+Number of Observations: 19
+Number of Groups: 6 
+--------------------------------------------------------------------------------
+
+
+Abouheif's Cmean
+
+
+--------------------------------------------------------------------------------
+class: krandtest lightkrandtest 
+Monte-Carlo tests
+Call: as.krandtest(sim = matrix(res$result, ncol = nvar, byrow = TRUE), 
+    obs = res$obs, alter = alter, names = test.names)
+
+Number of tests:   1 
+
+Adjustment method for multiple comparisons:   none 
+Permutation number:   999 
+  Test        Obs   Std.Obs   Alter Pvalue
+1   dt -0.1366435 -1.359744 greater  0.941
+
+--------------------------------------------------------------------------------
+
+
+Moran's I
+
+
+--------------------------------------------------------------------------------
+class: krandtest lightkrandtest 
+Monte-Carlo tests
+Call: as.krandtest(sim = matrix(res$result, ncol = nvar, byrow = TRUE), 
+    obs = res$obs, alter = alter, names = test.names)
+
+Number of tests:   1 
+
+Adjustment method for multiple comparisons:   none 
+Permutation number:   999 
+  Test        Obs   Std.Obs   Alter Pvalue
+1   dt -0.2013167 -1.449279 greater  0.954
+
+--------------------------------------------------------------------------------
+
+
+Pagel's lambda
+
+
+--------------------------------------------------------------------------------
+$lambda
+[1] 6.610696e-05
+
+$logL
+[1] -30.19343
+
+$logL0
+[1] -30.19304
+
+$P
+[1] 1
+
+--------------------------------------------------------------------------------
+
+
+Blomberg's kappa
+
+
+--------------------------------------------------------------------------------
+$K
+[1] 0.3732806
+
+$P
+[1] 0.992
+
+--------------------------------------------------------------------------------
+
+
+R2 hypothesis testing
+
+
+--------------------------------------------------------------------------------
+   Effect        F               v1          v2          ncp             Rsq        
+ Model:1   Min.   :8.686   Min.   :1   Min.   :18   Min.   :8.686   Min.   :0.3255  
+           1st Qu.:8.686   1st Qu.:1   1st Qu.:18   1st Qu.:8.686   1st Qu.:0.3255  
+           Median :8.686   Median :1   Median :18   Median :8.686   Median :0.3255  
+           Mean   :8.686   Mean   :1   Mean   :18   Mean   :8.686   Mean   :0.3255  
+           3rd Qu.:8.686   3rd Qu.:1   3rd Qu.:18   3rd Qu.:8.686   3rd Qu.:0.3255  
+           Max.   :8.686   Max.   :1   Max.   :18   Max.   :8.686   Max.   :0.3255  
+    upper.CL         lower.CL      
+ Min.   :0.6417   Min.   :0.05026  
+ 1st Qu.:0.6417   1st Qu.:0.05026  
+ Median :0.6417   Median :0.05026  
+ Mean   :0.6417   Mean   :0.05026  
+ 3rd Qu.:0.6417   3rd Qu.:0.05026  
+ Max.   :0.6417   Max.   :0.05026  
+   Effect        F               v1          v2             ncp             Rsq        
+ Model:1   Min.   :12.28   Min.   :1   Min.   :10.24   Min.   :12.28   Min.   :0.5453  
+           1st Qu.:12.28   1st Qu.:1   1st Qu.:10.24   1st Qu.:12.28   1st Qu.:0.5453  
+           Median :12.28   Median :1   Median :10.24   Median :12.28   Median :0.5453  
+           Mean   :12.28   Mean   :1   Mean   :10.24   Mean   :12.28   Mean   :0.5453  
+           3rd Qu.:12.28   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:12.28   3rd Qu.:0.5453  
+           Max.   :12.28   Max.   :1   Max.   :10.24   Max.   :12.28   Max.   :0.5453  
+    upper.CL         lower.CL     
+ Min.   :0.8349   Min.   :0.1757  
+ 1st Qu.:0.8349   1st Qu.:0.1757  
+ Median :0.8349   Median :0.1757  
+ Mean   :0.8349   Mean   :0.1757  
+ 3rd Qu.:0.8349   3rd Qu.:0.1757  
+ Max.   :0.8349   Max.   :0.1757  
 ================================================================================
 ================================================================================
 Model 3b: log(Esec) ~ log(length)
@@ -5651,12 +5218,12 @@ Redundant readout of chosen model, see above
 Linear mixed-effects model fit by maximum likelihood
  Data: raw.data 
        AIC      BIC    logLik
-  21.97757 25.75532 -6.988783
+  21.82962 25.60737 -6.914808
 
 Random effects:
  Formula: ~1 | species
         (Intercept)  Residual
-StdDev:   0.3060925 0.4007488
+StdDev:   0.2997113 0.4010905
 
 Correlation Structure: corBrownian
  Formula: ~1 | species 
@@ -5664,17 +5231,15 @@ Correlation Structure: corBrownian
 numeric(0)
 Fixed effects: phenotype ~ cofactor 
                Value Std.Error DF  t-value p-value
-(Intercept) 5.618916 0.7347957 12 7.646909  0.0000
-cofactor    0.756742 0.4065517 12 1.861367  0.0874
+(Intercept) 5.636584 0.7250005 12 7.774593  0.0000
+cofactor    0.749311 0.4014293 12 1.866607  0.0866
  Correlation: 
          (Intr)
 cofactor -0.976
 
 Standardized Within-Group Residuals:
-        Min          Q1         Med          Q3 
--1.18034175 -0.32935228 -0.09443903 -0.04870241 
-        Max 
- 2.37191877 
+        Min          Q1         Med          Q3         Max 
+-1.18046327 -0.36667996 -0.15086541 -0.05279163  2.36567818 
 
 Number of Observations: 19
 Number of Groups: 6 
@@ -5695,7 +5260,7 @@ Number of tests:   1
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
   Test        Obs   Std.Obs   Alter Pvalue
-1   dt -0.1579315 -1.311865 greater   0.95
+1   dt -0.1302653 -1.340364 greater  0.952
 
 --------------------------------------------------------------------------------
 
@@ -5713,8 +5278,8 @@ Number of tests:   1
 
 Adjustment method for multiple comparisons:   none 
 Permutation number:   999 
-  Test        Obs   Std.Obs   Alter Pvalue
-1   dt -0.2291476 -1.450287 greater  0.965
+  Test        Obs  Std.Obs   Alter Pvalue
+1   dt -0.1950242 -1.31925 greater  0.951
 
 --------------------------------------------------------------------------------
 
@@ -5727,10 +5292,10 @@ $lambda
 [1] 6.610696e-05
 
 $logL
-[1] -24.99081
+[1] -30.70119
 
 $logL0
-[1] -24.9904
+[1] -30.70082
 
 $P
 [1] 1
@@ -5743,10 +5308,10 @@ Blomberg's kappa
 
 --------------------------------------------------------------------------------
 $K
-[1] 0.3739916
+[1] 0.3765127
 
 $P
-[1] 0.99
+[1] 0.994
 
 --------------------------------------------------------------------------------
 
@@ -5755,45 +5320,31 @@ R2 hypothesis testing
 
 
 --------------------------------------------------------------------------------
-   Effect        F               v1          v2    
- Model:1   Min.   :11.63   Min.   :1   Min.   :18  
-           1st Qu.:11.63   1st Qu.:1   1st Qu.:18  
-           Median :11.63   Median :1   Median :18  
-           Mean   :11.63   Mean   :1   Mean   :18  
-           3rd Qu.:11.63   3rd Qu.:1   3rd Qu.:18  
-           Max.   :11.63   Max.   :1   Max.   :18  
-      ncp             Rsq            upper.CL     
- Min.   :11.63   Min.   :0.3926   Min.   :0.6865  
- 1st Qu.:11.63   1st Qu.:0.3926   1st Qu.:0.6865  
- Median :11.63   Median :0.3926   Median :0.6865  
- Mean   :11.63   Mean   :0.3926   Mean   :0.6865  
- 3rd Qu.:11.63   3rd Qu.:0.3926   3rd Qu.:0.6865  
- Max.   :11.63   Max.   :0.3926   Max.   :0.6865  
-    lower.CL     
- Min.   :0.1003  
- 1st Qu.:0.1003  
- Median :0.1003  
- Mean   :0.1003  
- 3rd Qu.:0.1003  
- Max.   :0.1003  
-   Effect        F               v1   
- Model:1   Min.   :18.92   Min.   :1  
-           1st Qu.:18.92   1st Qu.:1  
-           Median :18.92   Median :1  
-           Mean   :18.92   Mean   :1  
-           3rd Qu.:18.92   3rd Qu.:1  
-           Max.   :18.92   Max.   :1  
-       v2             ncp             Rsq        
- Min.   :10.24   Min.   :18.92   Min.   :0.6489  
- 1st Qu.:10.24   1st Qu.:18.92   1st Qu.:0.6489  
- Median :10.24   Median :18.92   Median :0.6489  
- Mean   :10.24   Mean   :18.92   Mean   :0.6489  
- 3rd Qu.:10.24   3rd Qu.:18.92   3rd Qu.:0.6489  
- Max.   :10.24   Max.   :18.92   Max.   :0.6489  
+   Effect        F              v1          v2          ncp            Rsq        
+ Model:1   Min.   :12.2   Min.   :1   Min.   :18   Min.   :12.2   Min.   :0.4041  
+           1st Qu.:12.2   1st Qu.:1   1st Qu.:18   1st Qu.:12.2   1st Qu.:0.4041  
+           Median :12.2   Median :1   Median :18   Median :12.2   Median :0.4041  
+           Mean   :12.2   Mean   :1   Mean   :18   Mean   :12.2   Mean   :0.4041  
+           3rd Qu.:12.2   3rd Qu.:1   3rd Qu.:18   3rd Qu.:12.2   3rd Qu.:0.4041  
+           Max.   :12.2   Max.   :1   Max.   :18   Max.   :12.2   Max.   :0.4041  
     upper.CL         lower.CL     
- Min.   :0.8765   Min.   :0.3241  
- 1st Qu.:0.8765   1st Qu.:0.3241  
- Median :0.8765   Median :0.3241  
- Mean   :0.8765   Mean   :0.3241  
- 3rd Qu.:0.8765   3rd Qu.:0.3241  
- Max.   :0.8765   Max.   :0.3241  
+ Min.   :0.6938   Min.   :0.1103  
+ 1st Qu.:0.6938   1st Qu.:0.1103  
+ Median :0.6938   Median :0.1103  
+ Mean   :0.6938   Mean   :0.1103  
+ 3rd Qu.:0.6938   3rd Qu.:0.1103  
+ Max.   :0.6938   Max.   :0.1103  
+   Effect        F               v1          v2             ncp             Rsq        
+ Model:1   Min.   :81.51   Min.   :1   Min.   :10.24   Min.   :81.51   Min.   :0.8884  
+           1st Qu.:81.51   1st Qu.:1   1st Qu.:10.24   1st Qu.:81.51   1st Qu.:0.8884  
+           Median :81.51   Median :1   Median :10.24   Median :81.51   Median :0.8884  
+           Mean   :81.51   Mean   :1   Mean   :10.24   Mean   :81.51   Mean   :0.8884  
+           3rd Qu.:81.51   3rd Qu.:1   3rd Qu.:10.24   3rd Qu.:81.51   3rd Qu.:0.8884  
+           Max.   :81.51   Max.   :1   Max.   :10.24   Max.   :81.51   Max.   :0.8884  
+    upper.CL         lower.CL     
+ Min.   :0.9627   Min.   :0.7723  
+ 1st Qu.:0.9627   1st Qu.:0.7723  
+ Median :0.9627   Median :0.7723  
+ Mean   :0.9627   Mean   :0.7723  
+ 3rd Qu.:0.9627   3rd Qu.:0.7723  
+ Max.   :0.9627   Max.   :0.7723  
